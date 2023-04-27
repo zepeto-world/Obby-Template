@@ -1,17 +1,17 @@
-#Obby Template
-##📢 About
+# Obby Template
+## 📢 About
 Nice to meet you Creators! 👋 Welcome to obby template guide!
 With Obby you can create amazing parkour worlds to play with your friends!
 Now, are you ready to get started?
 
-##❓ How to create with obby template
-:tw-1f527: Installation and settings
+## ❓ How to create with obby template
+:wrench: Installation and settings
 - Download Unity Hub and Unity 2020.3.9f1 version. ([Download](https://unity.com/releases/editor/archive))
 - Pull the repository.
 
-> 💡 Enjoy and start creating with Obby Template! :tw-1f389:
+> 💡 Enjoy and start creating with Obby Template! :tada:
 
-##🔨 Tools
+## 🔨 Tools
 - **GameSettings**: General game statistics and settings
                     
 Name |  Functionality
@@ -25,12 +25,12 @@ Name |  Functionality
 - **ObbyManager:** This script is very important for the functioning of the Obby template. Check that it is in scene.
 
 
-##🚧 Builds
-- ** Spawn Platform:** This is the first platform, it is used as the base of spawn.
-- **Death Road: **This is a sample for the death system.
-- ** Teleport:** This is responsible for sending the player to the last saved position.You can edit the hitbox with the box collider
+## 🚧 Builds
+- **Spawn Platform:** This is the first platform, it is used as the base of spawn.
+- **Death Road:** This is a sample for the death system.
+- **Teleport:** This is responsible for sending the player to the last saved position.You can edit the hitbox with the box collider
 
-- **Fall Platform Builder: **Use the ***FallPlatformBuilder*** component to build platforms that fall. 
+- **Fall Platform Builder:** Use the ***FallPlatformBuilder*** component to build platforms that fall. 
 Add it to the scene and then add the object you want as a child of the prefab.
 
 Make sure the object you add contains the BoxCollider component with the
@@ -39,7 +39,7 @@ corresponding dimensions of the object.
 Additionally, make sure that the object does not have the Static option enabled.
 
 
-####*Fall Platform Structure:*
+#### *Fall Platform Structure:*
 |||
 | ------------ | ------------ |
 |  `Box Collider` |  Used to detect the player |
