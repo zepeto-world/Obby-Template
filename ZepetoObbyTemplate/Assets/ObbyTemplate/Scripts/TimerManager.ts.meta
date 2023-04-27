@@ -1,0 +1,49 @@
+fileFormatVersion: 2
+guid: 76974b934591cd74dabf7a8992fc3f14
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst EventsManager_1 = require(\"./EventsManager\");\r\nconst
+    GameSettings_1 = require(\"./GameSettings\");\r\nclass TimerManager extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this._timeRemaining
+    = 0; // Time remaining in seconds.\r\n        this._isRunning = false; // If
+    timer is running.\r\n    }\r\n    SetTimer(duration) {\r\n        this._duration
+    = duration;\r\n        this.ResetTimer();\r\n        this.StartTimer();\r\n   
+    }\r\n    Update() {\r\n        if (this._isRunning) {\r\n            this._timeRemaining
+    -= UnityEngine_1.Time.deltaTime;\r\n            let tempMin = UnityEngine_1.Mathf.FloorToInt(this._timeRemaining
+    / 60);\r\n            let tempSeg = UnityEngine_1.Mathf.FloorToInt(this._timeRemaining
+    % 60);\r\n            let tempMinString = tempMin <= 0 ? \" \" : tempMin.toString()
+    + \" : \";\r\n            let tempSegString = tempSeg < 10 ? \"0\" + tempSeg
+    : tempSeg.toString();\r\n            this.UpdateVisual(this._timeRemaining /
+    this._duration);\r\n            this.remainingTxt.text = tempMinString + tempSegString;\r\n           
+    if (this._timeRemaining <= 0) {\r\n                this.StopTimer();\r\n               
+    this.OnGameOver();\r\n            }\r\n        }\r\n    }\r\n    UpdateVisual(valueNormalized)
+    {\r\n        this.timeSlider.value = valueNormalized;\r\n    }\r\n    StartTimer()
+    {\r\n        this._isRunning = true;\r\n    }\r\n    StopTimer() {\r\n       
+    this._isRunning = false;\r\n    }\r\n    ResetTimer() {\r\n        this._timeRemaining
+    = this._duration;\r\n        this._isRunning = false;\r\n    }\r\n    OnGameOver()
+    {\r\n        UnityEngine_1.Debug.Log(\"Game Over\");\r\n        GameSettings_1.default.instance.OnGameOver();\r\n   
+    }\r\n    /// <summary>\r\n    /// Get Time Remaining\r\n    /// </summary>\r\n   
+    GetTimeRemaining() {\r\n        return this._timeRemaining;\r\n    }\r\n    ///
+    <summary>\r\n    /// Get if time is running\r\n    /// </summary>\r\n    GetIsRunning()
+    {\r\n        return this._isRunning;\r\n    }\r\n}\r\nexports.default = TimerManager;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGltZXJNYW5hZ2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiVGltZXJNYW5hZ2VyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXFFO0FBRXJFLGlEQUFxRDtBQUNyRCxtREFBNEM7QUFDNUMsaURBQTBDO0FBRTFDLE1BQXFCLFlBQWEsU0FBUSxxQ0FBcUI7SUFBL0Q7O1FBTVksbUJBQWMsR0FBVyxDQUFDLENBQUMsQ0FBQyw2QkFBNkI7UUFDekQsZUFBVSxHQUFZLEtBQUssQ0FBQyxDQUFDLHVCQUF1QjtJQXlFaEUsQ0FBQztJQXZFVSxRQUFRLENBQUMsUUFBZ0I7UUFFNUIsSUFBSSxDQUFDLFNBQVMsR0FBRyxRQUFRLENBQUM7UUFFMUIsSUFBSSxDQUFDLFVBQVUsRUFBRSxDQUFDO1FBQ2xCLElBQUksQ0FBQyxVQUFVLEVBQUUsQ0FBQztJQUN0QixDQUFDO0lBRUQsTUFBTTtRQUVGLElBQUksSUFBSSxDQUFDLFVBQVUsRUFDbkI7WUFDSSxJQUFJLENBQUMsY0FBYyxJQUFJLGtCQUFJLENBQUMsU0FBUyxDQUFDO1lBQ3RDLElBQUksT0FBTyxHQUFXLG1CQUFLLENBQUMsVUFBVSxDQUFDLElBQUksQ0FBQyxjQUFjLEdBQUcsRUFBRSxDQUFDLENBQUM7WUFDakUsSUFBSSxPQUFPLEdBQVcsbUJBQUssQ0FBQyxVQUFVLENBQUMsSUFBSSxDQUFDLGNBQWMsR0FBRyxFQUFFLENBQUMsQ0FBQztZQUNqRSxJQUFJLGFBQWEsR0FBVyxPQUFPLElBQUksQ0FBQyxDQUFDLENBQUMsQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDLE9BQU8sQ0FBQyxRQUFRLEVBQUUsR0FBRyxLQUFLLENBQUM7WUFDNUUsSUFBSSxhQUFhLEdBQVcsT0FBTyxHQUFHLEVBQUUsQ0FBQyxDQUFDLENBQUMsR0FBRyxHQUFHLE9BQU8sQ0FBQyxDQUFDLENBQUMsT0FBTyxDQUFDLFFBQVEsRUFBRSxDQUFDO1lBRTlFLElBQUksQ0FBQyxZQUFZLENBQUMsSUFBSSxDQUFDLGNBQWMsR0FBRyxJQUFJLENBQUMsU0FBUyxDQUFDLENBQUM7WUFFeEQsSUFBSSxDQUFDLFlBQVksQ0FBQyxJQUFJLEdBQUcsYUFBYSxHQUFHLGFBQWEsQ0FBQztZQUV2RCxJQUFJLElBQUksQ0FBQyxjQUFjLElBQUksQ0FBQyxFQUFFO2dCQUMxQixJQUFJLENBQUMsU0FBUyxFQUFFLENBQUM7Z0JBQ2pCLElBQUksQ0FBQyxVQUFVLEVBQUUsQ0FBQzthQUNyQjtTQUNKO0lBQ0wsQ0FBQztJQUVELFlBQVksQ0FBQyxlQUFzQjtRQUUvQixJQUFJLENBQUMsVUFBVSxDQUFDLEtBQUssR0FBRyxlQUFlLENBQUM7SUFDNUMsQ0FBQztJQUVNLFVBQVU7UUFFYixJQUFJLENBQUMsVUFBVSxHQUFHLElBQUksQ0FBQztJQUMzQixDQUFDO0lBRU0sU0FBUztRQUVaLElBQUksQ0FBQyxVQUFVLEdBQUcsS0FBSyxDQUFDO0lBQzVCLENBQUM7SUFFTyxVQUFVO1FBRWQsSUFBSSxDQUFDLGNBQWMsR0FBRyxJQUFJLENBQUMsU0FBUyxDQUFDO1FBQ3JDLElBQUksQ0FBQyxVQUFVLEdBQUcsS0FBSyxDQUFDO0lBQzVCLENBQUM7SUFFTyxVQUFVO1FBRWQsbUJBQUssQ0FBQyxHQUFHLENBQUMsV0FBVyxDQUFDLENBQUM7UUFDdkIsc0JBQVksQ0FBQyxRQUFRLENBQUMsVUFBVSxFQUFFLENBQUM7SUFDdkMsQ0FBQztJQUVELGFBQWE7SUFDYixzQkFBc0I7SUFDdEIsY0FBYztJQUNQLGdCQUFnQjtRQUVuQixPQUFPLElBQUksQ0FBQyxjQUFjLENBQUM7SUFDL0IsQ0FBQztJQUVELGFBQWE7SUFDYiwwQkFBMEI7SUFDMUIsY0FBYztJQUNQLFlBQVk7UUFFZixPQUFPLElBQUksQ0FBQyxVQUFVLENBQUM7SUFDM0IsQ0FBQztDQUNKO0FBaEZELCtCQWdGQyJ9","assetPath":"Assets/ObbyTemplate/Scripts/TimerManager.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"timeSlider","type":"UnityEngine.UI.Slider","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"remainingTxt","type":"UnityEngine.UI.Text","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"TimerManager","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 205bf4dcb72af8ab09af0a2af1281637
+  onlyWriteTrigger: 0

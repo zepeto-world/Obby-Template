@@ -1,0 +1,45 @@
+fileFormatVersion: 2
+guid: bf8ebc80ee02fa14788274f198d142c6
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nconst TimerManager_1 = require(\"./TimerManager\");\r\nclass
+    GameSettings extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor()
+    {\r\n        super(...arguments);\r\n        this._useTimer = false; //If this
+    value is true, an object will be created with the timer.\r\n    }\r\n    Awake()
+    {\r\n        //Singleton\r\n        if (ZEPETO_Script_1.ZepetoScriptBehaviour.op_Equality(GameSettings.instance,
+    null))\r\n            GameSettings.instance = this;\r\n        else\r\n           
+    UnityEngine_1.GameObject.Destroy(this);\r\n    }\r\n    Start() {\r\n       
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this.zepetoCharacter = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;
+    //Save Zepeto''s character reference\r\n            if (this._useTimer) {\r\n               
+    let timerScreenObj = UnityEngine_1.GameObject.Instantiate(this._timerScreenPrefab);
+    //Load timer screen in game\r\n                this._timerManager = timerScreenObj.GetComponent($typeof(TimerManager_1.default));\r\n               
+    this._timerManager.SetTimer(this.gameDuration); //Set timer settings\r\n           
+    }\r\n        });\r\n    }\r\n    OnVictory() {\r\n        this._timerManager.StopTimer();\r\n       
+    let victoryScreenObj = UnityEngine_1.GameObject.Instantiate(this._victoryScreenPrefab,
+    this._timerManager.transform); //Load Win Screen in game\r\n    }\r\n    OnGameOver()
+    {\r\n        let gameOverScreenObj = UnityEngine_1.GameObject.Instantiate(this._gameOverScreenPrefab,
+    this._timerManager.transform); //Load GameOver screen in game\r\n    }\r\n}\r\nexports.default
+    = GameSettings;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR2FtZVNldHRpbmdzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiR2FtZVNldHRpbmdzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXlFO0FBQ3pFLGlEQUFxRDtBQUNyRCw2RUFBNEU7QUFFNUUsaURBQTBDO0FBRzFDLE1BQXFCLFlBQWEsU0FBUSxxQ0FBcUI7SUFBL0Q7O1FBUThCLGNBQVMsR0FBWSxLQUFLLENBQUMsQ0FBQyxrRUFBa0U7SUF3QzVILENBQUM7SUFqQ0csS0FBSztRQUVELFdBQVc7UUFDWCxJQXhCQyxxQ0FBcUIsQ0FzRDYrSSxXQUFZLENBOUIzZ0osWUFBWSxDQUFDLFFBQVEsRUFBSSxJQUFJO1lBQUUsWUFBWSxDQUFDLFFBQVEsR0FBRyxJQUFJLENBQUM7O1lBRTVELHdCQUFVLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxDQUFDO0lBQ2pDLENBQUM7SUFFRCxLQUFLO1FBRUQsMkNBQWEsQ0FBQyxRQUFRLENBQUMsa0JBQWtCLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUV2RCxJQUFJLENBQUMsZUFBZSxHQUFHLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLENBQUMsbUNBQW1DO1lBRXJILElBQUksSUFBSSxDQUFDLFNBQVMsRUFDbEI7Z0JBQ0ksSUFBSSxjQUFjLEdBQUcsd0JBQVUsQ0FBQyxXQUFXLENBQUMsSUFBSSxDQUFDLGtCQUFrQixDQUFlLENBQUMsQ0FBQywyQkFBMkI7Z0JBQy9HLElBQUksQ0FBQyxhQUFhLEdBQUcsY0FBYyxDQUFDLFlBQVksU0FBQyxzQkFBWSxFQUFHLENBQUM7Z0JBQ2pFLElBQUksQ0FBQyxhQUFhLENBQUMsUUFBUSxDQUFDLElBQUksQ0FBQyxZQUFZLENBQUMsQ0FBQyxDQUFDLG9CQUFvQjthQUN2RTtRQUNMLENBQUMsQ0FBQyxDQUFDO0lBQ1AsQ0FBQztJQUVELFNBQVM7UUFFTCxJQUFJLENBQUMsYUFBYSxDQUFDLFNBQVMsRUFBRSxDQUFDO1FBQy9CLElBQUksZ0JBQWdCLEdBQUcsd0JBQVUsQ0FBQyxXQUFXLENBQUMsSUFBSSxDQUFDLG9CQUFvQixFQUFFLElBQUksQ0FBQyxhQUFhLENBQUMsU0FBUyxDQUFlLENBQUMsQ0FBQyx5QkFBeUI7SUFDbkosQ0FBQztJQUVELFVBQVU7UUFFTixJQUFJLGlCQUFpQixHQUFHLHdCQUFVLENBQUMsV0FBVyxDQUFDLElBQUksQ0FBQyxxQkFBcUIsRUFBRSxJQUFJLENBQUMsYUFBYSxDQUFDLFNBQVMsQ0FBZSxDQUFDLENBQUMsOEJBQThCO0lBQzFKLENBQUM7Q0FDSjtBQWhERCwrQkFnREMifQ==","assetPath":"Assets/ObbyTemplate/Scripts/GameSettings.ts","manifest":{"properties":[{"assembly":"ZEPETO.Character.Controller","name":"zepetoCharacter","type":"ZEPETO.Character.Controller.ZepetoCharacter","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"HideInInspector","args":[]}]},{"assembly":"mscorlib","name":"gameDuration","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"Header","args":["\"Timer
+    Settings\""]}]},{"assembly":"mscorlib","name":"_useTimer","type":"System.Boolean","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.CoreModule","name":"_timerScreenPrefab","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.CoreModule","name":"_victoryScreenPrefab","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.CoreModule","name":"_gameOverScreenPrefab","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]}],"name":"GameSettings","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: e0c8708f3d267baad1e987f58740ff81
+  onlyWriteTrigger: 0

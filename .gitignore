@@ -2,15 +2,15 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Rr]ecordings/
-/[Rr]ecording/
-/[Ll]ogs/
-/[Mm]emoryCaptures/
+ZepetoObbyTemplate/[Ll]ibrary/
+ZepetoObbyTemplate/[Tt]emp/
+ZepetoObbyTemplate/[Oo]bj/
+ZepetoObbyTemplate/[Bb]uild/
+ZepetoObbyTemplate/[Bb]uilds/
+ZepetoObbyTemplate/[Rr]ecordings/
+ZepetoObbyTemplate/[Rr]ecording/
+ZepetoObbyTemplate/[Ll]ogs/
+ZepetoObbyTemplate/[Mm]emoryCaptures/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta

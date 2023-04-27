@@ -1,0 +1,52 @@
+fileFormatVersion: 2
+guid: 8ead314104c646044ba6fa308c44e065
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst __UnityEngine__ = require(\"UnityEngine\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    GameSettings_1 = require(\"./GameSettings\");\r\nclass FallPlatform extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.fallDelay
+    = .1; //Time it takes to start falling\r\n        this.respawnDelay = 5; //Time
+    it takes to respawn\r\n    }\r\n    Awake() {\r\n        //Get the Collider reference
+    on this GameObject\r\n        this._myCollider = this.gameObject.GetComponent($typeof(UnityEngine_1.BoxCollider));\r\n       
+    //Get the Rigidbody reference on this GameObject\r\n        this._myRigidbody
+    = this.gameObject.GetComponent($typeof(UnityEngine_1.Rigidbody));\r\n    }\r\n   
+    Start() {\r\n        let child = this.transform.GetChild(0).GetComponent($typeof(UnityEngine_1.BoxCollider));
+    //Get Collider on the child\r\n        if (child != null) //Only if not null\r\n        
+    {\r\n            this._myCollider.center = new UnityEngine_1.Vector3(child.center.x,
+    .5, child.center.z); //Rebuild Center of this collider\r\n            this._myCollider.size
+    = new UnityEngine_1.Vector3(child.transform.localScale.x * child.size.x, 1, child.transform.localScale.z
+    * child.size.z); //Rebuild Size of this collider\r\n            this._myCollider.isTrigger
+    = true; //Set it Trigger\r\n        }\r\n        //Set init pos\r\n        this._initPosY
+    = this.transform.position.y;\r\n    }\r\n    OnTriggerEnter(collider) {\r\n       
+    if (GameSettings_1.default.instance.zepetoCharacter == null || __UnityEngine__.Object.op_Inequality(collider.gameObject,
+    GameSettings_1.default.instance.zepetoCharacter.gameObject))\r\n            return;\r\n       
+    if (!this._falling) {\r\n            //Start falling\r\n            this._falling
+    = true;\r\n            this.Invoke(\"FallPlatform\", this.fallDelay);\r\n       
+    }\r\n    }\r\n    FallPlatform() {\r\n        this._myRigidbody.isKinematic =
+    false;\r\n        this._myRigidbody.useGravity = true;\r\n        //Start respawning\r\n       
+    this.Invoke(\"RespawnPlatform\", this.respawnDelay);\r\n    }\r\n    RespawnPlatform()
+    {\r\n        this._falling = false;\r\n        this._myRigidbody.isKinematic
+    = true;\r\n        this._myRigidbody.useGravity = false;\r\n        this.transform.rotation
+    = UnityEngine_1.Quaternion.Euler(0, 0, 0);\r\n        this.transform.position
+    = new UnityEngine_1.Vector3(this.transform.position.x, this._initPosY, this.transform.position.z);\r\n   
+    }\r\n}\r\nexports.default = FallPlatform;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRmFsbFBsYXRmb3JtLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRmFsbFBsYXRmb3JtLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUFBLDZDQUFpSDtBQUVqSCxpREFBcUQ7QUFDckQsaURBQTBDO0FBRTFDLE1BQXFCLFlBQWEsU0FBUSxxQ0FBcUI7SUFBL0Q7O1FBRVcsY0FBUyxHQUFXLEVBQUUsQ0FBQyxDQUFDLGdDQUFnQztRQUN4RCxpQkFBWSxHQUFXLENBQUMsQ0FBQyxDQUFDLDBCQUEwQjtJQWdFL0QsQ0FBQztJQXhERyxLQUFLO1FBRUQsK0NBQStDO1FBQy9DLElBQUksQ0FBQyxXQUFXLEdBQUcsSUFBSSxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMseUJBQVcsRUFBRyxDQUFDO1FBRS9ELGdEQUFnRDtRQUNoRCxJQUFJLENBQUMsWUFBWSxHQUFHLElBQUksQ0FBQyxVQUFVLENBQUMsWUFBWSxTQUFDLHVCQUFTLEVBQUcsQ0FBQTtJQUNqRSxDQUFDO0lBRUQsS0FBSztRQUVELElBQUksS0FBSyxHQUFnQixJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxZQUFZLFNBQUMseUJBQVcsRUFBRyxDQUFDLENBQUMsMkJBQTJCO1FBRTVHLElBQUksS0FBSyxJQUFJLElBQUksRUFBRSxrQkFBa0I7U0FDckM7WUFDSSxJQUFJLENBQUMsV0FBVyxDQUFDLE1BQU0sR0FBRyxJQUFJLHFCQUFPLENBQUMsS0FBSyxDQUFDLE1BQU0sQ0FBQyxDQUFDLEVBQUUsRUFBRSxFQUFFLEtBQUssQ0FBQyxNQUFNLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxpQ0FBaUM7WUFDNUcsSUFBSSxDQUFDLFdBQVcsQ0FBQyxJQUFJLEdBQUcsSUFBSSxxQkFBTyxDQUFDLEtBQUssQ0FBQyxTQUFTLENBQUMsVUFBVSxDQUFDLENBQUMsR0FBRyxLQUFLLENBQUMsSUFBSSxDQUFDLENBQUMsRUFBRSxDQUFDLEVBQUUsS0FBSyxDQUFDLFNBQVMsQ0FBQyxVQUFVLENBQUMsQ0FBQyxHQUFHLEtBQUssQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQywrQkFBK0I7WUFDakssSUFBSSxDQUFDLFdBQVcsQ0FBQyxTQUFTLEdBQUcsSUFBSSxDQUFDLENBQUMsZ0JBQWdCO1NBQ3REO1FBRUQsY0FBYztRQUNkLElBQUksQ0FBQyxTQUFTLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDO0lBQy9DLENBQUM7SUFFRCxjQUFjLENBQUMsUUFBa0I7UUFFN0IsSUFBSSxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxlQUFlLElBQUksSUFBSSwyQkE4QnErUSxhQUFjLENBOUIvK1EsUUFBUSxDQUFDLFVBQVUsRUFBSSxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxlQUFlLENBQUMsVUFBVSxDQUFBO1lBQ3hILE9BQU87UUFFWCxJQUFJLENBQUMsSUFBSSxDQUFDLFFBQVEsRUFDbEI7WUFDSSxlQUFlO1lBQ2YsSUFBSSxDQUFDLFFBQVEsR0FBRyxJQUFJLENBQUM7WUFDckIsSUFBSSxDQUFDLE1BQU0sQ0FBQyxjQUFjLEVBQUUsSUFBSSxDQUFDLFNBQVMsQ0FBQyxDQUFDO1NBQy9DO0lBQ0wsQ0FBQztJQUVELFlBQVk7UUFFUixJQUFJLENBQUMsWUFBWSxDQUFDLFdBQVcsR0FBRyxLQUFLLENBQUM7UUFDdEMsSUFBSSxDQUFDLFlBQVksQ0FBQyxVQUFVLEdBQUcsSUFBSSxDQUFDO1FBRXBDLGtCQUFrQjtRQUNsQixJQUFJLENBQUMsTUFBTSxDQUFDLGlCQUFpQixFQUFFLElBQUksQ0FBQyxZQUFZLENBQUMsQ0FBQztJQUN0RCxDQUFDO0lBRUQsZUFBZTtRQUVYLElBQUksQ0FBQyxRQUFRLEdBQUcsS0FBSyxDQUFDO1FBRXRCLElBQUksQ0FBQyxZQUFZLENBQUMsV0FBVyxHQUFHLElBQUksQ0FBQztRQUNyQyxJQUFJLENBQUMsWUFBWSxDQUFDLFVBQVUsR0FBRyxLQUFLLENBQUM7UUFFckMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEdBQUcsd0JBQVUsQ0FBQyxLQUFLLENBQUMsQ0FBQyxFQUFDLENBQUMsRUFBQyxDQUFDLENBQUMsQ0FBQztRQUNsRCxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyxJQUFJLHFCQUFPLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxFQUFFLElBQUksQ0FBQyxTQUFTLEVBQUUsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUM7SUFDaEgsQ0FBQztDQUNKO0FBbkVELCtCQW1FQyJ9","assetPath":"Assets/ObbyTemplate/Scripts/FallPlatform.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"fallDelay","type":"System.Single","isArray":false,"initValue":["0.1"],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"respawnDelay","type":"System.Single","isArray":false,"initValue":["5"],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"FallPlatform","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 967c0c999a345463ad6b4186594923de
+  onlyWriteTrigger: 0

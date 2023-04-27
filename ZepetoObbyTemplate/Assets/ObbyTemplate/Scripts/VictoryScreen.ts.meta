@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: a0fedd1c4c9683d448c4a8e0ac7faea5
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_SceneManagement_1 = require(\"UnityEngine.SceneManagement\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass VictoryScreen extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor() {\r\n        super(...arguments);\r\n       
+    this.victoryTittle = \"Game Over\"; //Victory Tittle\r\n        this.victorySubtittle
+    = \"\"; //Victory Subtittle, It is not required\r\n    }\r\n    OnValidate()
+    {\r\n        this.tittleTxt.text = this.victoryTittle;\r\n        this.subtittleTxt.text
+    = this.victorySubtittle;\r\n    }\r\n    Start() {\r\n        this.tittleTxt.text
+    = this.victoryTittle;\r\n        this.subtittleTxt.text = this.victorySubtittle;\r\n       
+    this.resetButton.onClick.AddListener(this.ResetBtnAction);\r\n    }\r\n    ResetBtnAction()
+    {\r\n        UnityEngine_SceneManagement_1.SceneManager.LoadScene(UnityEngine_SceneManagement_1.SceneManager.GetActiveScene().name);\r\n   
+    }\r\n}\r\nexports.default = VictoryScreen;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVmljdG9yeVNjcmVlbi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlZpY3RvcnlTY3JlZW4udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFFQSw2RUFBMkQ7QUFFM0QsaURBQXFEO0FBRXJELE1BQXFCLGFBQWMsU0FBUSxxQ0FBcUI7SUFBaEU7O1FBRVcsa0JBQWEsR0FBVyxXQUFXLENBQUMsQ0FBQyxnQkFBZ0I7UUFDckQscUJBQWdCLEdBQVcsRUFBRSxDQUFDLENBQUMsdUNBQXVDO0lBc0JqRixDQUFDO0lBaEJHLFVBQVU7UUFDTixJQUFJLENBQUMsU0FBUyxDQUFDLElBQUksR0FBRyxJQUFJLENBQUMsYUFBYSxDQUFDO1FBQ3pDLElBQUksQ0FBQyxZQUFZLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQyxnQkFBZ0IsQ0FBQztJQUNuRCxDQUFDO0lBRUQsS0FBSztRQUNELElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQyxhQUFhLENBQUM7UUFDekMsSUFBSSxDQUFDLFlBQVksQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDLGdCQUFnQixDQUFDO1FBRS9DLElBQUksQ0FBQyxXQUFXLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxJQUFJLENBQUMsY0FBYyxDQUFDLENBQUM7SUFDOUQsQ0FBQztJQUVELGNBQWM7UUFDViwwQ0FBWSxDQUFDLFNBQVMsQ0FBQywwQ0FBWSxDQUFDLGNBQWMsRUFBRSxDQUFDLElBQUksQ0FBQyxDQUFDO0lBQy9ELENBQUM7Q0FFSjtBQXpCRCxnQ0F5QkMifQ==","assetPath":"Assets/ObbyTemplate/Scripts/VictoryScreen.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"victoryTittle","type":"System.String","isArray":false,"initValue":["Game
+    Over"],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"victorySubtittle","type":"System.String","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"resetButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"Unity.TextMeshPro","name":"tittleTxt","type":"TMPro.TextMeshProUGUI","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"Unity.TextMeshPro","name":"subtittleTxt","type":"TMPro.TextMeshProUGUI","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"VictoryScreen","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 82a4bd73e42f25e95b16eb7ae7a5259c
+  onlyWriteTrigger: 0

@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: a2b001aca9ab94143b38d4c354dcdd76
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    EventsManager extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    static GetInstance()
+    {\r\n        if (!EventsManager.instance) {\r\n            EventsManager.instance
+    = new EventsManager();\r\n        }\r\n        return EventsManager.instance;\r\n   
+    }\r\n}\r\nexports.default = EventsManager;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRXZlbnRzTWFuYWdlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkV2ZW50c01hbmFnZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFHQSxpREFBcUQ7QUFFckQsTUFBcUIsYUFBYyxTQUFRLHFDQUFxQjtJQU1yRCxNQUFNLENBQUMsV0FBVztRQUNyQixJQUFJLENBQUMsYUFBYSxDQUFDLFFBQVEsRUFBRTtZQUN6QixhQUFhLENBQUMsUUFBUSxHQUFHLElBQUksYUFBYSxFQUFFLENBQUM7U0FDaEQ7UUFFRCxPQUFPLGFBQWEsQ0FBQyxRQUFRLENBQUM7SUFDbEMsQ0FBQztDQUVKO0FBZEQsZ0NBY0MifQ==","assetPath":"Assets/Scripts/EventsManager.ts","manifest":{"properties":[{"assembly":"","name":"OnGameOver","type":"__type","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"EventsManager","description":""},"isCompiled":true}'
+  typescriptHash: c8c101904600fe047ba2c942fdf694ff
+  onlyWriteTrigger: 0

@@ -1,0 +1,36 @@
+fileFormatVersion: 2
+guid: 4d75a49f0d7ee6e4a887556da7f38699
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_SceneManagement_1 = require(\"UnityEngine.SceneManagement\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass GameOverScreen extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor() {\r\n        super(...arguments);\r\n       
+    this.gameOverTittle = \"Game Over\"; //Game Over Tittle\r\n        this.gameOverSubtittle
+    = \"Time is up!\"; //Game Over Subtittle, It is not required\r\n    }\r\n   
+    OnValidate() {\r\n        this.tittleTxt.text = this.gameOverTittle;\r\n       
+    this.subtittleTxt.text = this.gameOverSubtittle;\r\n    }\r\n    Start() {\r\n       
+    this.tittleTxt.text = this.gameOverTittle;\r\n        this.subtittleTxt.text
+    = this.gameOverSubtittle;\r\n        this.retryButton.onClick.AddListener(this.RetryBtnAction);\r\n   
+    }\r\n    RetryBtnAction() {\r\n        UnityEngine_SceneManagement_1.SceneManager.LoadScene(UnityEngine_SceneManagement_1.SceneManager.GetActiveScene().name);\r\n   
+    }\r\n}\r\nexports.default = GameOverScreen;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR2FtZU92ZXJTY3JlZW4uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJHYW1lT3ZlclNjcmVlbi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUVBLDZFQUEyRDtBQUUzRCxpREFBcUQ7QUFFckQsTUFBcUIsY0FBZSxTQUFRLHFDQUFxQjtJQUFqRTs7UUFFVyxtQkFBYyxHQUFXLFdBQVcsQ0FBQyxDQUFDLGtCQUFrQjtRQUN4RCxzQkFBaUIsR0FBVyxhQUFhLENBQUMsQ0FBQyx5Q0FBeUM7SUF5Qi9GLENBQUM7SUFuQkcsVUFBVTtRQUVOLElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQyxjQUFjLENBQUM7UUFDMUMsSUFBSSxDQUFDLFlBQVksQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDLGlCQUFpQixDQUFDO0lBQ3BELENBQUM7SUFFRCxLQUFLO1FBRUQsSUFBSSxDQUFDLFNBQVMsQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDLGNBQWMsQ0FBQztRQUMxQyxJQUFJLENBQUMsWUFBWSxDQUFDLElBQUksR0FBRyxJQUFJLENBQUMsaUJBQWlCLENBQUM7UUFFaEQsSUFBSSxDQUFDLFdBQVcsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLElBQUksQ0FBQyxjQUFjLENBQUMsQ0FBQztJQUM5RCxDQUFDO0lBRUQsY0FBYztRQUVWLDBDQUFZLENBQUMsU0FBUyxDQUFDLDBDQUFZLENBQUMsY0FBYyxFQUFFLENBQUMsSUFBSSxDQUFDLENBQUM7SUFDL0QsQ0FBQztDQUVKO0FBNUJELGlDQTRCQyJ9","assetPath":"Assets/Scripts/GameOverScreen.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"gameOverTittle","type":"System.String","isArray":false,"initValue":["Game
+    Over"],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"gameOverSubtittle","type":"System.String","isArray":false,"initValue":["Time
+    is up!"],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"retryButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"Unity.TextMeshPro","name":"tittleTxt","type":"TMPro.TextMeshProUGUI","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"Unity.TextMeshPro","name":"subtittleTxt","type":"TMPro.TextMeshProUGUI","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"GameOverScreen","description":""},"isCompiled":true}'
+  typescriptHash: 643ec8722bd42597987797eab90e5708
+  onlyWriteTrigger: 0
