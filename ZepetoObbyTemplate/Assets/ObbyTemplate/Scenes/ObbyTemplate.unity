@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.10569621, g: 0.722582, b: 1.0185555, a: 1}
+  m_IndirectSpecularColor: {r: 0.10569621, g: 0.72258204, b: 1.0185555, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3066,7 +3066,7 @@ MonoBehaviour:
     values:
     - '{"type":"System.Boolean, mscorlib","value":"True"}'
     - 
-    - '{"type":"System.Single, mscorlib","value":"3"}'
+    - '{"type":"System.Single, mscorlib","value":"90"}'
     - 
     - 
     - 
