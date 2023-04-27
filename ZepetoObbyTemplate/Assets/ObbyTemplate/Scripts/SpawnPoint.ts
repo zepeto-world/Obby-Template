@@ -7,7 +7,7 @@ import GameSettings from './GameSettings';
 export default class SpawnPoint extends ZepetoScriptBehaviour {
 
     public particleSystem: GameObject;
-    private activeCheckpoint: bool = false;
+    private activeCheckpoint: bool = false; 
     private obbyManager: GameObject;
 
     OnTriggerEnter(collider: Collider)
