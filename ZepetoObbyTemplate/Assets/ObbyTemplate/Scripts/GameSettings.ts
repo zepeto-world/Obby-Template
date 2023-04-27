@@ -4,12 +4,16 @@ import { ZepetoCharacter, ZepetoPlayers } from 'ZEPETO.Character.Controller'
 import { LoadingStatus } from 'ZEPETO.Character.Controller.ZepetoCharacter';
 import TimerManager from './TimerManager';
 import { InputAction, InputActionAsset } from 'UnityEngine.InputSystem';
+import StartScreen from './StartScreen';
+import CharacterController from './CharacterController';
 
 export default class GameSettings extends ZepetoScriptBehaviour
 {
     public static instance: GameSettings;
 
     @HideInInspector() public zepetoCharacter: ZepetoCharacter; //Reference of Zepeto Character
+    public characterController: GameObject; //Reference of Character spawner
+    public canvasTransform: Transform; //Reference of canvas
 
     @Header("Timer Settings")
     public gameDuration: number; // Duration in seconds
@@ -18,6 +22,7 @@ export default class GameSettings extends ZepetoScriptBehaviour
     @SerializeField() private _timerScreenPrefab: GameObject; //Timer prefab reference
     @SerializeField() private _victoryScreenPrefab: GameObject; //Victory screen prefab reference
     @SerializeField() private _gameOverScreenPrefab: GameObject; //GameOver screen prefab reference
+    @SerializeField() private _startScreenPrefab: GameObject; //Start screen prefab reference
 
     private _timerManager: TimerManager; //Timer Manager reference
     Awake()
@@ -30,13 +35,18 @@ export default class GameSettings extends ZepetoScriptBehaviour
 
     Start()
     {
-        ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(() =>
-        {
+        let startScreenObj = GameObject.Instantiate(this._startScreenPrefab, this.canvasTransform) as StartScreen; //Load start screen in game
+    } 
+
+    CloseStartAlert()
+    {
+        this.characterController.GetComponent<CharacterController>().SpawnCharacter();
+
+        ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(() => {
             this.zepetoCharacter = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character; //Save Zepeto's character reference
 
-            if (this._useTimer)
-            {
-                let timerScreenObj = GameObject.Instantiate(this._timerScreenPrefab) as GameObject; //Load timer screen in game
+            if (this._useTimer) {
+                let timerScreenObj = GameObject.Instantiate(this._timerScreenPrefab, this.canvasTransform) as GameObject; //Load timer screen in game
                 this._timerManager = timerScreenObj.GetComponent<TimerManager>();
                 this._timerManager.SetTimer(this.gameDuration); //Set timer settings
             }
@@ -46,11 +56,11 @@ export default class GameSettings extends ZepetoScriptBehaviour
     OnVictory(): void
     {
         this._timerManager.StopTimer();
-        let victoryScreenObj = GameObject.Instantiate(this._victoryScreenPrefab, this._timerManager.transform) as GameObject; //Load Win Screen in game
+        let victoryScreenObj = GameObject.Instantiate(this._victoryScreenPrefab, this.canvasTransform) as GameObject; //Load Win Screen in game
     }
 
     OnGameOver(): void
     {
-        let gameOverScreenObj = GameObject.Instantiate(this._gameOverScreenPrefab, this._timerManager.transform) as GameObject; //Load GameOver screen in game
+        let gameOverScreenObj = GameObject.Instantiate(this._gameOverScreenPrefab, this.canvasTransform) as GameObject; //Load GameOver screen in game
     }
 }
