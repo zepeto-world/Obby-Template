@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/ObbyTemplate/Scenes/ObbyTemplate.unity
+    guid: dbd85058be286f34da2adb8a105e7977
   m_configObjects: {}

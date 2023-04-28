@@ -66,6 +66,7 @@ export default class TimerManager extends ZepetoScriptBehaviour
     private OnGameOver(): void
     {
         Debug.Log("Game Over");
+        this.remainingTxt.text = "00";
         GameSettings.instance.OnGameOver();
     }
 
