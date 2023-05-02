@@ -1,4 +1,4 @@
-import { Debug, GameObject, ParticleSystem, Transform } from 'UnityEngine';
+import { Debug, GameObject, ParticleSystem, Transform, Vector3 } from 'UnityEngine';
 import { UnityEvent } from 'UnityEngine.Events'
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import { ZepetoCharacter, ZepetoPlayers } from 'ZEPETO.Character.Controller'
@@ -12,24 +12,19 @@ export default class ObbyGameManager extends ZepetoScriptBehaviour {
 
     private currentCheckpoint: SpawnPoint; //Last saved checkpoint
 
-    Awake()
-    {
+    Awake() {
         if (ObbyGameManager.instance == null) ObbyGameManager.instance = this;
         else
             GameObject.Destroy(this);
     }
 
-    Start()
-    {
+    Start() {
         Debug.Log(GameSettings.instance.gameDuration);
     }
 
-    Update()
-    {
-        if (GameSettings.instance.zepetoCharacter != null)
-        {
-            if (GameSettings.instance.zepetoCharacter.transform.position.y < -20)
-            {
+    Update() {
+        if (GameSettings.instance.zepetoCharacter != null) {
+            if (GameSettings.instance.zepetoCharacter.transform.position.y < -20) {
                 GameSettings.instance.zepetoCharacter.transform.position = this.currentCheckpoint.transform.position;
                 this.TeleportCharacter();
                 return;
@@ -40,16 +35,14 @@ export default class ObbyGameManager extends ZepetoScriptBehaviour {
     /// <summary>
     /// Save new checkpoint
     /// </summary>
-    UpdateCheckpoint(newCheckpoint: SpawnPoint)
-    {
+    UpdateCheckpoint(newCheckpoint: SpawnPoint) {
         this.currentCheckpoint = newCheckpoint;
     }
 
     /// <summary>
     /// Teleport the character to last checkpoint pos
     /// </summary>
-    TeleportCharacter()
-    {
+    TeleportCharacter() {
         GameSettings.instance.zepetoCharacter.Teleport(this.currentCheckpoint.transform.position, GameSettings.instance.zepetoCharacter.transform.rotation);
         this.currentCheckpoint.particleSystem.GetComponent<ParticleSystem>().Emit(10);
     }

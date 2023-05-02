@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 102cb5c60f2df9149a2a2a9574c639ae
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    SpawnPoint_1 = require(\"./SpawnPoint\");\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nclass
+    LevelScript extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Spawn() {\r\n       
+    return this.spawnGameObject.GetComponent($typeof(SpawnPoint_1.default));\r\n   
+    }\r\n}\r\nexports.default = LevelScript;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTGV2ZWxTY3JpcHQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJMZXZlbFNjcmlwdC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFxRDtBQUNyRCw2Q0FBcUM7QUFDckMsNkNBQWtEO0FBRWxELE1BQXFCLFdBQVksU0FBUSxxQ0FBcUI7SUFFbkQsS0FBSztRQUNSLE9BQU8sSUFBSSxDQUFDLGVBQWUsQ0FBQyxZQUFZLFNBQUMsb0JBQVUsR0FBSTtJQUMzRCxDQUFDO0NBRUo7QUFORCw4QkFNQyJ9","assetPath":"Assets/ObbyTemplate/Scripts/LevelScript.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"spawnGameObject","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]}],"name":"LevelScript","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: b4e609f24b2422b17048384b7b222a78
+  onlyWriteTrigger: 0

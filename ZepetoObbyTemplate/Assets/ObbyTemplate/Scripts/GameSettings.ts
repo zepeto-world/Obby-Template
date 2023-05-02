@@ -1,4 +1,4 @@
-import { GameObject, Input, KeyCode, Time, Transform} from 'UnityEngine';
+import { GameObject, Input, KeyCode, Time, Transform, Vector3 } from 'UnityEngine';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import { ZepetoCharacter, ZepetoPlayers } from 'ZEPETO.Character.Controller'
 import { LoadingStatus } from 'ZEPETO.Character.Controller.ZepetoCharacter';
@@ -6,9 +6,11 @@ import TimerManager from './TimerManager';
 import { InputAction, InputActionAsset } from 'UnityEngine.InputSystem';
 import StartScreen from './StartScreen';
 import CharacterController from './CharacterController';
+import ObbyGameManager from './ObbyGameManager';
+import SpawnPoint from './SpawnPoint';
+import LevelScript from './LevelScript';
 
-export default class GameSettings extends ZepetoScriptBehaviour
-{
+export default class GameSettings extends ZepetoScriptBehaviour {
     public static instance: GameSettings;
 
     @HideInInspector() public zepetoCharacter: ZepetoCharacter; //Reference of Zepeto Character
@@ -16,30 +18,35 @@ export default class GameSettings extends ZepetoScriptBehaviour
     public canvasTransform: Transform; //Reference of canvas
 
     @Header("Timer Settings")
-    public gameDuration: number; // Duration in seconds
     @SerializeField() private _useTimer: boolean = false; //If this value is true, an object will be created with the timer.
+    public gameDuration: number; // Duration in seconds
+    private _timerManager: TimerManager; //Timer Manager reference
 
+    @Header("Prefabs")
     @SerializeField() private _timerScreenPrefab: GameObject; //Timer prefab reference
     @SerializeField() private _victoryScreenPrefab: GameObject; //Victory screen prefab reference
     @SerializeField() private _gameOverScreenPrefab: GameObject; //GameOver screen prefab reference
     @SerializeField() private _startScreenPrefab: GameObject; //Start screen prefab reference
+    public levels: GameObject[];
 
-    private _timerManager: TimerManager; //Timer Manager reference
-    Awake()
-    {
+
+    @Header("Actual Level")
+    public _level: GameObject;
+    private _actualLevel = 0;
+
+    Awake() {
         //Singleton
         if (GameSettings.instance == null) GameSettings.instance = this;
         else
             GameObject.Destroy(this);
     }
 
-    Start()
-    {
+    Start() {
+        this._level = GameObject.Instantiate(this.levels[this._actualLevel]) as GameObject;
         let startScreenObj = GameObject.Instantiate(this._startScreenPrefab, this.canvasTransform) as StartScreen; //Load start screen in game
-    } 
+    }
 
-    CloseStartAlert()
-    {
+    CloseStartAlert() {
         this.characterController.GetComponent<CharacterController>().SpawnCharacter();
 
         ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(() => {
@@ -53,14 +60,19 @@ export default class GameSettings extends ZepetoScriptBehaviour
         });
     }
 
-    OnVictory(): void
-    {
+    OnVictory(): void {
         this._timerManager.StopTimer();
         let victoryScreenObj = GameObject.Instantiate(this._victoryScreenPrefab, this.canvasTransform) as GameObject; //Load Win Screen in game
     }
 
-    OnGameOver(): void
-    {
+    OnGameOver(): void {
         let gameOverScreenObj = GameObject.Instantiate(this._gameOverScreenPrefab, this.canvasTransform) as GameObject; //Load GameOver screen in game
+    }
+
+    public NextLevel() {
+        GameObject.Destroy(this._level);
+        this._actualLevel++;
+        this._level = GameObject.Instantiate(this.levels[this._actualLevel]) as GameObject;
+        ObbyGameManager.instance.UpdateCheckpoint(this._level.GetComponent<LevelScript>().Spawn());
     }
 }

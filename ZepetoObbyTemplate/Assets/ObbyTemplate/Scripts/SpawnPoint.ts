@@ -7,19 +7,16 @@ import GameSettings from './GameSettings';
 export default class SpawnPoint extends ZepetoScriptBehaviour {
 
     public particleSystem: GameObject;
-    private activeCheckpoint: bool = false; 
+    private activeCheckpoint: bool = false;
     private obbyManager: GameObject;
 
-    OnTriggerEnter(collider: Collider)
-    {
+    OnTriggerEnter(collider: Collider) {
         if (GameSettings.instance.zepetoCharacter == null || collider.gameObject != GameSettings.instance.zepetoCharacter.gameObject)
             return;
 
-        if (!this.activeCheckpoint)
-        {
+        if (!this.activeCheckpoint) {
             this.activeCheckpoint = true;
             ObbyGameManager.instance.UpdateCheckpoint(this);
         }
     }
-
 }
