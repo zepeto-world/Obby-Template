@@ -25,7 +25,7 @@ Name |  Functionality
 `Start Screen Screen Prefab`| Reference to the Start Screen Prefab, you can edit it from this location
 `Levels`| This is the list of level prefabs, they appears on the order of the list.
  
- <img width="700" alt="image" src="./Docs/Images/Cap_1.png">
+ <img width="700" alt="image" src="./Docs/Images/Cap_1.png"></img>
  
 - **ObbyManager:** This script is very important for the functioning of the Obby template. Check that it is in scene.
 
