@@ -21,7 +21,7 @@ Name |  Functionality
 `Is Distance Meter` | Value only available for RunnerTemplate
 `Timer Screen Prefab`| Reference to the timer prefab, you can edit it from this location.
 `Victory Screen Prefab`| Reference to the victory prefab, you can edit it from this location
- <img width="700" alt="image" src="./docs/Images/Cap_1.png">          
+ <img width="700" alt="image" src="./Docs/Images/Cap_1.png">          
 - **ObbyManager:** This script is very important for the functioning of the Obby template. Check that it is in scene.
 
 
