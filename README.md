@@ -52,9 +52,7 @@ Additionally, make sure that the object does not have the Static option enabled.
 <img width="700" alt="image" src="./Docs/Images/Cap_8.png"> </img> 
 
 #### *Fall Platform Structure:* 
-
-
-<img width="700" alt="image" src="./Docs/Images/Cap_9.png"></img>   
+<br /><img width="700" alt="image" src="./Docs/Images/Cap_9.png"></img>   
 
 |||
 | ------------ | ------------ |
@@ -72,9 +70,7 @@ This platform can move along any axis setting the amount of movement that you wa
 <img width="700" alt="image" src="./Docs/Images/Cap_12.png"></img>
 
 - **Level Prefab:**
-
-
-<img width="700" alt="image" src="./Docs/Images/Cap_13.png"></img> 
+<br /><img width="700" alt="image" src="./Docs/Images/Cap_13.png"></img> 
 The level prefab contains a complete level, wich will be added to the "Levels"  array in "GameSettings".
 Also the prefab have a "Level" script that have the SpawnPoint of the level.
 <img width="700" alt="image" src="./Docs/Images/Cap_14.png"></img> 
