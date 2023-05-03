@@ -6,19 +6,17 @@ import GameSettings from './GameSettings';
 export default class StartScreen extends ZepetoScriptBehaviour {
 
     public mainButton: Button;
-     
-    Start()
-    {
-        this.mainButton.onClick.AddListener(() =>
-        {
-            this.OnClick(); 
+
+    Start() {
+        this.mainButton.onClick.AddListener(() => {
+            this.OnClick();
         });
     }
 
-    OnClick() : void
-    {
+    OnClick(): void {
         GameSettings.instance.CloseStartAlert();
         GameObject.Destroy(this.gameObject);
+        GameSettings.instance.canWin = true;
     }
 
 }

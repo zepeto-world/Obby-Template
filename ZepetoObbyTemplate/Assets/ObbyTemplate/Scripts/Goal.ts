@@ -7,13 +7,12 @@ export default class Goal extends ZepetoScriptBehaviour {
 
     private used: boolean;
 
-    OnTriggerEnter(collider: Collider)
-    {
+    OnTriggerEnter(collider: Collider) {
         if (GameSettings.instance.zepetoCharacter == null || collider.gameObject != GameSettings.instance.zepetoCharacter.gameObject)
             return;
 
-        if (!this.used) {
-        GameSettings.instance.OnVictory();
+        if (!this.used && GameSettings.instance.canWin) {
+            GameSettings.instance.OnVictory();
             this.used = true;
         }
     }

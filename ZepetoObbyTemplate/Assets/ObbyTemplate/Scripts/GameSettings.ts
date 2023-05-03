@@ -12,7 +12,7 @@ import LevelScript from './LevelScript';
 
 export default class GameSettings extends ZepetoScriptBehaviour {
     public static instance: GameSettings;
-
+    @HideInInspector() public canWin: bool;
     @HideInInspector() public zepetoCharacter: ZepetoCharacter; //Reference of Zepeto Character
     public characterController: GameObject; //Reference of Character spawner
     public canvasTransform: Transform; //Reference of canvas
@@ -59,10 +59,13 @@ export default class GameSettings extends ZepetoScriptBehaviour {
             }
         });
     }
-
+    public ResetTimer():void{
+        this._timerManager.SetTimer(this.gameDuration); //Set timer settings
+    }
     OnVictory(): void {
         this._timerManager.StopTimer();
         let victoryScreenObj = GameObject.Instantiate(this._victoryScreenPrefab, this.canvasTransform) as GameObject; //Load Win Screen in game
+        this.canWin = false;
     }
 
     OnGameOver(): void {
@@ -72,8 +75,11 @@ export default class GameSettings extends ZepetoScriptBehaviour {
     public NextLevel() {
         GameObject.Destroy(this._level);
         this._actualLevel++;
+        if (this._actualLevel > this.levels.Length) this._actualLevel = 0;
         this._level = GameObject.Instantiate(this.levels[this._actualLevel]) as GameObject;
         ObbyGameManager.instance.UpdateCheckpoint(this._level.GetComponent<LevelScript>().Spawn());
         ObbyGameManager.instance.TeleportCharacter();
+        this.ResetTimer();
+        this.canWin = true;
     }
 }
