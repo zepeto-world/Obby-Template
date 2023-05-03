@@ -29,13 +29,10 @@ Name |  Functionality
 
 
 ## 🚧 Builds
-- **Spawn Platform:** This is the first platform, it is used as the base of spawn.
- <img width="700" alt="image" src="./Docs/Images/Cap_2.png">  
-- **Death Road:** This is a sample for the death system. 
-- <img width="700" alt="image" src="./Docs/Images/Cap_3.png">
-- <img width="700" alt="image" src="./Docs/Images/Cap_4.png">  
-- **Teleport:** This is responsible for sending the player to the last saved position.You can edit the hitbox with the box collider
-- <img width="700" alt="image" src="./Docs/Images/Cap_5.png">  
+- **Spawn Platform:** This is the first platform, it is used as the base of spawn. <img width="700" alt="image" src="./Docs/Images/Cap_2.png">  
+ 
+- **Death Road:** This is a sample for the death system.  <img width="700" alt="image" src="./Docs/Images/Cap_3.png">  <img width="700" alt="image" src="./Docs/Images/Cap_4.png">  
+- **Teleport:** This is responsible for sending the player to the last saved position.You can edit the hitbox with the box collider <img width="700" alt="image" src="./Docs/Images/Cap_5.png">  
 - **Fall Platform Builder:** Use the ***FallPlatformBuilder*** component to build platforms that fall. 
 Add it to the scene and then add the object you want as a child of the prefab.
 
