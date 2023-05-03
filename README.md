@@ -52,6 +52,7 @@ Additionally, make sure that the object does not have the Static option enabled.
 <img width="700" alt="image" src="./Docs/Images/Cap_8.png"> </img> 
 
 #### *Fall Platform Structure:*
+
 <img width="700" alt="image" src="./Docs/Images/Cap_9.png"> </img> 
 |||
 | ------------ | ------------ |
