@@ -30,9 +30,9 @@ export default class GameSettings extends ZepetoScriptBehaviour {
     public levels: GameObject[];
 
 
-    @Header("Actual Level")
-    public _level: GameObject;
-    private _actualLevel = 0;
+    // @Header("Actual Level")
+    private _level: GameObject;
+    private _actualLevel: int = 0;
 
     Awake() {
         //Singleton
