@@ -74,5 +74,6 @@ export default class GameSettings extends ZepetoScriptBehaviour {
         this._actualLevel++;
         this._level = GameObject.Instantiate(this.levels[this._actualLevel]) as GameObject;
         ObbyGameManager.instance.UpdateCheckpoint(this._level.GetComponent<LevelScript>().Spawn());
+        ObbyGameManager.instance.TeleportCharacter();
     }
 }

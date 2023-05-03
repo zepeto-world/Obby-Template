@@ -24,15 +24,18 @@ export default class VictoryScreen extends ZepetoScriptBehaviour {
         this.subtittleTxt.text = this.victorySubtittle;
 
         this.resetButton.onClick.AddListener(this.ResetBtnAction);
-        this.nextLevelButton.onClick.AddListener(this.NextLevelBtnAction);
+        this.nextLevelButton.onClick.AddListener(() => 
+        {
+            this.NextLevelBtnAction()
+        });
     }
 
     ResetBtnAction(): void {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    NextLevelBtnAction():void{
+    NextLevelBtnAction(): void {
         GameSettings.instance.NextLevel();
-        GameObject.Destroy(this.gameObject,1);
+        GameObject.Destroy(this.gameObject);
     }
 }
