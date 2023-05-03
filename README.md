@@ -52,13 +52,13 @@ Additionally, make sure that the object does not have the Static option enabled.
 <img width="700" alt="image" src="./Docs/Images/Cap_8.png"> </img> 
 
 #### *Fall Platform Structure:* 
+<p><img width="700" alt="image" src="./Docs/Images/Cap_9.png"></img>   
 
 |||
 | ------------ | ------------ |
 |  `Box Collider` |  Used to detect the player |
 |   `Rigidbody` |Used to realize the fall of the platform   |
-|  ` FallPlatform Script` | **Fall Delay:** Time it takes to start falling.  **Respawn Delay:** Time it takes to respawn  |
- <img width="700" alt="image" src="./Docs/Images/Cap_9.png"> </img>                
+|  ` FallPlatform Script` | **Fall Delay:** Time it takes to start falling.  **Respawn Delay:** Time it takes to respawn  |             
 
 - **Goal Platform:** This platform is used as a goal, add it at the end of the level.
 When the player passes over it a victory tab will appear.
@@ -70,7 +70,7 @@ This platform can move along any axis setting the amount of movement that you wa
 <img width="700" alt="image" src="./Docs/Images/Cap_12.png"></img>
 
 - **Level Prefab:**
-<img width="700" alt="image" src="./Docs/Images/Cap_13.png"></img> 
+<p><img width="700" alt="image" src="./Docs/Images/Cap_13.png"></img> 
 The level prefab contains a complete level, wich will be added to the "Levels"  array in "GameSettings".
 Also the prefab have a "Level" script that have the SpawnPoint of the level.
 <img width="700" alt="image" src="./Docs/Images/Cap_14.png"></img> 
