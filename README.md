@@ -51,14 +51,14 @@ corresponding dimensions of the object.
 Additionally, make sure that the object does not have the Static option enabled.
 <img width="700" alt="image" src="./Docs/Images/Cap_8.png"> </img> 
 
-#### *Fall Platform Structure:* <p>\n</p>
-<img width="700" alt="image" src="./Docs/Images/Cap_9.png"> </img> 
+#### *Fall Platform Structure:* 
+
 |||
 | ------------ | ------------ |
 |  `Box Collider` |  Used to detect the player |
 |   `Rigidbody` |Used to realize the fall of the platform   |
 |  ` FallPlatform Script` | **Fall Delay:** Time it takes to start falling.  **Respawn Delay:** Time it takes to respawn  |
-                    
+ <img width="700" alt="image" src="./Docs/Images/Cap_9.png"> </img>                
 
 - **Goal Platform:** This platform is used as a goal, add it at the end of the level.
 When the player passes over it a victory tab will appear.
