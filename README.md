@@ -36,17 +36,20 @@ Name |  Functionality
 - **Death Road:** This is a sample for the death system.  <img width="700" alt="image" src="./Docs/Images/Cap_3.png">  <img width="700" alt="image" src="./Docs/Images/Cap_4.png">  
 - **Teleport:** This is responsible for sending the player to the last saved position.You can edit the hitbox with the box collider <img width="700" alt="image" src="./Docs/Images/Cap_5.png">  
 - **Fall Platform Builder:** 
+<img width="700" alt="image" src="./Docs/Images/Cap_6.png"> </img>
 
 Use the ***FallPlatformBuilder*** component to build platforms that fall. 
 Add it to the scene and then add the object you want as a child of the prefab.
 
 Make sure the object you add contains the BoxCollider component with the
 corresponding dimensions of the object.
+<img width="700" alt="image" src="./Docs/Images/Cap_7.png"> </img> 
 
 Additionally, make sure that the object does not have the Static option enabled.
-
+<img width="700" alt="image" src="./Docs/Images/Cap_8.png"> </img> 
 
 #### *Fall Platform Structure:*
+<img width="700" alt="image" src="./Docs/Images/Cap_9.png"> </img> 
 |||
 | ------------ | ------------ |
 |  `Box Collider` |  Used to detect the player |
@@ -56,4 +59,18 @@ Additionally, make sure that the object does not have the Static option enabled.
 
 - **Goal Platform:** This platform is used as a goal, add it at the end of the level.
 When the player passes over it a victory tab will appear.
+<img width="700" alt="image" src="./Docs/Images/Cap_10.png"></img>
 
+- **Move Platform:**
+<img width="700" alt="image" src="./Docs/Images/Cap_11.png"></img> 
+This platform can move along any axis setting the amount of movement that you want to the platform do and in how much time it takes to go back.
+<img width="700" alt="image" src="./Docs/Images/Cap_12.png"></img>
+
+- **Level Prefab:**
+<img width="700" alt="image" src="./Docs/Images/Cap_13.png"></img> 
+The level prefab contains a complete level, wich will be added to the "Levels"  array in "GameSettings".
+Also the prefab have a "Level" script that have the SpawnPoint of the level.
+<img width="700" alt="image" src="./Docs/Images/Cap_14.png"></img> 
+
+- **Check Point Prefab:** This is a empty gameObject that will be the check point to teleport the player when he loses.
+<img width="700" alt="image" src="./Docs/Images/Cap_15.png"></img> 
