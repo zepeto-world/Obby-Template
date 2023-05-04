@@ -16,7 +16,7 @@ export default class StartScreen extends ZepetoScriptBehaviour {
     OnClick(): void {
         GameSettings.instance.CloseStartAlert();
         GameObject.Destroy(this.gameObject);
-        GameSettings.instance.canWin = true;
+        GameSettings.instance.StartGame();
     }
 
 }

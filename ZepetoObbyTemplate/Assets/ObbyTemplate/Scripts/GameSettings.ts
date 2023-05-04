@@ -1,4 +1,4 @@
-import { GameObject, Input, KeyCode, Time, Transform, Vector3 } from 'UnityEngine';
+import { Debug, GameObject, Input, KeyCode, Time, Transform, Vector3 } from 'UnityEngine';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import { ZepetoCharacter, ZepetoPlayers } from 'ZEPETO.Character.Controller'
 import { LoadingStatus } from 'ZEPETO.Character.Controller.ZepetoCharacter';
@@ -9,6 +9,7 @@ import CharacterController from './CharacterController';
 import ObbyGameManager from './ObbyGameManager';
 import SpawnPoint from './SpawnPoint';
 import LevelScript from './LevelScript';
+import { SceneManager } from 'UnityEngine.SceneManagement';
 
 export default class GameSettings extends ZepetoScriptBehaviour {
     public static instance: GameSettings;
@@ -32,6 +33,9 @@ export default class GameSettings extends ZepetoScriptBehaviour {
 
     // @Header("Actual Level")
     private _level: GameObject;
+    public get ActualLevel(): int {
+        return this._actualLevel;
+    }
     private _actualLevel: int = 0;
 
     Awake() {
@@ -47,20 +51,26 @@ export default class GameSettings extends ZepetoScriptBehaviour {
     }
 
     CloseStartAlert() {
+        if (this._timerManager) {
+            this._timerManager.SetTimer(this.gameDuration); //Set timer settings
+            return;
+        }
         this.characterController.GetComponent<CharacterController>().SpawnCharacter();
 
         ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(() => {
             this.zepetoCharacter = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character; //Save Zepeto's character reference
 
             if (this._useTimer) {
+
                 let timerScreenObj = GameObject.Instantiate(this._timerScreenPrefab, this.canvasTransform) as GameObject; //Load timer screen in game
                 this._timerManager = timerScreenObj.GetComponent<TimerManager>();
                 this._timerManager.SetTimer(this.gameDuration); //Set timer settings
             }
         });
     }
-    public ResetTimer():void{
-        this._timerManager.SetTimer(this.gameDuration); //Set timer settings
+    public StartGame(): void {
+        if (this._timerManager) this._timerManager.SetTimer(this.gameDuration); //Set timer settings
+        this.canWin = true;
     }
     OnVictory(): void {
         this._timerManager.StopTimer();
@@ -75,11 +85,13 @@ export default class GameSettings extends ZepetoScriptBehaviour {
     public NextLevel() {
         GameObject.Destroy(this._level);
         this._actualLevel++;
-        if (this._actualLevel > this.levels.Length) this._actualLevel = 0;
+        if (this._actualLevel >= this.levels.Length) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            return;
+        }
         this._level = GameObject.Instantiate(this.levels[this._actualLevel]) as GameObject;
         ObbyGameManager.instance.UpdateCheckpoint(this._level.GetComponent<LevelScript>().Spawn());
         ObbyGameManager.instance.TeleportCharacter();
-        this.ResetTimer();
-        this.canWin = true;
+        let startScreenObj = GameObject.Instantiate(this._startScreenPrefab, this.canvasTransform) as StartScreen; //Load start screen in game
     }
 }

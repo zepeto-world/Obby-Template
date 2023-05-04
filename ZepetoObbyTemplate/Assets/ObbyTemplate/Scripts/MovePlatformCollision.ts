@@ -4,7 +4,7 @@ import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 
 export default class MovePlatformCollision extends ZepetoScriptBehaviour {
     private player: ZepetoCharacter;
-
+    private isPlayer: bool;
     OnTriggerEnter(collider: Collider) {
         this.player = collider.GetComponent<ZepetoCharacter>();
         if (this.player) {
@@ -12,10 +12,11 @@ export default class MovePlatformCollision extends ZepetoScriptBehaviour {
             this.player.transform.SetParent(this.transform);
         }
     }
+
     OnTriggerExit(collider: Collider) {
         var _player = collider.GetComponent<ZepetoCharacter>();
         if (_player) {
-            this.player.transform.parent = null;
+            _player.transform.parent = null;
             this.player = null;
         }
     }

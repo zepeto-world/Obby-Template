@@ -858,7 +858,6 @@ MonoBehaviour:
     - _startScreenPrefab
     - canvasTransform
     - levels
-    - _level
     unityValues:
     - {fileID: 0}
     - {fileID: 9037170854677153438, guid: 76b95f430c228da4c9f576159082dd56, type: 3}
@@ -869,7 +868,6 @@ MonoBehaviour:
     - {fileID: 4453706167620401238, guid: cce13ea7e0198c744823c4bd04147553, type: 3}
     - {fileID: 1387780688}
     - {fileID: 0}
-    - {fileID: 0}
     values:
     - '{"type":"System.Boolean, mscorlib","value":"True"}'
     - 
@@ -879,12 +877,12 @@ MonoBehaviour:
     - 
     - 
     - 
-    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":2,\"type\":\"UnityEngine.Object,
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":3,\"type\":\"UnityEngine.GameObject,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
-    - 
     unityArrayValues:
     - {fileID: 8408841874206348625, guid: bff9ecd4493b09846b44110388e5d651, type: 3}
-    - {fileID: 5578478086686508586, guid: f7735ff6ac0ed11458d8d98fbc4254e4, type: 3}
+    - {fileID: 8408841874206348625, guid: 814d564e377f826498909f3dcebd4b40, type: 3}
+    - {fileID: 8408841874206348625, guid: a368158869cefc2418041c326a43788b, type: 3}
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: bf8ebc80ee02fa14788274f198d142c6, type: 3}
     isExpaned: 0
