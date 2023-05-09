@@ -23,12 +23,14 @@ ScriptedImporter:
     ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
     ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass MovePlatformCollision
     extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    OnTriggerEnter(collider)
-    {\r\n        this.player = collider.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter));\r\n       
-    if (this.player) {\r\n            UnityEngine_1.Debug.Log(\"SETTING PARENT: \"
-    + collider.name);\r\n            this.player.transform.SetParent(this.transform);\r\n       
+    {\r\n        this._player = collider.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter));\r\n       
+    // When the player touches the platform, they become a child of the platform
+    to maintain the movement and prevent the players from sliding and falling\r\n       
+    if (this._player) {\r\n            this._player.transform.SetParent(this.transform);\r\n       
     }\r\n    }\r\n    OnTriggerExit(collider) {\r\n        var _player = collider.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter));\r\n       
-    if (_player) {\r\n            _player.transform.parent = null;\r\n           
-    this.player = null;\r\n        }\r\n    }\r\n}\r\nexports.default = MovePlatformCollision;\r\n//#
-    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTW92ZVBsYXRmb3JtQ29sbGlzaW9uLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiTW92ZVBsYXRmb3JtQ29sbGlzaW9uLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXlEO0FBQ3pELDZFQUE0RTtBQUM1RSxpREFBcUQ7QUFFckQsTUFBcUIscUJBQXNCLFNBQVEscUNBQXFCO0lBR3BFLGNBQWMsQ0FBQyxRQUFrQjtRQUM3QixJQUFJLENBQUMsTUFBTSxHQUFHLFFBQVEsQ0FBQyxZQUFZLFNBQUMsNkNBQWUsRUFBRyxDQUFDO1FBQ3ZELElBQUksSUFBSSxDQUFDLE1BQU0sRUFBRTtZQUNiLG1CQUFLLENBQUMsR0FBRyxDQUFDLGtCQUFrQixHQUFHLFFBQVEsQ0FBQyxJQUFJLENBQUMsQ0FBQztZQUM5QyxJQUFJLENBQUMsTUFBTSxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxDQUFDO1NBQ25EO0lBQ0wsQ0FBQztJQUVELGFBQWEsQ0FBQyxRQUFrQjtRQUM1QixJQUFJLE9BQU8sR0FBRyxRQUFRLENBQUMsWUFBWSxTQUFDLDZDQUFlLEVBQUcsQ0FBQztRQUN2RCxJQUFJLE9BQU8sRUFBRTtZQUNULE9BQU8sQ0FBQyxTQUFTLENBQUMsTUFBTSxHQUFHLElBQUksQ0FBQztZQUNoQyxJQUFJLENBQUMsTUFBTSxHQUFHLElBQUksQ0FBQztTQUN0QjtJQUNMLENBQUM7Q0FDSjtBQWxCRCx3Q0FrQkMifQ==","assetPath":"Assets/ObbyTemplate/Scripts/MovePlatformCollision.ts","manifest":{"properties":[],"name":"MovePlatformCollision","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: 5fdb51730154d90e897377673c742fc6
+    // Once the player leaves the platform, they return to the main state, with no
+    parents\r\n        if (_player) {\r\n            _player.transform.parent = null;\r\n           
+    this._player = null;\r\n        }\r\n    }\r\n}\r\nexports.default = MovePlatformCollision;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTW92ZVBsYXRmb3JtQ29sbGlzaW9uLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiTW92ZVBsYXRmb3JtQ29sbGlzaW9uLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXVDO0FBQ3ZDLDZFQUE4RDtBQUM5RCxpREFBcUQ7QUFFckQsTUFBcUIscUJBQXNCLFNBQVEscUNBQXFCO0lBR3BFLGNBQWMsQ0FBQyxRQUFrQjtRQUM3QixJQUFJLENBQUMsT0FBTyxHQUFHLFFBQVEsQ0FBQyxZQUFZLFNBQUMsNkNBQWUsRUFBRyxDQUFDO1FBQ3hELHNKQUFzSjtRQUN0SixJQUFJLElBQUksQ0FBQyxPQUFPLEVBQUU7WUFDZCxJQUFJLENBQUMsT0FBTyxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxDQUFDO1NBQ3BEO0lBQ0wsQ0FBQztJQUVELGFBQWEsQ0FBQyxRQUFrQjtRQUM1QixJQUFJLE9BQU8sR0FBRyxRQUFRLENBQUMsWUFBWSxTQUFDLDZDQUFlLEVBQUcsQ0FBQztRQUN2RCxzRkFBc0Y7UUFDdEYsSUFBSSxPQUFPLEVBQUU7WUFDVCxPQUFPLENBQUMsU0FBUyxDQUFDLE1BQU0sR0FBRyxJQUFJLENBQUM7WUFDaEMsSUFBSSxDQUFDLE9BQU8sR0FBRyxJQUFJLENBQUM7U0FDdkI7SUFDTCxDQUFDO0NBQ0o7QUFuQkQsd0NBbUJDIn0=","assetPath":"Assets/ObbyTemplate/Scripts/MovePlatformCollision.ts","manifest":{"properties":[],"name":"MovePlatformCollision","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 8a1b733266087c54f083e39a8782f282
   onlyWriteTrigger: 0

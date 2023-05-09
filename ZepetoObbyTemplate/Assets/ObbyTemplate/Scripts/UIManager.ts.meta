@@ -1,0 +1,40 @@
+fileFormatVersion: 2
+guid: f3e466cae2c705d4e894cb156c0ea808
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst TimerManager_1 = require(\"./TimerManager\");\r\nclass
+    UIManager extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor()
+    {\r\n        super(...arguments);\r\n        this._useTimer = false; //If this
+    value is true, an object will be created with the timer.\r\n    }\r\n    Awake()
+    {\r\n        // Singleton\r\n        if (ZEPETO_Script_1.ZepetoScriptBehaviour.op_Inequality(UIManager.Instance,
+    null))\r\n            UnityEngine_1.GameObject.Destroy(this.gameObject);\r\n       
+    UIManager.Instance = this;\r\n        // ---------\r\n        this.timerManager
+    = this._timer.GetComponent($typeof(TimerManager_1.default));\r\n    }\r\n   
+    OnStart() {\r\n        this._startScreen.SetActive(true);\r\n        this._victoryScreen.SetActive(false);\r\n       
+    this._gameOverScreen.SetActive(false);\r\n        this._timer.SetActive(false);\r\n   
+    }\r\n    OnStartGame() {\r\n        if (!this._useTimer)\r\n            return;\r\n       
+    this._timer.SetActive(true);\r\n        this.timerManager.SetTimer(this.gameDuration);\r\n   
+    }\r\n    OnVictory() {\r\n        this.timerManager.StopTimer();\r\n        this._victoryScreen.SetActive(true);\r\n   
+    }\r\n    OnGameOver() {\r\n        this._gameOverScreen.SetActive(true);\r\n   
+    }\r\n}\r\nexports.default = UIManager;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVUlNYW5hZ2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiVUlNYW5hZ2VyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXlDO0FBQ3pDLGlEQUFxRDtBQUNyRCxpREFBMEM7QUFFMUMsTUFBcUIsU0FBVSxTQUFRLHFDQUFxQjtJQUE1RDs7UUFVOEIsY0FBUyxHQUFZLEtBQUssQ0FBQyxDQUFDLGtFQUFrRTtJQWlDNUgsQ0FBQztJQTdCRyxLQUFLO1FBQ0QsWUFBWTtRQUNaLElBbkJDLHFDQUFxQixDQThDNCtLLGFBQWMsQ0EzQjVnTCxTQUFTLENBQUMsUUFBUSxFQUFJLElBQUk7WUFBRSx3QkFBVSxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsVUFBVSxDQUFDLENBQUM7UUFDcEUsU0FBUyxDQUFDLFFBQVEsR0FBRyxJQUFJLENBQUM7UUFDMUIsWUFBWTtRQUNaLElBQUksQ0FBQyxZQUFZLEdBQUcsSUFBSSxDQUFDLE1BQU0sQ0FBQyxZQUFZLFNBQUMsc0JBQVksRUFBRyxDQUFDO0lBQ2pFLENBQUM7SUFFRCxPQUFPO1FBQ0gsSUFBSSxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7UUFDbEMsSUFBSSxDQUFDLGNBQWMsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDckMsSUFBSSxDQUFDLGVBQWUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDdEMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7SUFDakMsQ0FBQztJQUVELFdBQVc7UUFDUCxJQUFJLENBQUMsSUFBSSxDQUFDLFNBQVM7WUFBRSxPQUFPO1FBQzVCLElBQUksQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO1FBQzVCLElBQUksQ0FBQyxZQUFZLENBQUMsUUFBUSxDQUFDLElBQUksQ0FBQyxZQUFZLENBQUMsQ0FBQztJQUNsRCxDQUFDO0lBRUQsU0FBUztRQUNMLElBQUksQ0FBQyxZQUFZLENBQUMsU0FBUyxFQUFFLENBQUM7UUFDOUIsSUFBSSxDQUFDLGNBQWMsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7SUFDeEMsQ0FBQztJQUVELFVBQVU7UUFDTixJQUFJLENBQUMsZUFBZSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUN6QyxDQUFDO0NBQ0o7QUEzQ0QsNEJBMkNDIn0=","assetPath":"Assets/ObbyTemplate/Scripts/UIManager.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"_gameOverScreen","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.CoreModule","name":"_victoryScreen","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.CoreModule","name":"_startScreen","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"UnityEngine.CoreModule","name":"_timer","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]},{"assembly":"mscorlib","name":"_useTimer","type":"System.Boolean","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"Header","args":["\"Timer
+    Settings\""]},{"name":"SerializeField","args":[]}]},{"assembly":"mscorlib","name":"gameDuration","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"","name":"timerManager","type":"P:/Work/Captivatar/ZEPETO/Obby_Interno/ZepetoObbyTemplate/Assets/ObbyTemplate/Scripts/TimerManager.default","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"UIManager","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 99f99e0c1d989d34f9eaacad1ddc503c
+  onlyWriteTrigger: 0

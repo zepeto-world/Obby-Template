@@ -92,24 +92,12 @@ MonoBehaviour:
   applyRootMotion: 0
   script:
     keys:
-    - tittleTxt
-    - subtittleTxt
-    - victoryTittle
-    - victorySubtittle
     - resetButton
     - nextLevelButton
     unityValues:
-    - {fileID: 7072721390875609785}
-    - {fileID: 3621657416703340896}
-    - {fileID: 0}
-    - {fileID: 0}
     - {fileID: 2652799673829033169}
     - {fileID: 8644098064788760824}
     values:
-    - 
-    - 
-    - '{"type":"System.String, mscorlib","value":"You win!"}'
-    - '{"type":"System.String, mscorlib","value":""}'
     - 
     - 
     unityArrayValues: []
@@ -423,7 +411,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Congratulations!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

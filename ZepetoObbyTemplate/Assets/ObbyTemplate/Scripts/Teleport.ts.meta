@@ -20,12 +20,11 @@ ScriptedImporter:
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
     { value: true });\r\nconst __UnityEngine__ = require(\"UnityEngine\");\r\nconst
-    UnityEngine_1 = require(\"UnityEngine\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
-    ObbyGameManager_1 = require(\"./ObbyGameManager\");\r\nconst GameSettings_1 =
-    require(\"./GameSettings\");\r\nclass Teleport extends ZEPETO_Script_1.ZepetoScriptBehaviour
-    {\r\n    OnTriggerEnter(collider) {\r\n        if (GameSettings_1.default.instance.zepetoCharacter
-    == null || __UnityEngine__.Object.op_Inequality(collider.gameObject, GameSettings_1.default.instance.zepetoCharacter.gameObject))\r\n           
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst ObbyGameManager_1 = require(\"./ObbyGameManager\");\r\nconst
+    GameSettings_1 = require(\"./GameSettings\");\r\nclass Teleport extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    OnTriggerEnter(collider) {\r\n        if (GameSettings_1.default.Instance.zepetoCharacter
+    == null || __UnityEngine__.Object.op_Inequality(collider.gameObject, GameSettings_1.default.Instance.zepetoCharacter.gameObject))\r\n           
     return;\r\n        this.TPPlayer();\r\n    }\r\n    TPPlayer() {\r\n        ObbyGameManager_1.default.instance.TeleportCharacter();\r\n   
-    }\r\n}\r\nexports.default = Teleport;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGVsZXBvcnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUZWxlcG9ydC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBQSw2Q0FBMEY7QUFFMUYsaURBQXFEO0FBQ3JELHVEQUFnRDtBQUNoRCxpREFBMEM7QUFFMUMsTUFBcUIsUUFBUyxTQUFRLHFDQUFxQjtJQUV2RCxjQUFjLENBQUMsUUFBa0I7UUFFN0IsSUFBSSxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxlQUFlLElBQUksSUFBSSwyQkFVeTJVLGFBQWMsQ0FWbjNVLFFBQVEsQ0FBQyxVQUFVLEVBQUksc0JBQVksQ0FBQyxRQUFRLENBQUMsZUFBZSxDQUFDLFVBQVUsQ0FBQTtZQUN4SCxPQUFPO1FBRVgsSUFBSSxDQUFDLFFBQVEsRUFBRSxDQUFDO0lBQ3BCLENBQUM7SUFFRCxRQUFRO1FBRUoseUJBQWUsQ0FBQyxRQUFRLENBQUMsaUJBQWlCLEVBQUUsQ0FBQztJQUNqRCxDQUFDO0NBQ0o7QUFkRCwyQkFjQyJ9","assetPath":"Assets/Scripts/Teleport.ts","manifest":{"properties":[],"name":"Teleport","description":""},"isCompiled":true}'
-  typescriptHash: 6239270272d96fce2a7677be4af13dda
+    }\r\n}\r\nexports.default = Teleport;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGVsZXBvcnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUZWxlcG9ydC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFDQSxpREFBcUQ7QUFDckQsdURBQWdEO0FBQ2hELGlEQUEwQztBQUUxQyxNQUFxQixRQUFTLFNBQVEscUNBQXFCO0lBRXZELGNBQWMsQ0FBQyxRQUFrQjtRQUU3QixJQUFJLHNCQUFZLENBQUMsUUFBUSxDQUFDLGVBQWUsSUFBSSxJQUFJLDJCQVUwK1UsYUFBYyxDQVZwL1UsUUFBUSxDQUFDLFVBQVUsRUFBSSxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxlQUFlLENBQUMsVUFBVSxDQUFBO1lBQ3hILE9BQU87UUFFWCxJQUFJLENBQUMsUUFBUSxFQUFFLENBQUM7SUFDcEIsQ0FBQztJQUVELFFBQVE7UUFFSix5QkFBZSxDQUFDLFFBQVEsQ0FBQyxpQkFBaUIsRUFBRSxDQUFDO0lBQ2pELENBQUM7Q0FDSjtBQWRELDJCQWNDIn0=","assetPath":"Assets/ObbyTemplate/Scripts/Teleport.ts","manifest":{"properties":[],"name":"Teleport","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 174210fb1863898186f60cda9c3a58d8
   onlyWriteTrigger: 0

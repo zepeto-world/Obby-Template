@@ -21,23 +21,21 @@ ScriptedImporter:
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
     { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
     ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst SpawnPoint_1 = require(\"./SpawnPoint\");\r\nconst
-    EventsManager_1 = require(\"./EventsManager\");\r\nconst GameSettings_1 = require(\"./GameSettings\");\r\nclass
-    ObbyGameManager extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Awake()
-    {\r\n        if (ZEPETO_Script_1.ZepetoScriptBehaviour.op_Equality(ObbyGameManager.instance,
+    GameSettings_1 = require(\"./GameSettings\");\r\nclass ObbyGameManager extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Awake() {\r\n        if (ZEPETO_Script_1.ZepetoScriptBehaviour.op_Equality(ObbyGameManager.instance,
     null))\r\n            ObbyGameManager.instance = this;\r\n        else\r\n           
-    UnityEngine_1.GameObject.Destroy(this);\r\n    }\r\n    Start() {\r\n       
-    UnityEngine_1.Debug.Log(GameSettings_1.default.instance.gameDuration);\r\n   
-    }\r\n    Update() {\r\n        if (GameSettings_1.default.instance.zepetoCharacter
-    != null) {\r\n            if (GameSettings_1.default.instance.zepetoCharacter.transform.position.y
-    < -20) {\r\n                GameSettings_1.default.instance.zepetoCharacter.transform.position
-    = this.currentCheckpoint.transform.position;\r\n                this.TeleportCharacter();\r\n               
+    UnityEngine_1.GameObject.Destroy(this);\r\n    }\r\n    Update() {\r\n       
+    if (GameSettings_1.default.Instance.zepetoCharacter != null) {\r\n           
+    if (GameSettings_1.default.Instance.zepetoCharacter.transform.position.y < -20)
+    {\r\n                GameSettings_1.default.Instance.zepetoCharacter.transform.position
+    = this._currentCheckpoint.transform.position;\r\n                this.TeleportCharacter();\r\n               
     return;\r\n            }\r\n        }\r\n    }\r\n    /// <summary>\r\n    ///
     Save new checkpoint\r\n    /// </summary>\r\n    UpdateCheckpoint(newCheckpoint)
-    {\r\n        this.currentCheckpoint = newCheckpoint;\r\n    }\r\n    /// <summary>\r\n   
+    {\r\n        this._currentCheckpoint = newCheckpoint;\r\n    }\r\n    /// <summary>\r\n   
     /// Teleport the character to last checkpoint pos\r\n    /// </summary>\r\n   
-    TeleportCharacter() {\r\n        GameSettings_1.default.instance.zepetoCharacter.Teleport(this.currentCheckpoint.transform.position,
-    GameSettings_1.default.instance.zepetoCharacter.transform.rotation);\r\n       
-    this.currentCheckpoint.particleSystem.GetComponent($typeof(UnityEngine_1.ParticleSystem)).Emit(10);\r\n   
-    }\r\n}\r\nexports.default = ObbyGameManager;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiT2JieUdhbWVNYW5hZ2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiT2JieUdhbWVNYW5hZ2VyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQW9GO0FBRXBGLGlEQUFxRDtBQUVyRCw2Q0FBc0M7QUFFdEMsbURBQTRDO0FBQzVDLGlEQUEwQztBQUUxQyxNQUFxQixlQUFnQixTQUFRLHFDQUFxQjtJQUs5RCxLQUFLO1FBQ0QsSUFiQyxxQ0FBcUIsQ0E4QzhpSyxXQUFZLENBakM1a0ssZUFBZSxDQUFDLFFBQVEsRUFBSSxJQUFJO1lBQUUsZUFBZSxDQUFDLFFBQVEsR0FBRyxJQUFJLENBQUM7O1lBRWxFLHdCQUFVLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxDQUFDO0lBQ2pDLENBQUM7SUFFRCxLQUFLO1FBQ0QsbUJBQUssQ0FBQyxHQUFHLENBQUMsc0JBQVksQ0FBQyxRQUFRLENBQUMsWUFBWSxDQUFDLENBQUM7SUFDbEQsQ0FBQztJQUVELE1BQU07UUFDRixJQUFJLHNCQUFZLENBQUMsUUFBUSxDQUFDLGVBQWUsSUFBSSxJQUFJLEVBQUU7WUFDL0MsSUFBSSxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxlQUFlLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDLEdBQUcsQ0FBQyxFQUFFLEVBQUU7Z0JBQ2xFLHNCQUFZLENBQUMsUUFBUSxDQUFDLGVBQWUsQ0FBQyxTQUFTLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQyxpQkFBaUIsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDO2dCQUNyRyxJQUFJLENBQUMsaUJBQWlCLEVBQUUsQ0FBQztnQkFDekIsT0FBTzthQUNWO1NBQ0o7SUFDTCxDQUFDO0lBRUQsYUFBYTtJQUNiLHVCQUF1QjtJQUN2QixjQUFjO0lBQ2QsZ0JBQWdCLENBQUMsYUFBeUI7UUFDdEMsSUFBSSxDQUFDLGlCQUFpQixHQUFHLGFBQWEsQ0FBQztJQUMzQyxDQUFDO0lBRUQsYUFBYTtJQUNiLGlEQUFpRDtJQUNqRCxjQUFjO0lBQ2QsaUJBQWlCO1FBQ2Isc0JBQVksQ0FBQyxRQUFRLENBQUMsZUFBZSxDQUFDLFFBQVEsQ0FBQyxJQUFJLENBQUMsaUJBQWlCLENBQUMsU0FBUyxDQUFDLFFBQVEsRUFBRSxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxlQUFlLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDO1FBQ3BKLElBQUksQ0FBQyxpQkFBaUIsQ0FBQyxjQUFjLENBQUMsWUFBWSxTQUFDLDRCQUFjLEdBQUksSUFBSSxDQUFDLEVBQUUsQ0FBQyxDQUFDO0lBQ2xGLENBQUM7Q0FDSjtBQXZDRCxrQ0F1Q0MifQ==","assetPath":"Assets/ObbyTemplate/Scripts/ObbyGameManager.ts","manifest":{"properties":[],"name":"ObbyGameManager","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: 27f553e641b81c078bf20f84fecfa91b
+    TeleportCharacter() {\r\n        GameSettings_1.default.Instance.zepetoCharacter.Teleport(this._currentCheckpoint.transform.position,
+    GameSettings_1.default.Instance.zepetoCharacter.transform.rotation);\r\n       
+    this._currentCheckpoint.particleSystem.GetComponent($typeof(UnityEngine_1.ParticleSystem)).Emit(10);\r\n   
+    }\r\n}\r\nexports.default = ObbyGameManager;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiT2JieUdhbWVNYW5hZ2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiT2JieUdhbWVNYW5hZ2VyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXlEO0FBQ3pELGlEQUFxRDtBQUNyRCw2Q0FBc0M7QUFDdEMsaURBQTBDO0FBRTFDLE1BQXFCLGVBQWdCLFNBQVEscUNBQXFCO0lBTTlELEtBQUs7UUFDRCxJQVhDLHFDQUFxQixDQXdDNjRLLFdBQVksQ0E3QjM2SyxlQUFlLENBQUMsUUFBUSxFQUFJLElBQUk7WUFBRSxlQUFlLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQzs7WUFFbEUsd0JBQVUsQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDLENBQUM7SUFDakMsQ0FBQztJQUVELE1BQU07UUFDRixJQUFJLHNCQUFZLENBQUMsUUFBUSxDQUFDLGVBQWUsSUFBSSxJQUFJLEVBQUU7WUFDL0MsSUFBSSxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxlQUFlLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDLEdBQUcsQ0FBQyxFQUFFLEVBQUU7Z0JBQ2xFLHNCQUFZLENBQUMsUUFBUSxDQUFDLGVBQWUsQ0FBQyxTQUFTLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQyxrQkFBa0IsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDO2dCQUN0RyxJQUFJLENBQUMsaUJBQWlCLEVBQUUsQ0FBQztnQkFDekIsT0FBTzthQUNWO1NBQ0o7SUFDTCxDQUFDO0lBRUQsYUFBYTtJQUNiLHVCQUF1QjtJQUN2QixjQUFjO0lBQ2QsZ0JBQWdCLENBQUMsYUFBeUI7UUFDdEMsSUFBSSxDQUFDLGtCQUFrQixHQUFHLGFBQWEsQ0FBQztJQUM1QyxDQUFDO0lBRUQsYUFBYTtJQUNiLGlEQUFpRDtJQUNqRCxjQUFjO0lBQ2QsaUJBQWlCO1FBQ2Isc0JBQVksQ0FBQyxRQUFRLENBQUMsZUFBZSxDQUFDLFFBQVEsQ0FBQyxJQUFJLENBQUMsa0JBQWtCLENBQUMsU0FBUyxDQUFDLFFBQVEsRUFBRSxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxlQUFlLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDO1FBQ3JKLElBQUksQ0FBQyxrQkFBa0IsQ0FBQyxjQUFjLENBQUMsWUFBWSxTQUFDLDRCQUFjLEdBQUksSUFBSSxDQUFDLEVBQUUsQ0FBQyxDQUFDO0lBQ25GLENBQUM7Q0FDSjtBQXBDRCxrQ0FvQ0MifQ==","assetPath":"Assets/ObbyTemplate/Scripts/ObbyGameManager.ts","manifest":{"properties":[],"name":"ObbyGameManager","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 92b46e7d4afb842cbc2637e2b03d4de6
   onlyWriteTrigger: 0

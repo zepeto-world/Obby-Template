@@ -1,97 +1,89 @@
-import { Debug, GameObject, Input, KeyCode, Time, Transform, Vector3 } from 'UnityEngine';
+import { GameObject } from 'UnityEngine';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import { ZepetoCharacter, ZepetoPlayers } from 'ZEPETO.Character.Controller'
-import { LoadingStatus } from 'ZEPETO.Character.Controller.ZepetoCharacter';
-import TimerManager from './TimerManager';
-import { InputAction, InputActionAsset } from 'UnityEngine.InputSystem';
-import StartScreen from './StartScreen';
 import CharacterController from './CharacterController';
 import ObbyGameManager from './ObbyGameManager';
-import SpawnPoint from './SpawnPoint';
 import LevelScript from './LevelScript';
 import { SceneManager } from 'UnityEngine.SceneManagement';
+import UIManager from './UIManager';
 
-export default class GameSettings extends ZepetoScriptBehaviour {
-    public static instance: GameSettings;
-    @HideInInspector() public canWin: bool;
-    @HideInInspector() public zepetoCharacter: ZepetoCharacter; //Reference of Zepeto Character
+export default class GameSettings extends ZepetoScriptBehaviour 
+{
+    public static Instance: GameSettings;
+
     public characterController: GameObject; //Reference of Character spawner
-    public canvasTransform: Transform; //Reference of canvas
 
-    @Header("Timer Settings")
-    @SerializeField() private _useTimer: boolean = false; //If this value is true, an object will be created with the timer.
-    public gameDuration: number; // Duration in seconds
-    private _timerManager: TimerManager; //Timer Manager reference
+    @HideInInspector() public canWin: bool; // Set if the collision with the goal will trigger the win
+    @HideInInspector() public zepetoCharacter: ZepetoCharacter; //Reference of Zepeto Character
 
-    @Header("Prefabs")
-    @SerializeField() private _timerScreenPrefab: GameObject; //Timer prefab reference
-    @SerializeField() private _victoryScreenPrefab: GameObject; //Victory screen prefab reference
-    @SerializeField() private _gameOverScreenPrefab: GameObject; //GameOver screen prefab reference
-    @SerializeField() private _startScreenPrefab: GameObject; //Start screen prefab reference
-    public levels: GameObject[];
+    public levels: GameObject[]; // Array of level prefabs that will be spawn on the game
+    private _levelSpawned: GameObject; // The actual level
+    private _actualLevel: int = 0; // The counter of the actual level
 
-
-    // @Header("Actual Level")
-    private _level: GameObject;
-    public get ActualLevel(): int {
-        return this._actualLevel;
-    }
-    private _actualLevel: int = 0;
+    private _playerSpawned: bool; // Controls if the player is already on world
 
     Awake() {
         //Singleton
-        if (GameSettings.instance == null) GameSettings.instance = this;
-        else
-            GameObject.Destroy(this);
+        if (GameSettings.Instance == null) GameSettings.Instance = this;
+        else GameObject.Destroy(this);
     }
 
     Start() {
-        this._level = GameObject.Instantiate(this.levels[this._actualLevel]) as GameObject;
-        let startScreenObj = GameObject.Instantiate(this._startScreenPrefab, this.canvasTransform) as StartScreen; //Load start screen in game
+        UIManager.Instance.OnStart();
+        this.InstanceActualLevel();
     }
 
-    CloseStartAlert() {
-        if (this._timerManager) {
-            this._timerManager.SetTimer(this.gameDuration); //Set timer settings
-            return;
-        }
+    SpawnPlayer() {
+        this._playerSpawned = true;
         this.characterController.GetComponent<CharacterController>().SpawnCharacter();
 
         ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(() => {
             this.zepetoCharacter = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character; //Save Zepeto's character reference
-
-            if (this._useTimer) {
-
-                let timerScreenObj = GameObject.Instantiate(this._timerScreenPrefab, this.canvasTransform) as GameObject; //Load timer screen in game
-                this._timerManager = timerScreenObj.GetComponent<TimerManager>();
-                this._timerManager.SetTimer(this.gameDuration); //Set timer settings
-            }
         });
     }
-    public StartGame(): void {
-        if (this._timerManager) this._timerManager.SetTimer(this.gameDuration); //Set timer settings
+
+    InstanceActualLevel() {
+        this._levelSpawned = GameObject.Instantiate(this.levels[this._actualLevel]) as GameObject;
+    }
+
+    OnStartGame(): void {
+        UIManager.Instance.OnStartGame();
+
+        if (!this._playerSpawned) this.SpawnPlayer();
+
         this.canWin = true;
     }
+
     OnVictory(): void {
-        this._timerManager.StopTimer();
-        let victoryScreenObj = GameObject.Instantiate(this._victoryScreenPrefab, this.canvasTransform) as GameObject; //Load Win Screen in game
+        UIManager.Instance.OnVictory();
         this.canWin = false;
     }
 
     OnGameOver(): void {
-        let gameOverScreenObj = GameObject.Instantiate(this._gameOverScreenPrefab, this.canvasTransform) as GameObject; //Load GameOver screen in game
+        UIManager.Instance.OnGameOver();
+        this.canWin = false;
     }
 
-    public NextLevel() {
-        GameObject.Destroy(this._level);
+    ResetMap() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    NextLevel() {
+        GameObject.Destroy(this._levelSpawned);
         this._actualLevel++;
+
         if (this._actualLevel >= this.levels.Length) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            // If there are no more levels
+            this.ResetMap();
             return;
         }
-        this._level = GameObject.Instantiate(this.levels[this._actualLevel]) as GameObject;
-        ObbyGameManager.instance.UpdateCheckpoint(this._level.GetComponent<LevelScript>().Spawn());
-        ObbyGameManager.instance.TeleportCharacter();
-        let startScreenObj = GameObject.Instantiate(this._startScreenPrefab, this.canvasTransform) as StartScreen; //Load start screen in game
+
+        this.InstanceActualLevel(); // Spawn the new level
+        var levelScript = this._levelSpawned.GetComponent<LevelScript>(); // Get the level script
+
+        ObbyGameManager.instance.UpdateCheckpoint(levelScript.Spawn()); // Set the spawn to the new level spawn
+        ObbyGameManager.instance.TeleportCharacter(); // TP the player to the spawn
+
+        UIManager.Instance.OnStart();
     }
 }

@@ -1,9 +1,9 @@
-import { GameObject } from 'UnityEngine';
 import { Button } from 'UnityEngine.UI'
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import GameSettings from './GameSettings';
 
-export default class StartScreen extends ZepetoScriptBehaviour {
+export default class StartScreen extends ZepetoScriptBehaviour 
+{
 
     public mainButton: Button;
 
@@ -14,9 +14,8 @@ export default class StartScreen extends ZepetoScriptBehaviour {
     }
 
     OnClick(): void {
-        GameSettings.instance.CloseStartAlert();
-        GameObject.Destroy(this.gameObject);
-        GameSettings.instance.StartGame();
+        GameSettings.Instance.OnStartGame();
+        this.gameObject.SetActive(false);
     }
 
 }
