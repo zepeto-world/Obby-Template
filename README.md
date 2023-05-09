@@ -14,19 +14,26 @@ Now, are you ready to get started?
 ## 🔨 Tools
 - **GameSettings**: General game statistics and settings
                     
-Name |  Functionality
-------------- | -------------
-`Game Duration`  | Total time that the game lasts, after this time a game over screen appears.
-`Use Timer` | If this value is true, a timer will appear on your screen 
-`Is Distance Meter` | Value only available for RunnerTemplate
-`Timer Screen Prefab`| Reference to the timer prefab, you can edit it from this location.
-`Victory Screen Prefab`| Reference to the victory prefab, you can edit it from this location
-`Game Over Screen Prefab`| Reference to the Game Over prefab, you can edit it from this location
-`Start Screen Screen Prefab`| Reference to the Start Screen Prefab, you can edit it from this location
-`Levels`| This is the list of level prefabs, they appears on the order of the list.
+| Name                         | Functionality                                                               |
+| ---------------------------- | --------------------------------------------------------------------------- |
+| `Levels`                     | This is the list of level prefabs, they appears on the order of the list.   |
+
  
  <img width="700" alt="image" src="./Docs/Images/Cap_1.png"></img>
  
+  - **UI Manager**: General game statistics and settings
+Have the UI references and the configuration for the user of the timer
+| Name                         | Functionality                                                               |
+| ---------------------------- | --------------------------------------------------------------------------- |
+| `Game Duration`              | Total time that the game lasts, after this time a game over screen appears. |
+| `Use Timer`                  | If this value is true, a timer will appear on your screen                   |
+| `Timer Screen Prefab`        | Reference to the timer prefab, you can edit it from this location.          |
+| `Victory Screen Prefab`      | Reference to the victory prefab, you can edit it from this location         |
+| `Game Over Screen Prefab`    | Reference to the Game Over prefab, you can edit it from this location       |
+| `Start Screen Screen Prefab` | Reference to the Start Screen Prefab, you can edit it from this location    |
+
+ <img width="700" alt="image" src="./Docs/Images/Cap_16.png"></img>
+
 - **ObbyManager:** This script is very important for the functioning of the Obby template. Check that it is in scene.
 
 
@@ -54,11 +61,11 @@ Additionally, make sure that the object does not have the Static option enabled.
 #### *Fall Platform Structure:* 
 <br /><img width="700" alt="image" src="./Docs/Images/Cap_9.png"></img>   
 
-|||
-| ------------ | ------------ |
-|  `Box Collider` |  Used to detect the player |
-|   `Rigidbody` |Used to realize the fall of the platform   |
-|  ` FallPlatform Script` | **Fall Delay:** Time it takes to start falling.  **Respawn Delay:** Time it takes to respawn  |             
+|                        |                                                                                              |
+| ---------------------- | -------------------------------------------------------------------------------------------- |
+| `Box Collider`         | Used to detect the player                                                                    |
+| `Rigidbody`            | Used to realize the fall of the platform                                                     |
+| ` FallPlatform Script` | **Fall Delay:** Time it takes to start falling.  **Respawn Delay:** Time it takes to respawn |
 
 - **Goal Platform:** This platform is used as a goal, add it at the end of the level.
 When the player passes over it a victory tab will appear.
