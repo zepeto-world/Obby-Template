@@ -14,15 +14,17 @@ Now, are you ready to get started?
 ## 🔨 Tools
 - **GameSettings**: General game statistics and settings
                     
-| Name                         | Functionality                                                               |
-| ---------------------------- | --------------------------------------------------------------------------- |
-| `Levels`                     | This is the list of level prefabs, they appears on the order of the list.   |
+| Name     | Functionality                                                             |
+| -------- | ------------------------------------------------------------------------- |
+| `Levels` | This is the list of level prefabs, they appears on the order of the list. |
 
  
  <img width="700" alt="image" src="./Docs/Images/Cap_1.png"></img>
  
   - **UI Manager**: General game statistics and settings
-Have the UI references and the configuration for the user of the timer
+Have the UI references and the configuration for the user of the timer.
+
+------------------------------------------------------------------------------------------------------------
 | Name                         | Functionality                                                               |
 | ---------------------------- | --------------------------------------------------------------------------- |
 | `Game Duration`              | Total time that the game lasts, after this time a game over screen appears. |
