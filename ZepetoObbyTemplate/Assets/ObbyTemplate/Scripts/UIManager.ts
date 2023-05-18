@@ -6,10 +6,10 @@ export default class UIManager extends ZepetoScriptBehaviour
 {
     public static Instance: UIManager;
 
-    @SerializeField() _gameOverScreen: GameObject;
-    @SerializeField() _victoryScreen: GameObject;
-    @SerializeField() _startScreen: GameObject;
-    @SerializeField() _timer: GameObject;
+    @SerializeField() _gameOverPanel: GameObject;
+    @SerializeField() _victoryPanel: GameObject;
+    @SerializeField() _startPanel: GameObject;
+    @SerializeField() _timerPanel: GameObject;
 
     @Header("Timer Settings")
     @SerializeField() private _useTimer: boolean = false; //If this value is true, an object will be created with the timer.
@@ -21,28 +21,28 @@ export default class UIManager extends ZepetoScriptBehaviour
         if (UIManager.Instance != null) GameObject.Destroy(this.gameObject);
         UIManager.Instance = this;
         // ---------
-        this.timerManager = this._timer.GetComponent<TimerManager>();
+        this.timerManager = this._timerPanel.GetComponent<TimerManager>();
     }
 
     OnStart() {
-        this._startScreen.SetActive(true);
-        this._victoryScreen.SetActive(false);
-        this._gameOverScreen.SetActive(false);
-        this._timer.SetActive(false);
+        this._startPanel.SetActive(true);
+        this._victoryPanel.SetActive(false);
+        this._gameOverPanel.SetActive(false);
+        this._timerPanel.SetActive(false);
     }
 
     OnStartGame() {
         if (!this._useTimer) return;
-        this._timer.SetActive(true);
+        this._timerPanel.SetActive(true);
         this.timerManager.SetTimer(this.gameDuration);
     }
 
     OnVictory(): void {
         this.timerManager.StopTimer();
-        this._victoryScreen.SetActive(true);
+        this._victoryPanel.SetActive(true);
     }
 
     OnGameOver(): void {
-        this._gameOverScreen.SetActive(true);
+        this._gameOverPanel.SetActive(true);
     }
 }

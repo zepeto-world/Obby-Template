@@ -48,7 +48,7 @@ export default class TimerManager extends ZepetoScriptBehaviour
         this.timeSlider.value = valueNormalized; // Slider Update
 
         // Format the text to show it on the slider timer text
-        let tempMin: number = Mathf.RoundToInt(this._timeRemaining / 60);
+        let tempMin: number = Mathf.FloorToInt(this._timeRemaining / 60);
         let tempSeg: number = Mathf.RoundToInt(this._timeRemaining % 60);
         let tempMinString: string = tempMin <= 0 ? " " : tempMin.toString() + " : ";
         let tempSegString: string = tempSeg < 10 ? "0" + tempSeg : tempSeg.toString();
