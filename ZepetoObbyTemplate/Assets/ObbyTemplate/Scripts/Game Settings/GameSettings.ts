@@ -7,8 +7,7 @@ import LevelScript from './LevelScript';
 import { SceneManager } from 'UnityEngine.SceneManagement';
 import UIManager from './UIManager';
 
-export default class GameSettings extends ZepetoScriptBehaviour 
-{
+export default class GameSettings extends ZepetoScriptBehaviour {
     public static Instance: GameSettings;
 
     public characterController: GameObject; //Reference of Character spawner
@@ -22,57 +21,63 @@ export default class GameSettings extends ZepetoScriptBehaviour
 
     private _playerSpawned: bool; // Controls if the player is already on world
 
-    Awake() {
+    Awake () {
         //Singleton
-        if (GameSettings.Instance == null) GameSettings.Instance = this;
-        else GameObject.Destroy(this);
+        if ( GameSettings.Instance == null ) GameSettings.Instance = this;
+        else GameObject.Destroy( this );
     }
 
-    Start() {
+    Start () {
         UIManager.Instance.OnStart();
         this.InstanceActualLevel();
     }
 
-    SpawnPlayer() {
+    SpawnPlayer () {
         this._playerSpawned = true;
         this.characterController.GetComponent<CharacterController>().SpawnCharacter();
 
-        ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(() => {
+        ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener( () => {
             this.zepetoCharacter = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character; //Save Zepeto's character reference
-        });
+        } );
     }
 
-    InstanceActualLevel() {
-        this._levelSpawned = GameObject.Instantiate(this.levels[this._actualLevel]) as GameObject;
+    InstanceActualLevel () {
+        this._levelSpawned = GameObject.Instantiate( this.levels[ this._actualLevel ] ) as GameObject;
     }
 
-    OnStartGame(): void {
+    OnStartGame (): void {
         UIManager.Instance.OnStartGame();
 
-        if (!this._playerSpawned) this.SpawnPlayer();
+        if ( !this._playerSpawned ) this.SpawnPlayer();
+        else this.zepetoCharacter.characterController.enabled = true;
 
         this.canWin = true;
     }
 
-    OnVictory(): void {
+    OnVictory (): void {
         UIManager.Instance.OnVictory();
-        this.canWin = false;
+        this.ResetGameVariables();
     }
 
-    OnGameOver(): void {
+    OnGameOver (): void {
         UIManager.Instance.OnGameOver();
+        this.ResetGameVariables();
+    }
+    ResetGameVariables (): void {
         this.canWin = false;
+        this.zepetoCharacter.characterController.enabled = false;
     }
 
-    ResetMap() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    ResetMap () {
+        SceneManager.LoadScene( SceneManager.GetActiveScene().name );
     }
 
-    NextLevel() {
-        GameObject.Destroy(this._levelSpawned);
+    NextLevel () {
+        GameObject.Destroy( this._levelSpawned );
         this._actualLevel++;
 
-        if (this._actualLevel >= this.levels.Length) {
+        if ( this._actualLevel >= this.levels.Length )
+        {
             // If there are no more levels
             this.ResetMap();
             return;
@@ -81,7 +86,7 @@ export default class GameSettings extends ZepetoScriptBehaviour
         this.InstanceActualLevel(); // Spawn the new level
         var levelScript = this._levelSpawned.GetComponent<LevelScript>(); // Get the level script
 
-        ObbyGameManager.instance.UpdateCheckpoint(levelScript.Spawn()); // Set the spawn to the new level spawn
+        ObbyGameManager.instance.UpdateCheckpoint( levelScript.Spawn() ); // Set the spawn to the new level spawn
         ObbyGameManager.instance.TeleportCharacter(); // TP the player to the spawn
 
         UIManager.Instance.OnStart();

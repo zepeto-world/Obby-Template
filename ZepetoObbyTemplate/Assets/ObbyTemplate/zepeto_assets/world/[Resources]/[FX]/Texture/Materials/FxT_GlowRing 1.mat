@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FxT_GlowRing 1
+  m_Shader: {fileID: 4800000, guid: 41ae9b6918943e54e9504ad6739b36a9, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3003
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Dissolve_Texture:
+        m_Texture: {fileID: 2800000, guid: b119c52acebb5ef478f41d44db10727e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Distortion_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 7222a0f9764a6974ab08752fe4105843, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Main_Texture:
+        m_Texture: {fileID: 2800000, guid: b74cbdf0d98a1eb4d9411c71aecd528b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _tex4coord3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Burn: 2
+    - _Dissolve: 0.09
+    - _Distortion_Intensity: 0
+    - _Distortion_U_Panning: 0
+    - _Distortion_U_Tiling: 1
+    - _Distortion_V_Panning: 0
+    - _Distortion_V_Tiling: 1
+    - _MainTex_U_Panning: 0
+    - _MainTex_V_Panning: 0
+    - _Main_U_Tiling: 1
+    - _Main_V_Tiling: 1
+    - _Mask_U_Tiling: 1
+    - _Mask_V_Tiling: 1
+    - _Use_CustomData: 0
+    - __dirty: 1
+    m_Colors: []
+  m_BuildTextureStacks: []
