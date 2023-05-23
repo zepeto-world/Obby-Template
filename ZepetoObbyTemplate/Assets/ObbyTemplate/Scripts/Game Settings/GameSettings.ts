@@ -1,7 +1,7 @@
 import { GameObject } from 'UnityEngine';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import { ZepetoCharacter, ZepetoPlayers } from 'ZEPETO.Character.Controller'
-import CharacterController from './CharacterController';
+import CharacterController from '../CharacterController';
 import ObbyGameManager from './ObbyGameManager';
 import LevelScript from './LevelScript';
 import { SceneManager } from 'UnityEngine.SceneManagement';

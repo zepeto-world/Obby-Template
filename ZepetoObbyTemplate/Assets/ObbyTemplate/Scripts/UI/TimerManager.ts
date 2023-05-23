@@ -1,7 +1,8 @@
 import { Time, Mathf } from 'UnityEngine';
 import { Slider, Text } from 'UnityEngine.UI';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
-import GameSettings from './GameSettings';
+import GameSettings from '../Game Settings/GameSettings';
+
 
 
 export default class TimerManager extends ZepetoScriptBehaviour 

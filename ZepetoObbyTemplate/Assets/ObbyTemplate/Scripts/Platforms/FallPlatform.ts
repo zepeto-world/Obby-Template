@@ -1,6 +1,7 @@
 import { BoxCollider, Collider, Quaternion, Rigidbody, Vector3 } from "UnityEngine";
 import { ZepetoScriptBehaviour } from "ZEPETO.Script";
-import GameSettings from "./GameSettings";
+import GameSettings from '../Game Settings/GameSettings';
+
 
 export default class FallPlatform extends ZepetoScriptBehaviour 
 {

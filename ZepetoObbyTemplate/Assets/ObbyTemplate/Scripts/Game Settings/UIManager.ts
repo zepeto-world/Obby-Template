@@ -1,6 +1,7 @@
 import { GameObject } from 'UnityEngine';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
-import TimerManager from './TimerManager';
+import TimerManager from '../UI/TimerManager';
+
 
 export default class UIManager extends ZepetoScriptBehaviour 
 {

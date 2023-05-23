@@ -1,6 +1,7 @@
 import { Collider } from 'UnityEngine';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
-import GameSettings from './GameSettings';
+import GameSettings from '../Game Settings/GameSettings';
+
 
 export default class Goal extends ZepetoScriptBehaviour 
 {

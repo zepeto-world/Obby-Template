@@ -1,6 +1,7 @@
 import { Button } from 'UnityEngine.UI';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
-import GameSettings from './GameSettings';
+import GameSettings from '../Game Settings/GameSettings';
+
 
 export default class VictoryScreen extends ZepetoScriptBehaviour {
     public resetButton: Button; //Get Reset button reference

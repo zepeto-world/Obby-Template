@@ -1,6 +1,6 @@
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
-import SpawnPoint from './SpawnPoint'
 import { GameObject } from 'UnityEngine';
+import SpawnPoint from '../Platforms/SpawnPoint';
 
 export default class LevelScript extends ZepetoScriptBehaviour 
 {

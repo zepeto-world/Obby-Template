@@ -20,13 +20,13 @@ ScriptedImporter:
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
     { value: true });\r\nconst __UnityEngine__ = require(\"UnityEngine\");\r\nconst
-    UnityEngine_1 = require(\"UnityEngine\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
-    GameSettings_1 = require(\"./GameSettings\");\r\nclass Goal extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst GameSettings_1 = require(\"../Game
+    Settings/GameSettings\");\r\nclass Goal extends ZEPETO_Script_1.ZepetoScriptBehaviour
     {\r\n    OnTriggerEnter(collider) {\r\n        if (GameSettings_1.default.Instance.zepetoCharacter
     == null || __UnityEngine__.Object.op_Inequality(collider.gameObject, GameSettings_1.default.Instance.zepetoCharacter.gameObject))\r\n           
     return;\r\n        if (!this._used && GameSettings_1.default.Instance.canWin)
     {\r\n            GameSettings_1.default.Instance.OnVictory();\r\n           
     this._used = true;\r\n        }\r\n    }\r\n}\r\nexports.default = Goal;\r\n//#
-    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR29hbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkdvYWwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsNkNBQXVDO0FBQ3ZDLGlEQUFxRDtBQUNyRCxpREFBMEM7QUFFMUMsTUFBcUIsSUFBSyxTQUFRLHFDQUFxQjtJQUtuRCxjQUFjLENBQUMsUUFBa0I7UUFDN0IsSUFBSSxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxlQUFlLElBQUksSUFBSSwyQkFRNjlVLGFBQWMsQ0FSditVLFFBQVEsQ0FBQyxVQUFVLEVBQUksc0JBQVksQ0FBQyxRQUFRLENBQUMsZUFBZSxDQUFDLFVBQVUsQ0FBQTtZQUN4SCxPQUFPO1FBRVgsSUFBSSxDQUFDLElBQUksQ0FBQyxLQUFLLElBQUksc0JBQVksQ0FBQyxRQUFRLENBQUMsTUFBTSxFQUFFO1lBQzdDLHNCQUFZLENBQUMsUUFBUSxDQUFDLFNBQVMsRUFBRSxDQUFDO1lBQ2xDLElBQUksQ0FBQyxLQUFLLEdBQUcsSUFBSSxDQUFDO1NBQ3JCO0lBQ0wsQ0FBQztDQUNKO0FBZEQsdUJBY0MifQ==","assetPath":"Assets/ObbyTemplate/Scripts/Goal.ts","manifest":{"properties":[],"name":"Goal","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: 4903cebd659ad662ded28920eada411c
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR29hbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkdvYWwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQ0EsaURBQXFEO0FBQ3JELGdFQUF5RDtBQUd6RCxNQUFxQixJQUFLLFNBQVEscUNBQXFCO0lBS25ELGNBQWMsQ0FBQyxRQUFrQjtRQUM3QixJQUFJLHNCQUFZLENBQUMsUUFBUSxDQUFDLGVBQWUsSUFBSSxJQUFJLDJCQVE0OFUsYUFBYyxDQVJ0OVUsUUFBUSxDQUFDLFVBQVUsRUFBSSxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxlQUFlLENBQUMsVUFBVSxDQUFBO1lBQ3hILE9BQU87UUFFWCxJQUFJLENBQUMsSUFBSSxDQUFDLEtBQUssSUFBSSxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxNQUFNLEVBQUU7WUFDN0Msc0JBQVksQ0FBQyxRQUFRLENBQUMsU0FBUyxFQUFFLENBQUM7WUFDbEMsSUFBSSxDQUFDLEtBQUssR0FBRyxJQUFJLENBQUM7U0FDckI7SUFDTCxDQUFDO0NBQ0o7QUFkRCx1QkFjQyJ9","assetPath":"Assets/ObbyTemplate/Scripts/Platforms/Goal.ts","manifest":{"properties":[],"name":"Goal","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 6793a7273fd10108121a4ea43ac0ba5c
   onlyWriteTrigger: 0

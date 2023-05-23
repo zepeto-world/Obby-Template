@@ -1,7 +1,7 @@
 import { GameObject, ParticleSystem } from 'UnityEngine';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
-import SpawnPoint from './SpawnPoint';
 import GameSettings from './GameSettings';
+import SpawnPoint from '../Platforms/SpawnPoint';
 
 export default class ObbyGameManager extends ZepetoScriptBehaviour 
 {

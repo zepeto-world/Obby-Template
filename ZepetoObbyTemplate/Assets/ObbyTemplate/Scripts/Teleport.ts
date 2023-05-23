@@ -1,7 +1,8 @@
 import { Collider } from 'UnityEngine';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
-import ObbyGameManager from './ObbyGameManager';
-import GameSettings from './GameSettings';
+import GameSettings from './Game Settings/GameSettings';
+import ObbyGameManager from './Game Settings/ObbyGameManager';
+
 
 export default class Teleport extends ZepetoScriptBehaviour
 {

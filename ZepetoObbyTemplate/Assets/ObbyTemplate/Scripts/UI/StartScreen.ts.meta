@@ -20,10 +20,10 @@ ScriptedImporter:
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
     { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
-    GameSettings_1 = require(\"./GameSettings\");\r\nclass StartScreen extends ZEPETO_Script_1.ZepetoScriptBehaviour
-    {\r\n    Start() {\r\n        this.mainButton.onClick.AddListener(() => {\r\n           
-    this.OnClick();\r\n        });\r\n    }\r\n    OnClick() {\r\n        GameSettings_1.default.Instance.OnStartGame();\r\n       
-    this.gameObject.SetActive(false);\r\n    }\r\n}\r\nexports.default = StartScreen;\r\n//#
-    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3RhcnRTY3JlZW4uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJTdGFydFNjcmVlbi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUNBLGlEQUFxRDtBQUNyRCxpREFBMEM7QUFFMUMsTUFBcUIsV0FBWSxTQUFRLHFDQUFxQjtJQUsxRCxLQUFLO1FBQ0QsSUFBSSxDQUFDLFVBQVUsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUNyQyxJQUFJLENBQUMsT0FBTyxFQUFFLENBQUM7UUFDbkIsQ0FBQyxDQUFDLENBQUM7SUFDUCxDQUFDO0lBRUQsT0FBTztRQUNILHNCQUFZLENBQUMsUUFBUSxDQUFDLFdBQVcsRUFBRSxDQUFDO1FBQ3BDLElBQUksQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO0lBQ3JDLENBQUM7Q0FFSjtBQWhCRCw4QkFnQkMifQ==","assetPath":"Assets/ObbyTemplate/Scripts/StartScreen.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"mainButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"StartScreen","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: 37b502694bbfd144d0a961f36742245d
+    GameSettings_1 = require(\"../Game Settings/GameSettings\");\r\nclass StartScreen
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n        this.mainButton.onClick.AddListener(()
+    => {\r\n            this.OnClick();\r\n        });\r\n    }\r\n    OnClick()
+    {\r\n        GameSettings_1.default.Instance.OnStartGame();\r\n        this.gameObject.SetActive(false);\r\n   
+    }\r\n}\r\nexports.default = StartScreen;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3RhcnRTY3JlZW4uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJTdGFydFNjcmVlbi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUNBLGlEQUFxRDtBQUNyRCxnRUFBeUQ7QUFHekQsTUFBcUIsV0FBWSxTQUFRLHFDQUFxQjtJQUsxRCxLQUFLO1FBQ0QsSUFBSSxDQUFDLFVBQVUsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUNyQyxJQUFJLENBQUMsT0FBTyxFQUFFLENBQUM7UUFDbkIsQ0FBQyxDQUFDLENBQUM7SUFDUCxDQUFDO0lBRUQsT0FBTztRQUNILHNCQUFZLENBQUMsUUFBUSxDQUFDLFdBQVcsRUFBRSxDQUFDO1FBQ3BDLElBQUksQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO0lBQ3JDLENBQUM7Q0FFSjtBQWhCRCw4QkFnQkMifQ==","assetPath":"Assets/ObbyTemplate/Scripts/UI/StartScreen.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"mainButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"StartScreen","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: a9cf27de02438667804e1216f71b4993
   onlyWriteTrigger: 0

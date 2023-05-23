@@ -21,13 +21,14 @@ ScriptedImporter:
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
     { value: true });\r\nconst __UnityEngine__ = require(\"UnityEngine\");\r\nconst
     UnityEngine_1 = require(\"UnityEngine\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
-    ObbyGameManager_1 = require(\"./ObbyGameManager\");\r\nconst GameSettings_1 =
-    require(\"./GameSettings\");\r\nclass SpawnPoint extends ZEPETO_Script_1.ZepetoScriptBehaviour
-    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this._activeCheckpoint
-    = false;\r\n    }\r\n    OnTriggerEnter(collider) {\r\n        if (GameSettings_1.default.Instance.zepetoCharacter
-    == null || __UnityEngine__.Object.op_Inequality(collider.gameObject, GameSettings_1.default.Instance.zepetoCharacter.gameObject))\r\n           
-    return;\r\n        if (!this._activeCheckpoint) {\r\n            this._activeCheckpoint
-    = true;\r\n            ObbyGameManager_1.default.instance.UpdateCheckpoint(this);\r\n       
-    }\r\n    }\r\n}\r\nexports.default = SpawnPoint;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3Bhd25Qb2ludC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlNwYXduUG9pbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsNkNBQW1EO0FBQ25ELGlEQUFxRDtBQUNyRCx1REFBZ0Q7QUFDaEQsaURBQTBDO0FBRTFDLE1BQXFCLFVBQVcsU0FBUSxxQ0FBcUI7SUFBN0Q7O1FBSVksc0JBQWlCLEdBQVMsS0FBSyxDQUFDO0lBWTVDLENBQUM7SUFURyxjQUFjLENBQUMsUUFBa0I7UUFDN0IsSUFBSSxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxlQUFlLElBQUksSUFBSSwyQkFRbXpVLGFBQWMsQ0FSN3pVLFFBQVEsQ0FBQyxVQUFVLEVBQUksc0JBQVksQ0FBQyxRQUFRLENBQUMsZUFBZSxDQUFDLFVBQVUsQ0FBQTtZQUN4SCxPQUFPO1FBRVgsSUFBSSxDQUFDLElBQUksQ0FBQyxpQkFBaUIsRUFBRTtZQUN6QixJQUFJLENBQUMsaUJBQWlCLEdBQUcsSUFBSSxDQUFDO1lBQzlCLHlCQUFlLENBQUMsUUFBUSxDQUFDLGdCQUFnQixDQUFDLElBQUksQ0FBQyxDQUFDO1NBQ25EO0lBQ0wsQ0FBQztDQUNKO0FBaEJELDZCQWdCQyJ9","assetPath":"Assets/ObbyTemplate/Scripts/SpawnPoint.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"particleSystem","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"SpawnPoint","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: c40375c9762d1f9e5fd8be3fb209e38a
+    GameSettings_1 = require(\"../Game Settings/GameSettings\");\r\nconst ObbyGameManager_1
+    = require(\"../Game Settings/ObbyGameManager\");\r\nclass SpawnPoint extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor() {\r\n        super(...arguments);\r\n       
+    this._activeCheckpoint = false;\r\n    }\r\n    OnTriggerEnter(collider) {\r\n       
+    if (GameSettings_1.default.Instance.zepetoCharacter == null || __UnityEngine__.Object.op_Inequality(collider.gameObject,
+    GameSettings_1.default.Instance.zepetoCharacter.gameObject))\r\n            return;\r\n       
+    if (!this._activeCheckpoint) {\r\n            this._activeCheckpoint = true;\r\n           
+    ObbyGameManager_1.default.instance.UpdateCheckpoint(this);\r\n        }\r\n   
+    }\r\n}\r\nexports.default = SpawnPoint;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3Bhd25Qb2ludC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlNwYXduUG9pbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsNkNBQW1EO0FBQ25ELGlEQUFxRDtBQUNyRCxnRUFBeUQ7QUFDekQsc0VBQStEO0FBRy9ELE1BQXFCLFVBQVcsU0FBUSxxQ0FBcUI7SUFBN0Q7O1FBSVksc0JBQWlCLEdBQVMsS0FBSyxDQUFDO0lBWTVDLENBQUM7SUFURyxjQUFjLENBQUMsUUFBa0I7UUFDN0IsSUFBSSxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxlQUFlLElBQUksSUFBSSwyQkFRbXhVLGFBQWMsQ0FSN3hVLFFBQVEsQ0FBQyxVQUFVLEVBQUksc0JBQVksQ0FBQyxRQUFRLENBQUMsZUFBZSxDQUFDLFVBQVUsQ0FBQTtZQUN4SCxPQUFPO1FBRVgsSUFBSSxDQUFDLElBQUksQ0FBQyxpQkFBaUIsRUFBRTtZQUN6QixJQUFJLENBQUMsaUJBQWlCLEdBQUcsSUFBSSxDQUFDO1lBQzlCLHlCQUFlLENBQUMsUUFBUSxDQUFDLGdCQUFnQixDQUFDLElBQUksQ0FBQyxDQUFDO1NBQ25EO0lBQ0wsQ0FBQztDQUNKO0FBaEJELDZCQWdCQyJ9","assetPath":"Assets/ObbyTemplate/Scripts/Platforms/SpawnPoint.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"particleSystem","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"SpawnPoint","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: b70235e165afea7205c45f2d3a4364d6
   onlyWriteTrigger: 0
