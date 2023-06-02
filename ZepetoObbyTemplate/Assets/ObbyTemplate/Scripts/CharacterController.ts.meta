@@ -21,12 +21,13 @@ ScriptedImporter:
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
     { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
     ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
-    ZEPETO_World_1 = require(\"ZEPETO.World\");\r\nclass CharacterController extends
-    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    // Create an instance of the player
-    using the id;\r\n    SpawnCharacter() {\r\n        $extension(\"ZEPETO.Character.Controller.ZepetoPlayersExtension\").CreatePlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
+    ZEPETO_World_1 = require(\"ZEPETO.World\");\r\n// This class spawns the player\r\nclass
+    CharacterController extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    //
+    Create an instance of the player using the id;\r\n    SpawnCharacter() {\r\n       
+    $extension(\"ZEPETO.Character.Controller.ZepetoPlayersExtension\").CreatePlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
     ZEPETO_World_1.WorldService.userId, new ZEPETO_Character_Controller_1.SpawnInfo(),
     true);\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
     => {\r\n            let _player = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer;\r\n       
-    });\r\n    }\r\n}\r\nexports.default = CharacterController;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2hhcmFjdGVyQ29udHJvbGxlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkNoYXJhY3RlckNvbnRyb2xsZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxpREFBc0Q7QUFDdEQsNkVBQWlIO0FBQ2pILCtDQUE0QztBQUU1QyxNQUFxQixtQkFBb0IsU0FBUSxxQ0FBcUI7SUFDbEUsaURBQWlEO0lBQ2pELGNBQWM7UUFDVixpRUFBdUIsc0JBQXNCLENBQTdDLDJDQUFhLENBQUMsUUFBUSxFQUF5QiwyQkFBWSxDQUFDLE1BQU0sRUFBRSxJQUFJLHVDQUFTLEVBQUUsRUFBRSxJQUFJLEVBQUc7UUFDNUYsMkNBQWEsQ0FBQyxRQUFRLENBQUMsa0JBQWtCLENBQUMsV0FBVyxDQUFFLEdBQUcsRUFBRTtZQUN4RCxJQUFJLE9BQU8sR0FBZ0IsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDO1FBQ2xFLENBQUMsQ0FBRSxDQUFDO0lBQ1IsQ0FBQztDQUNKO0FBUkQsc0NBUUMifQ==","assetPath":"Assets/ObbyTemplate/Scripts/CharacterController.ts","manifest":{"properties":[],"name":"CharacterController","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: 296101b90b72d4bdae521790b3a84ec2
+    });\r\n    }\r\n}\r\nexports.default = CharacterController;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2hhcmFjdGVyQ29udHJvbGxlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkNoYXJhY3RlckNvbnRyb2xsZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxpREFBc0Q7QUFDdEQsNkVBQWlIO0FBQ2pILCtDQUE0QztBQUU1QywrQkFBK0I7QUFDL0IsTUFBcUIsbUJBQW9CLFNBQVEscUNBQXFCO0lBQ2xFLGlEQUFpRDtJQUNqRCxjQUFjO1FBQ1YsaUVBQXVCLHNCQUFzQixDQUE3QywyQ0FBYSxDQUFDLFFBQVEsRUFBeUIsMkJBQVksQ0FBQyxNQUFNLEVBQUUsSUFBSSx1Q0FBUyxFQUFFLEVBQUUsSUFBSSxFQUFHO1FBQzVGLDJDQUFhLENBQUMsUUFBUSxDQUFDLGtCQUFrQixDQUFDLFdBQVcsQ0FBRSxHQUFHLEVBQUU7WUFDeEQsSUFBSSxPQUFPLEdBQWdCLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQztRQUNsRSxDQUFDLENBQUUsQ0FBQztJQUNSLENBQUM7Q0FDSjtBQVJELHNDQVFDIn0=","assetPath":"Assets/ObbyTemplate/Scripts/CharacterController.ts","manifest":{"properties":[],"name":"CharacterController","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: c5d01c2a812da122214634901910b22a
   onlyWriteTrigger: 0

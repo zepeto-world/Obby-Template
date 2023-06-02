@@ -1,9 +1,9 @@
 import { Collider } from 'UnityEngine';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
-import GameSettings from './Game Settings/GameSettings';
-import ObbyGameManager from './Game Settings/ObbyGameManager';
+import GameSettings from './Managers/GameSettings';
+import ObbyGameManager from './Managers/ObbyGameManager';
 
-
+// Controls the teleport system
 export default class Teleport extends ZepetoScriptBehaviour
 {
     OnTriggerEnter(collider: Collider)
@@ -14,6 +14,7 @@ export default class Teleport extends ZepetoScriptBehaviour
         this.TPPlayer();
     }
 
+    // Teleport the player
     TPPlayer()
     {
         ObbyGameManager.instance.TeleportCharacter();

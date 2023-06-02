@@ -1,22 +1,23 @@
 import { Button } from 'UnityEngine.UI'
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
-import GameSettings from '../Game Settings/GameSettings';
+import GameSettings from '../Managers/GameSettings';
 
+// Class that controls the interactions with the start screen
+export default class StartScreen extends ZepetoScriptBehaviour {
 
-export default class StartScreen extends ZepetoScriptBehaviour 
-{
+    public mainButton: Button; // button reference
 
-    public mainButton: Button;
-
-    Start() {
-        this.mainButton.onClick.AddListener(() => {
+    // Set the action for the button
+    Start () {
+        this.mainButton.onClick.AddListener( () => {
             this.OnClick();
-        });
+        } );
     }
-
-    OnClick(): void {
+    
+    //  Call to the onstart UI and hide the gameobject
+    OnClick (): void {
         GameSettings.Instance.OnStartGame();
-        this.gameObject.SetActive(false);
+        this.gameObject.SetActive( false );
     }
 
 }

@@ -20,12 +20,15 @@ ScriptedImporter:
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
     { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
-    GameSettings_1 = require(\"../Game Settings/GameSettings\");\r\nclass VictoryScreen
-    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n        this.resetButton.onClick.AddListener(this.ResetBtnAction);\r\n       
+    GameSettings_1 = require(\"../Game Settings/GameSettings\");\r\n// Class that
+    controls the interactions with the victory screen\r\nclass VictoryScreen extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    // Set the buttons action\r\n   
+    Start() {\r\n        this.resetButton.onClick.AddListener(this.ResetBtnAction);\r\n       
     this.nextLevelButton.onClick.AddListener(() => {\r\n            this.NextLevelBtnAction();\r\n       
-    });\r\n    }\r\n    ResetBtnAction() {\r\n        GameSettings_1.default.Instance.ResetMap();\r\n   
-    }\r\n    NextLevelBtnAction() {\r\n        GameSettings_1.default.Instance.NextLevel();\r\n       
-    this.gameObject.SetActive(false);\r\n    }\r\n}\r\nexports.default = VictoryScreen;\r\n//#
-    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVmljdG9yeVNjcmVlbi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlZpY3RvcnlTY3JlZW4udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSxpREFBcUQ7QUFDckQsZ0VBQXlEO0FBR3pELE1BQXFCLGFBQWMsU0FBUSxxQ0FBcUI7SUFJNUQsS0FBSztRQUNELElBQUksQ0FBQyxXQUFXLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBRSxJQUFJLENBQUMsY0FBYyxDQUFFLENBQUM7UUFDNUQsSUFBSSxDQUFDLGVBQWUsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFFLEdBQUcsRUFBRTtZQUMzQyxJQUFJLENBQUMsa0JBQWtCLEVBQUUsQ0FBQTtRQUM3QixDQUFDLENBQUUsQ0FBQztJQUNSLENBQUM7SUFFRCxjQUFjO1FBQ1Ysc0JBQVksQ0FBQyxRQUFRLENBQUMsUUFBUSxFQUFFLENBQUM7SUFDckMsQ0FBQztJQUVELGtCQUFrQjtRQUNkLHNCQUFZLENBQUMsUUFBUSxDQUFDLFNBQVMsRUFBRSxDQUFDO1FBQ2xDLElBQUksQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFFLEtBQUssQ0FBRSxDQUFDO0lBQ3ZDLENBQUM7Q0FDSjtBQW5CRCxnQ0FtQkMifQ==","assetPath":"Assets/ObbyTemplate/Scripts/UI/VictoryScreen.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"resetButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"nextLevelButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"VictoryScreen","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: 87d580b9d5e85c15b6305e1316bcee55
+    });\r\n    }\r\n    // Call to reload the scene\r\n    ResetBtnAction() {\r\n       
+    GameSettings_1.default.Instance.ResetMap();\r\n    }\r\n    // Call to instance
+    the next level and disable this gameobject\r\n    NextLevelBtnAction() {\r\n       
+    GameSettings_1.default.Instance.NextLevel();\r\n        this.gameObject.SetActive(false);\r\n   
+    }\r\n}\r\nexports.default = VictoryScreen;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVmljdG9yeVNjcmVlbi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlZpY3RvcnlTY3JlZW4udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSxpREFBcUQ7QUFDckQsZ0VBQXlEO0FBR3pELCtEQUErRDtBQUMvRCxNQUFxQixhQUFjLFNBQVEscUNBQXFCO0lBSTVELHlCQUF5QjtJQUN6QixLQUFLO1FBQ0QsSUFBSSxDQUFDLFdBQVcsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFFLElBQUksQ0FBQyxjQUFjLENBQUUsQ0FBQztRQUM1RCxJQUFJLENBQUMsZUFBZSxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUUsR0FBRyxFQUFFO1lBQzNDLElBQUksQ0FBQyxrQkFBa0IsRUFBRSxDQUFBO1FBQzdCLENBQUMsQ0FBRSxDQUFDO0lBQ1IsQ0FBQztJQUVELDJCQUEyQjtJQUMzQixjQUFjO1FBQ1Ysc0JBQVksQ0FBQyxRQUFRLENBQUMsUUFBUSxFQUFFLENBQUM7SUFDckMsQ0FBQztJQUVELDhEQUE4RDtJQUM5RCxrQkFBa0I7UUFDZCxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxTQUFTLEVBQUUsQ0FBQztRQUNsQyxJQUFJLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBRSxLQUFLLENBQUUsQ0FBQztJQUN2QyxDQUFDO0NBQ0o7QUF0QkQsZ0NBc0JDIn0=","assetPath":"Assets/ObbyTemplate/Scripts/UI/VictoryScreen.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"resetButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"nextLevelButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"VictoryScreen","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: d69977c30a5ee31bd5b0a6f45aeb0827
   onlyWriteTrigger: 0

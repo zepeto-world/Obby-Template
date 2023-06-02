@@ -1,8 +1,9 @@
 import { BoxCollider, Collider, Quaternion, Rigidbody, Vector3 } from "UnityEngine";
 import { ZepetoScriptBehaviour } from "ZEPETO.Script";
-import GameSettings from '../Game Settings/GameSettings';
+import GameSettings from "../Managers/GameSettings";
 
 
+// This class  controls the platforms that can fall when the player steps inside
 export default class FallPlatform extends ZepetoScriptBehaviour 
 {
   public fallDelay: number = 0.1; //Time it takes to start falling
@@ -60,6 +61,7 @@ export default class FallPlatform extends ZepetoScriptBehaviour
     }
   }
 
+  // Active the gravity for the platform so it falls down
   FallPlatform () {
     this._myRigidbody.isKinematic = false;
     this._myRigidbody.useGravity = true;
@@ -68,17 +70,18 @@ export default class FallPlatform extends ZepetoScriptBehaviour
     this.Invoke( "RespawnPlatform", this.respawnDelay );
   }
 
+  // Reset the platform to the start position 
   RespawnPlatform () {
-    this._falling = false;
+    this._falling = false; // Flag of is falling
 
-    this._myRigidbody.isKinematic = true;
+    this._myRigidbody.isKinematic = true; // Reset the kinematic and the gravity, doing that the platform will not fall when it respawns
     this._myRigidbody.useGravity = false;
 
-    this.transform.rotation = Quaternion.Euler( 0, 0, 0 );
+    this.transform.rotation = Quaternion.Euler( 0, 0, 0 ); // Set the rotation to zero
     this.transform.position = new Vector3(
       this.transform.position.x,
       this._initPosY,
       this.transform.position.z
-    );
+    ); // Set the position into the exact same position but reset his Y position to the initial.
   }
 }

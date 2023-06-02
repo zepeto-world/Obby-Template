@@ -22,13 +22,15 @@ ScriptedImporter:
     { value: true });\r\nconst __UnityEngine__ = require(\"UnityEngine\");\r\nconst
     UnityEngine_1 = require(\"UnityEngine\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
     GameSettings_1 = require(\"../Game Settings/GameSettings\");\r\nconst ObbyGameManager_1
-    = require(\"../Game Settings/ObbyGameManager\");\r\nclass SpawnPoint extends
-    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor() {\r\n        super(...arguments);\r\n       
-    this._activeCheckpoint = false;\r\n    }\r\n    OnTriggerEnter(collider) {\r\n       
-    if (GameSettings_1.default.Instance.zepetoCharacter == null || __UnityEngine__.Object.op_Inequality(collider.gameObject,
-    GameSettings_1.default.Instance.zepetoCharacter.gameObject))\r\n            return;\r\n       
-    if (!this._activeCheckpoint) {\r\n            this._activeCheckpoint = true;\r\n           
-    ObbyGameManager_1.default.instance.UpdateCheckpoint(this);\r\n        }\r\n   
-    }\r\n}\r\nexports.default = SpawnPoint;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3Bhd25Qb2ludC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlNwYXduUG9pbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsNkNBQW1EO0FBQ25ELGlEQUFxRDtBQUNyRCxnRUFBeUQ7QUFDekQsc0VBQStEO0FBRy9ELE1BQXFCLFVBQVcsU0FBUSxxQ0FBcUI7SUFBN0Q7O1FBSVksc0JBQWlCLEdBQVMsS0FBSyxDQUFDO0lBWTVDLENBQUM7SUFURyxjQUFjLENBQUMsUUFBa0I7UUFDN0IsSUFBSSxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxlQUFlLElBQUksSUFBSSwyQkFRbXhVLGFBQWMsQ0FSN3hVLFFBQVEsQ0FBQyxVQUFVLEVBQUksc0JBQVksQ0FBQyxRQUFRLENBQUMsZUFBZSxDQUFDLFVBQVUsQ0FBQTtZQUN4SCxPQUFPO1FBRVgsSUFBSSxDQUFDLElBQUksQ0FBQyxpQkFBaUIsRUFBRTtZQUN6QixJQUFJLENBQUMsaUJBQWlCLEdBQUcsSUFBSSxDQUFDO1lBQzlCLHlCQUFlLENBQUMsUUFBUSxDQUFDLGdCQUFnQixDQUFDLElBQUksQ0FBQyxDQUFDO1NBQ25EO0lBQ0wsQ0FBQztDQUNKO0FBaEJELDZCQWdCQyJ9","assetPath":"Assets/ObbyTemplate/Scripts/Platforms/SpawnPoint.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"particleSystem","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"SpawnPoint","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: b70235e165afea7205c45f2d3a4364d6
+    = require(\"../Game Settings/ObbyGameManager\");\r\n// This class controls the
+    spawnpoints\r\nclass SpawnPoint extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this._activeCheckpoint
+    = false; // flag to set if the spawnpoint was actived\r\n    }\r\n    // When
+    the player touches the spawn it got setted active and update the last checkpoint\r\n   
+    OnTriggerEnter(collider) {\r\n        if (GameSettings_1.default.Instance.zepetoCharacter
+    == null || __UnityEngine__.Object.op_Inequality(collider.gameObject, GameSettings_1.default.Instance.zepetoCharacter.gameObject))\r\n           
+    return;\r\n        if (!this._activeCheckpoint) {\r\n            this._activeCheckpoint
+    = true;\r\n            ObbyGameManager_1.default.instance.UpdateCheckpoint(this);\r\n       
+    }\r\n    }\r\n}\r\nexports.default = SpawnPoint;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3Bhd25Qb2ludC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlNwYXduUG9pbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsNkNBQW1EO0FBQ25ELGlEQUFxRDtBQUNyRCxnRUFBeUQ7QUFDekQsc0VBQStEO0FBRS9ELHNDQUFzQztBQUN0QyxNQUFxQixVQUFXLFNBQVEscUNBQXFCO0lBQTdEOztRQUdZLHNCQUFpQixHQUFTLEtBQUssQ0FBQyxDQUFDLDRDQUE0QztJQVl6RixDQUFDO0lBVkcsd0ZBQXdGO0lBQ3hGLGNBQWMsQ0FBQyxRQUFrQjtRQUM3QixJQUFJLHNCQUFZLENBQUMsUUFBUSxDQUFDLGVBQWUsSUFBSSxJQUFJLDJCQVE2blUsYUFBYyxDQVJ2b1UsUUFBUSxDQUFDLFVBQVUsRUFBSSxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxlQUFlLENBQUMsVUFBVSxDQUFBO1lBQ3hILE9BQU87UUFFWCxJQUFJLENBQUMsSUFBSSxDQUFDLGlCQUFpQixFQUFFO1lBQ3pCLElBQUksQ0FBQyxpQkFBaUIsR0FBRyxJQUFJLENBQUM7WUFDOUIseUJBQWUsQ0FBQyxRQUFRLENBQUMsZ0JBQWdCLENBQUMsSUFBSSxDQUFDLENBQUM7U0FDbkQ7SUFDTCxDQUFDO0NBQ0o7QUFmRCw2QkFlQyJ9","assetPath":"Assets/ObbyTemplate/Scripts/Platforms/SpawnPoint.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"particleSystem","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"SpawnPoint","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 710f52245851281141fb0715d052ab29
   onlyWriteTrigger: 0

@@ -1,14 +1,15 @@
 import { Time, Mathf } from 'UnityEngine';
 import { Slider, Text } from 'UnityEngine.UI';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
-import GameSettings from '../Game Settings/GameSettings';
+import GameSettings from '../Managers/GameSettings';
 
 
 
+// Class that controls the interactions with the timer screen
 export default class TimerManager extends ZepetoScriptBehaviour 
 {
-    public timeSlider: Slider;
-    public remainingTxt: Text;
+    public timeSlider: Slider; // Silder reference
+    public remainingTxt: Text; // remaining text reference
 
     private _duration: number; // Duration in seconds.
     private _timeRemaining: number = 0; // Time remaining in seconds.
@@ -16,6 +17,8 @@ export default class TimerManager extends ZepetoScriptBehaviour
     private _counter: number = 0; // Counter for update the visuals
 
 
+    // Set up the duration of the timer
+    // and call the functions that shows up on the game
     public SetTimer(duration: number) {
         this._duration = duration;
 
@@ -24,6 +27,7 @@ export default class TimerManager extends ZepetoScriptBehaviour
         this.StartTimer();
     }
 
+    // Controls the time if the flag is true
     Update() {
         if (this._isRunning) {
             this._timeRemaining -= Time.deltaTime;
@@ -43,6 +47,7 @@ export default class TimerManager extends ZepetoScriptBehaviour
         }
     }
 
+    // Controls the visual of the timer, normalizing the time to mins and secs
     UpdateVisual() {
         let valueNormalized = this._timeRemaining / this._duration; // Get the normalized value for the slider
 
@@ -57,34 +62,35 @@ export default class TimerManager extends ZepetoScriptBehaviour
         this.remainingTxt.text = tempMinString + tempSegString;
     }
 
+    // Change the flag to true
     public StartTimer() {
         this._isRunning = true;
     }
 
+    // Change the flag to false
     public StopTimer() {
         this._isRunning = false;
     }
 
+    // Set the timer to the duration and the flag on false
     private ResetTimer() {
         this._timeRemaining = this._duration;
         this._isRunning = false;
     }
 
+
+    // Set the timer on 0 for the visuals
     private OnGameOver(): void {
         this.remainingTxt.text = "00";
         GameSettings.Instance.OnGameOver();
     }
 
-    /// <summary>
     /// Get Time Remaining
-    /// </summary>
     public GetTimeRemaining(): number {
         return this._timeRemaining;
     }
 
-    /// <summary>
     /// Get if time is running
-    /// </summary>
     public GetIsRunning(): boolean {
         return this._isRunning;
     }

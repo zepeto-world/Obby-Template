@@ -1,5 +1,7 @@
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import { Time } from "UnityEngine";
+
+// This class controls the moving platforms
 export default class SimpleMove extends ZepetoScriptBehaviour 
 {
     public movingTime: number = 1; // How much time its tooks to move and go back
@@ -10,9 +12,11 @@ export default class SimpleMove extends ZepetoScriptBehaviour
     public movingRangeX: number = 2;
     public movingRangeZ: number = 2;
 
-    private _delta: number = 0;
-    private _movingFlag: boolean = true;
+    private _delta: number = 0; // Controls the time
+    private _movingFlag: boolean = true; // Flag for the move
 
+    // Every second the platform moves toward the offset position setted on the variables
+    // once the time is gapped them comes  again to the start position
     FixedUpdate() {
         this._delta += Time.deltaTime;
 

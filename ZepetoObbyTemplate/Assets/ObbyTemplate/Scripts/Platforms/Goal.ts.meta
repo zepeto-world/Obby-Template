@@ -21,12 +21,13 @@ ScriptedImporter:
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
     { value: true });\r\nconst __UnityEngine__ = require(\"UnityEngine\");\r\nconst
     ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst GameSettings_1 = require(\"../Game
-    Settings/GameSettings\");\r\nclass Goal extends ZEPETO_Script_1.ZepetoScriptBehaviour
-    {\r\n    OnTriggerEnter(collider) {\r\n        if (GameSettings_1.default.Instance.zepetoCharacter
-    == null || __UnityEngine__.Object.op_Inequality(collider.gameObject, GameSettings_1.default.Instance.zepetoCharacter.gameObject))\r\n           
-    return;\r\n        if (!this._used && GameSettings_1.default.Instance.canWin)
-    {\r\n            GameSettings_1.default.Instance.OnVictory();\r\n           
+    Settings/GameSettings\");\r\n// This class controls the goal, when the player
+    touch the goal\r\nclass Goal extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n   
+    // When the player touches call to the win and set the flag on true\r\n    OnTriggerEnter(collider)
+    {\r\n        if (GameSettings_1.default.Instance.zepetoCharacter == null || __UnityEngine__.Object.op_Inequality(collider.gameObject,
+    GameSettings_1.default.Instance.zepetoCharacter.gameObject))\r\n            return;\r\n       
+    if (!this._used && GameSettings_1.default.Instance.canWin) {\r\n            GameSettings_1.default.Instance.OnVictory();\r\n           
     this._used = true;\r\n        }\r\n    }\r\n}\r\nexports.default = Goal;\r\n//#
-    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR29hbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkdvYWwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQ0EsaURBQXFEO0FBQ3JELGdFQUF5RDtBQUd6RCxNQUFxQixJQUFLLFNBQVEscUNBQXFCO0lBS25ELGNBQWMsQ0FBQyxRQUFrQjtRQUM3QixJQUFJLHNCQUFZLENBQUMsUUFBUSxDQUFDLGVBQWUsSUFBSSxJQUFJLDJCQVE0OFUsYUFBYyxDQVJ0OVUsUUFBUSxDQUFDLFVBQVUsRUFBSSxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxlQUFlLENBQUMsVUFBVSxDQUFBO1lBQ3hILE9BQU87UUFFWCxJQUFJLENBQUMsSUFBSSxDQUFDLEtBQUssSUFBSSxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxNQUFNLEVBQUU7WUFDN0Msc0JBQVksQ0FBQyxRQUFRLENBQUMsU0FBUyxFQUFFLENBQUM7WUFDbEMsSUFBSSxDQUFDLEtBQUssR0FBRyxJQUFJLENBQUM7U0FDckI7SUFDTCxDQUFDO0NBQ0o7QUFkRCx1QkFjQyJ9","assetPath":"Assets/ObbyTemplate/Scripts/Platforms/Goal.ts","manifest":{"properties":[],"name":"Goal","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: 6793a7273fd10108121a4ea43ac0ba5c
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR29hbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkdvYWwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQ0EsaURBQXFEO0FBQ3JELGdFQUF5RDtBQUV6RCwrREFBK0Q7QUFDL0QsTUFBcUIsSUFBSyxTQUFRLHFDQUFxQjtJQUtuRCxtRUFBbUU7SUFDbkUsY0FBYyxDQUFDLFFBQWtCO1FBQzdCLElBQUksc0JBQVksQ0FBQyxRQUFRLENBQUMsZUFBZSxJQUFJLElBQUksMkJBUXN4VSxhQUFjLENBUmh5VSxRQUFRLENBQUMsVUFBVSxFQUFJLHNCQUFZLENBQUMsUUFBUSxDQUFDLGVBQWUsQ0FBQyxVQUFVLENBQUE7WUFDeEgsT0FBTztRQUVYLElBQUksQ0FBQyxJQUFJLENBQUMsS0FBSyxJQUFJLHNCQUFZLENBQUMsUUFBUSxDQUFDLE1BQU0sRUFBRTtZQUM3QyxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxTQUFTLEVBQUUsQ0FBQztZQUNsQyxJQUFJLENBQUMsS0FBSyxHQUFHLElBQUksQ0FBQztTQUNyQjtJQUNMLENBQUM7Q0FDSjtBQWZELHVCQWVDIn0=","assetPath":"Assets/ObbyTemplate/Scripts/Platforms/Goal.ts","manifest":{"properties":[],"name":"Goal","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 4eb31c2d807c93d1dc7f0571baedcdc3
   onlyWriteTrigger: 0

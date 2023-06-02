@@ -255,6 +255,13 @@
       "dependencies": {},
       "url": "https://upm.zepeto.run"
     },
+    "zepeto.world.gui": {
+      "version": "1.1.0-preview",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://upm.zepeto.run"
+    },
     "zepeto.world.shared": {
       "version": "1.8.0",
       "depth": 1,
