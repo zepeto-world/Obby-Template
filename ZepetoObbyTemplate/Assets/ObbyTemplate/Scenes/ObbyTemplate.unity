@@ -1321,29 +1321,29 @@ MonoBehaviour:
   applyRootMotion: 0
   script:
     keys:
-    - _useTimer
     - gameDuration
     - timerManager
     - _gameOverPanel
     - _victoryPanel
     - _startPanel
     - _timerPanel
+    - enableTimer
     unityValues:
-    - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 1538884904}
     - {fileID: 1049534602}
     - {fileID: 1009694435}
     - {fileID: 1227463320}
+    - {fileID: 0}
     values:
-    - '{"type":"System.Boolean, mscorlib","value":"True"}'
     - '{"type":"System.Single, mscorlib","value":"120"}'
     - 
     - 
     - 
     - 
     - 
+    - '{"type":"System.Boolean, mscorlib","value":"True"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: f3e466cae2c705d4e894cb156c0ea808, type: 3}
