@@ -20,13 +20,12 @@ ScriptedImporter:
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
     { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
-    GameSettings_1 = require(\"../Game Settings/GameSettings\");\r\n// Class that
-    controls the interactions with the start screen\r\nclass StartScreen extends
-    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    // Set the action for the button\r\n   
-    Start() {\r\n        this.mainButton.onClick.AddListener(() => {\r\n           
-    this.OnClick();\r\n        });\r\n    }\r\n    //  Call to the onstart UI and
-    hide the gameobject\r\n    OnClick() {\r\n        GameSettings_1.default.Instance.OnStartGame();\r\n       
+    GameSettings_1 = require(\"../Managers/GameSettings\");\r\n// Class that controls
+    the interactions with the start screen\r\nclass StartScreen extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    // Set the action for the button\r\n    Start() {\r\n        this.mainButton.onClick.AddListener(()
+    => {\r\n            this.OnClick();\r\n        });\r\n    }\r\n    //  Call to
+    the onstart UI and hide the gameobject\r\n    OnClick() {\r\n        GameSettings_1.default.Instance.OnStartGame();\r\n       
     this.gameObject.SetActive(false);\r\n    }\r\n}\r\nexports.default = StartScreen;\r\n//#
-    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3RhcnRTY3JlZW4uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJTdGFydFNjcmVlbi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUNBLGlEQUFxRDtBQUNyRCxnRUFBeUQ7QUFFekQsNkRBQTZEO0FBQzdELE1BQXFCLFdBQVksU0FBUSxxQ0FBcUI7SUFJMUQsZ0NBQWdDO0lBQ2hDLEtBQUs7UUFDRCxJQUFJLENBQUMsVUFBVSxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUUsR0FBRyxFQUFFO1lBQ3RDLElBQUksQ0FBQyxPQUFPLEVBQUUsQ0FBQztRQUNuQixDQUFDLENBQUUsQ0FBQztJQUNSLENBQUM7SUFFRCxrREFBa0Q7SUFDbEQsT0FBTztRQUNILHNCQUFZLENBQUMsUUFBUSxDQUFDLFdBQVcsRUFBRSxDQUFDO1FBQ3BDLElBQUksQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFFLEtBQUssQ0FBRSxDQUFDO0lBQ3ZDLENBQUM7Q0FFSjtBQWpCRCw4QkFpQkMifQ==","assetPath":"Assets/ObbyTemplate/Scripts/UI/StartScreen.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"mainButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"StartScreen","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: 2b3df565f99505558acf25e2782b4e20
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3RhcnRTY3JlZW4uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJTdGFydFNjcmVlbi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUNBLGlEQUFxRDtBQUNyRCwyREFBb0Q7QUFFcEQsNkRBQTZEO0FBQzdELE1BQXFCLFdBQVksU0FBUSxxQ0FBcUI7SUFJMUQsZ0NBQWdDO0lBQ2hDLEtBQUs7UUFDRCxJQUFJLENBQUMsVUFBVSxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUUsR0FBRyxFQUFFO1lBQ3RDLElBQUksQ0FBQyxPQUFPLEVBQUUsQ0FBQztRQUNuQixDQUFDLENBQUUsQ0FBQztJQUNSLENBQUM7SUFFRCxrREFBa0Q7SUFDbEQsT0FBTztRQUNILHNCQUFZLENBQUMsUUFBUSxDQUFDLFdBQVcsRUFBRSxDQUFDO1FBQ3BDLElBQUksQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFFLEtBQUssQ0FBRSxDQUFDO0lBQ3ZDLENBQUM7Q0FFSjtBQWpCRCw4QkFpQkMifQ==","assetPath":"Assets/ObbyTemplate/Scripts/UI/StartScreen.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"mainButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"StartScreen","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 2c76518b8a197fc423249126a8aa513e
   onlyWriteTrigger: 0
