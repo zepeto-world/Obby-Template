@@ -5,10 +5,12 @@ import SpawnPoint from '../Platforms/SpawnPoint';
 // This class contains the spawnpoint of the level prefab to get it when the player starts a new level
 export default class LevelScript extends ZepetoScriptBehaviour 
 {
-    @SerializeField() spawnGameObject: GameObject; // The spawn gameobject
-    public spawnPoint: SpawnPoint; // The spawn gameobject
+    @SerializeField() spawnGameObject: GameObject; // Reference to the first spawn of the level
 
-    public Spawn(): SpawnPoint { // It returns the SpawnPoint script from the gameobject
-        return this.spawnGameObject.GetComponent<SpawnPoint>();
+     // This method gets the "SpawnPoint" component of the first spawnPoint object of a level
+    public Spawn(): SpawnPoint 
+    {
+        // Here returns the component "SpawnPoint" of the gameObject
+        return this.spawnGameObject.GetComponent<SpawnPoint>(); 
     }
 }

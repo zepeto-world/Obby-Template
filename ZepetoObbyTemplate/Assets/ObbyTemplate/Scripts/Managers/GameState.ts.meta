@@ -1,0 +1,92 @@
+fileFormatVersion: 2
+guid: bf8ebc80ee02fa14788274f198d142c6
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nconst ObbyGameManager_1 = require(\"./ObbyGameManager\");\r\nconst
+    LevelScript_1 = require(\"./LevelScript\");\r\nconst UnityEngine_SceneManagement_1
+    = require(\"UnityEngine.SceneManagement\");\r\nconst UIManager_1 = require(\"./UIManager\");\r\nconst
+    ZEPETO_World_1 = require(\"ZEPETO.World\");\r\n// This class set up the game
+    levels and controls if the player wins or loses\r\nclass GameState extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this._actualLevel
+    = 0; // The counter of the actual level\r\n    }\r\n    // Awake is called when
+    the script instance is being loaded\r\n    Awake() {\r\n        // This is how
+    the instance of this class is allocated. Which makes it a \"singleton\"\r\n       
+    // https://en.wikipedia.org/wiki/Singleton_pattern\r\n        if (ZEPETO_Script_1.ZepetoScriptBehaviour.op_Equality(GameState.Instance,
+    null))\r\n            GameState.Instance = this;\r\n        else\r\n           
+    UnityEngine_1.GameObject.Destroy(this);\r\n    }\r\n    // Start is called on
+    the frame when a script is enabled just before any of the Update methods is called
+    the first time\r\n    Start() {\r\n        // Call to the start UI \r\n       
+    UIManager_1.default.Instance.OnStart();\r\n        // Call to the internal method
+    that instantiates the level\r\n        this.InstanceActualLevel();\r\n    }\r\n   
+    // This method is responsible for spawning the player\r\n    SpawnPlayer() {\r\n       
+    // Set the internal player spawn flag to true\r\n        this._playerSpawned
+    = true;\r\n        // Instance of the player zepeto\r\n        $extension(\"ZEPETO.Character.Controller.ZepetoPlayersExtension\").CreatePlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
+    ZEPETO_World_1.WorldService.userId, new ZEPETO_Character_Controller_1.SpawnInfo(),
+    true);\r\n        // The instantiation can take a few seconds, the following
+    lines are executed once this happens\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            // We save the reference of the ZepetoCharacter\r\n           
+    this.zepetoCharacter = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n           
+    // When the game starts, we turn off the mainCamera/lobbyCamera\r\n           
+    ObbyGameManager_1.default.instance.lobbyCamera.SetActive(false);\r\n        });\r\n   
+    }\r\n    // This method is responsible for instantiating the level\r\n    InstanceActualLevel()
+    {\r\n        // We choose the level to instantiate using this \"_actualLevel\"
+    as an index of the levels array (\"levels\")\r\n        // and we save its reference
+    in the internal variable \"_levelSpawned\"\r\n        this._levelSpawned = UnityEngine_1.GameObject.Instantiate(this.levels[this._actualLevel]);\r\n   
+    }\r\n    // This method resets the game state\r\n    ResetGameVariables() {\r\n       
+    // Set to false the internal flag \"canWin\"\r\n        this.canWin = false;\r\n       
+    // Set the timeScale to 0\r\n        UnityEngine_1.Time.timeScale = 0;\r\n   
+    }\r\n    // This method is responsible for resetting the level\r\n    ResetMap()
+    {\r\n        // We reload the scene\r\n        // https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager.LoadScene.html\r\n       
+    UnityEngine_SceneManagement_1.SceneManager.LoadScene(UnityEngine_SceneManagement_1.SceneManager.GetActiveScene().name);\r\n   
+    }\r\n    // This method is responsible for destroying and creating the next level\r\n   
+    NextLevel() {\r\n        // Destroy the actual level, \r\n        // https://docs.unity3d.com/ScriptReference/Object.Destroy.html\r\n       
+    UnityEngine_1.GameObject.Destroy(this._levelSpawned);\r\n        // Increase
+    the counter of the actual level\r\n        this._actualLevel++;\r\n        //
+    Check if the player has ended the last level and restart the game\r\n       
+    // We verify that the current level is not above the number of levels available\r\n       
+    if (this._actualLevel >= this.levels.length) {\r\n            // If there are
+    no more levels\r\n            // We call the method that resets the map\r\n           
+    this.ResetMap();\r\n            return;\r\n        }\r\n        // Instance the
+    new level, and get the spawnpoint of him, then teleport the player to spawn and
+    call the start UI\r\n        this.InstanceActualLevel();\r\n        // We need
+    to get the \"LevelScript\" that contains the first Spawn of the next level\r\n       
+    var levelScript = this._levelSpawned.GetComponent($typeof(LevelScript_1.default));\r\n       
+    // Set the spawn to the new spawn level via the ObbytGameManager\r\n        ObbyGameManager_1.default.instance.UpdateCheckpoint(levelScript.Spawn());\r\n       
+    // We call the \"TeleportCharacter\" method of the ObbyGameManager that teleports
+    the player to their respective spawn\r\n        ObbyGameManager_1.default.instance.TeleportCharacter();\r\n       
+    // We call the method of the UIManager that updates the interface at start\r\n       
+    UIManager_1.default.Instance.OnStart();\r\n    }\r\n    // This method is called
+    when player start the game\r\n    OnStartGame() {\r\n        // Set the timescale
+    in 1 if you have passed another level\r\n        UnityEngine_1.Time.timeScale
+    = 1;\r\n        // Calling the same event in the UIManagers\r\n        UIManager_1.default.Instance.OnStartGame();\r\n       
+    // If this player is not generated, we call the respective method\r\n       
+    if (!this._playerSpawned)\r\n            this.SpawnPlayer();\r\n        // Finally
+    we set the internal flag that it is possible to win\r\n        this.canWin =
+    true;\r\n    }\r\n    // This method is called when the player wins\r\n    OnVictory()
+    {\r\n        // Calling the same event in the UIManagers\r\n        UIManager_1.default.Instance.OnVictory();\r\n       
+    // We call the internal method that resets the game variables\r\n        this.ResetGameVariables();\r\n   
+    }\r\n    // This method is called when the player loses\r\n    OnGameOver() {\r\n       
+    // Calling the same event in the UIManagers\r\n        UIManager_1.default.Instance.OnGameOver();\r\n       
+    // We call the internal method that resets the game variables\r\n        this.ResetGameVariables();\r\n   
+    }\r\n}\r\nexports.default = GameState;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR2FtZVN0YXRlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiR2FtZVN0YXRlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQStDO0FBQy9DLGlEQUFxRDtBQUNyRCw2RUFBdUY7QUFDdkYsdURBQWdEO0FBQ2hELCtDQUF3QztBQUN4Qyw2RUFBMkQ7QUFDM0QsMkNBQW9DO0FBQ3BDLCtDQUE0QztBQUU1Qyw2RUFBNkU7QUFDN0UsTUFBcUIsU0FBVSxTQUFRLHFDQUFxQjtJQUE1RDs7UUFVWSxpQkFBWSxHQUFRLENBQUMsQ0FBQyxDQUFDLGtDQUFrQztJQTJJckUsQ0FBQztJQXhJRywyREFBMkQ7SUFDM0QsS0FBSztRQUVELG9GQUFvRjtRQUNwRixrREFBa0Q7UUFDbEQsSUEzQkMscUNBQXFCLENBOEpza0IsV0FBWSxDQW5Jbm1CLFNBQVMsQ0FBQyxRQUFRLEVBQUksSUFBSTtZQUFHLFNBQVMsQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDOztZQUN2RCx3QkFBVSxDQUFDLE9BQU8sQ0FBRSxJQUFJLENBQUUsQ0FBQztJQUNwQyxDQUFDO0lBRUQsdUhBQXVIO0lBQ3ZILEtBQUs7UUFFRCx3QkFBd0I7UUFDeEIsbUJBQVMsQ0FBQyxRQUFRLENBQUMsT0FBTyxFQUFFLENBQUM7UUFFN0IsMERBQTBEO1FBQzFELElBQUksQ0FBQyxtQkFBbUIsRUFBRSxDQUFDO0lBQy9CLENBQUM7SUFFRCxxREFBcUQ7SUFDckQsV0FBVztRQUVQLDZDQUE2QztRQUM3QyxJQUFJLENBQUMsY0FBYyxHQUFHLElBQUksQ0FBQztRQUUzQixnQ0FBZ0M7UUFDaEMsaUVBQXVCLHNCQUFzQixDQUE3QywyQ0FBYSxDQUFDLFFBQVEsRUFBd0IsMkJBQVksQ0FBQyxNQUFNLEVBQUUsSUFBSSx1Q0FBUyxFQUFFLEVBQUUsSUFBSSxFQUFFO1FBRTFGLCtGQUErRjtRQUMvRiwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxrQkFBa0IsQ0FBQyxXQUFXLENBQUUsR0FBRyxFQUFFO1lB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","assetPath":"Assets/ObbyTemplate/Scripts/Managers/GameState.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"canWin","type":"System.Boolean","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"HideInInspector","args":[]}]},{"assembly":"ZEPETO.Character.Controller","name":"zepetoCharacter","type":"ZEPETO.Character.Controller.ZepetoCharacter","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"HideInInspector","args":[]}]},{"assembly":"UnityEngine.CoreModule","name":"levels","type":"UnityEngine.GameObject[]","isArray":true,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"GameState","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: d288924ae5822d2f168e55c1ac73d95c
+  onlyWriteTrigger: 0

@@ -20,14 +20,18 @@ ScriptedImporter:
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
     { value: true });\r\nconst __UnityEngine__ = require(\"UnityEngine\");\r\nconst
-    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst GameSettings_1 = require(\"../Managers/GameSettings\");\r\n//
-    This class controls the goal, when the player touch the goal\r\nclass Goal extends
-    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    // When the player touches call
-    to the win and set the flag on true\r\n    OnTriggerEnter(collider) {\r\n       
-    if (GameSettings_1.default.Instance.zepetoCharacter == null || __UnityEngine__.Object.op_Inequality(collider.gameObject,
-    GameSettings_1.default.Instance.zepetoCharacter.gameObject))\r\n            return;\r\n       
-    if (!this._used && GameSettings_1.default.Instance.canWin) {\r\n            GameSettings_1.default.Instance.OnVictory();\r\n           
-    this._used = true;\r\n        }\r\n    }\r\n}\r\nexports.default = Goal;\r\n//#
-    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR29hbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkdvYWwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQ0EsaURBQXFEO0FBQ3JELDJEQUFvRDtBQUVwRCwrREFBK0Q7QUFDL0QsTUFBcUIsSUFBSyxTQUFRLHFDQUFxQjtJQUtuRCxtRUFBbUU7SUFDbkUsY0FBYyxDQUFDLFFBQWtCO1FBQzdCLElBQUksc0JBQVksQ0FBQyxRQUFRLENBQUMsZUFBZSxJQUFJLElBQUksMkJBUTJ4VSxhQUFjLENBUnJ5VSxRQUFRLENBQUMsVUFBVSxFQUFJLHNCQUFZLENBQUMsUUFBUSxDQUFDLGVBQWUsQ0FBQyxVQUFVLENBQUE7WUFDeEgsT0FBTztRQUVYLElBQUksQ0FBQyxJQUFJLENBQUMsS0FBSyxJQUFJLHNCQUFZLENBQUMsUUFBUSxDQUFDLE1BQU0sRUFBRTtZQUM3QyxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxTQUFTLEVBQUUsQ0FBQztZQUNsQyxJQUFJLENBQUMsS0FBSyxHQUFHLElBQUksQ0FBQztTQUNyQjtJQUNMLENBQUM7Q0FDSjtBQWZELHVCQWVDIn0=","assetPath":"Assets/ObbyTemplate/Scripts/Platforms/Goal.ts","manifest":{"properties":[],"name":"Goal","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: 68c9b54b99babc0386242b8815d76a2e
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst GameState_1 = require(\"../Managers/GameState\");\r\n//
+    This class is in charge of reacting when reaching the final platform\r\nclass
+    Goal extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    // https://docs.unity3d.com/ScriptReference/Collider.OnTriggerEnter.html\r\n   
+    // This event fires when the player reaches the last platform\r\n    OnTriggerEnter(collider)
+    {\r\n        // Check if the \"zepetoCharacter\" of the GameState instance is
+    null or if the gameobject of the collider is not him and return\r\n        if
+    (GameState_1.default.Instance.zepetoCharacter == null || __UnityEngine__.Object.op_Inequality(collider.gameObject,
+    GameState_1.default.Instance.zepetoCharacter.gameObject))\r\n            return;\r\n       
+    // Check if the flag \"canWin\" of the instance of GameState is false\r\n       
+    if (!this._used && GameState_1.default.Instance.canWin) {\r\n            // We
+    call to \"OnVictory\" method of the GameState instance\r\n            GameState_1.default.Instance.OnVictory();\r\n           
+    // And set the flag \"_used\" on true\r\n            this._used = true;\r\n       
+    }\r\n    }\r\n}\r\nexports.default = Goal;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR29hbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkdvYWwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQ0EsaURBQXFEO0FBQ3JELHFEQUE4QztBQUU5Qyx1RUFBdUU7QUFDdkUsTUFBcUIsSUFBSyxTQUFRLHFDQUFxQjtJQUluRCx3RUFBd0U7SUFDeEUsNkRBQTZEO0lBQzdELGNBQWMsQ0FBRyxRQUFrQjtRQUUvQiw4SEFBOEg7UUFDOUgsSUFBSyxtQkFBUyxDQUFDLFFBQVEsQ0FBQyxlQUFlLElBQUksSUFBSSwyQkFhMjNULGFBQWMsQ0FicjRULFFBQVEsQ0FBQyxVQUFVLEVBQUksbUJBQVMsQ0FBQyxRQUFRLENBQUMsZUFBZSxDQUFDLFVBQVUsQ0FBQTtZQUNuSCxPQUFPO1FBRVgsbUVBQW1FO1FBQ25FLElBQUssQ0FBQyxJQUFJLENBQUMsS0FBSyxJQUFJLG1CQUFTLENBQUMsUUFBUSxDQUFDLE1BQU0sRUFDN0M7WUFDSSwwREFBMEQ7WUFDMUQsbUJBQVMsQ0FBQyxRQUFRLENBQUMsU0FBUyxFQUFFLENBQUM7WUFFL0IsbUNBQW1DO1lBQ25DLElBQUksQ0FBQyxLQUFLLEdBQUcsSUFBSSxDQUFDO1NBQ3JCO0lBQ0wsQ0FBQztDQUNKO0FBdEJELHVCQXNCQyJ9","assetPath":"Assets/ObbyTemplate/Scripts/Platforms/Goal.ts","manifest":{"properties":[],"name":"Goal","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 20d3051815754030d906653fed78a5b7
   onlyWriteTrigger: 0

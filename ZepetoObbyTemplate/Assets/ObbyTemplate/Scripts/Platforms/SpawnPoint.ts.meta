@@ -20,17 +20,21 @@ ScriptedImporter:
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
     { value: true });\r\nconst __UnityEngine__ = require(\"UnityEngine\");\r\nconst
-    UnityEngine_1 = require(\"UnityEngine\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
-    GameSettings_1 = require(\"../Managers/GameSettings\");\r\nconst ObbyGameManager_1
-    = require(\"../Managers/ObbyGameManager\");\r\n// This class controls the spawnpoints\r\nclass
-    SpawnPoint extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor()
-    {\r\n        super(...arguments);\r\n        this._activeCheckpoint = false;
-    // flag to set if the spawnpoint was actived\r\n    }\r\n    // When the player
-    touches the spawn it got setted active and update the last checkpoint\r\n   
-    OnTriggerEnter(collider) {\r\n        if (GameSettings_1.default.Instance.zepetoCharacter
-    == null || __UnityEngine__.Object.op_Inequality(collider.gameObject, GameSettings_1.default.Instance.zepetoCharacter.gameObject))\r\n           
-    return;\r\n        if (!this._activeCheckpoint) {\r\n            this._activeCheckpoint
-    = true;\r\n            ObbyGameManager_1.default.instance.UpdateCheckpoint(this);\r\n       
-    }\r\n    }\r\n}\r\nexports.default = SpawnPoint;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3Bhd25Qb2ludC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlNwYXduUG9pbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsNkNBQW1EO0FBQ25ELGlEQUFxRDtBQUNyRCwyREFBb0Q7QUFDcEQsaUVBQTBEO0FBRTFELHNDQUFzQztBQUN0QyxNQUFxQixVQUFXLFNBQVEscUNBQXFCO0lBQTdEOztRQUdZLHNCQUFpQixHQUFTLEtBQUssQ0FBQyxDQUFDLDRDQUE0QztJQVl6RixDQUFDO0lBVkcsd0ZBQXdGO0lBQ3hGLGNBQWMsQ0FBQyxRQUFrQjtRQUM3QixJQUFJLHNCQUFZLENBQUMsUUFBUSxDQUFDLGVBQWUsSUFBSSxJQUFJLDJCQVF1b1UsYUFBYyxDQVJqcFUsUUFBUSxDQUFDLFVBQVUsRUFBSSxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxlQUFlLENBQUMsVUFBVSxDQUFBO1lBQ3hILE9BQU87UUFFWCxJQUFJLENBQUMsSUFBSSxDQUFDLGlCQUFpQixFQUFFO1lBQ3pCLElBQUksQ0FBQyxpQkFBaUIsR0FBRyxJQUFJLENBQUM7WUFDOUIseUJBQWUsQ0FBQyxRQUFRLENBQUMsZ0JBQWdCLENBQUMsSUFBSSxDQUFDLENBQUM7U0FDbkQ7SUFDTCxDQUFDO0NBQ0o7QUFmRCw2QkFlQyJ9","assetPath":"Assets/ObbyTemplate/Scripts/Platforms/SpawnPoint.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"particleSystem","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"SpawnPoint","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: 82b2b1f5925bd72bad53d5d655e87bdb
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst GameState_1 = require(\"../Managers/GameState\");\r\nconst
+    ObbyGameManager_1 = require(\"../Managers/ObbyGameManager\");\r\n// This class
+    controls the spawnpoints\r\nclass SpawnPoint extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this._activeCheckpoint
+    = false; // Internal flag to set if the spawnpoint was actived\r\n    }\r\n   
+    // https://docs.unity3d.com/ScriptReference/Collider.OnTriggerEnter.html\r\n   
+    // When the player touches the spawn it got setted active and update the last
+    checkpoint\r\n    OnTriggerEnter(collider) {\r\n        // Check if the \"zepetoCharacter\"
+    of the GameSettings instance is null or if the gameobject of the collider is
+    not him and return\r\n        if (GameState_1.default.Instance.zepetoCharacter
+    == null || __UnityEngine__.Object.op_Inequality(collider.gameObject, GameState_1.default.Instance.zepetoCharacter.gameObject))\r\n           
+    return;\r\n        // Check if the flag is false\r\n        if (!this._activeCheckpoint)
+    {\r\n            // Set the flag on true\r\n            this._activeCheckpoint
+    = true;\r\n            // Call to the UpdateCheckpoint method of the \"ObbyGameManager\"
+    instance passing this \"SpawnPoint\" like reference\r\n            ObbyGameManager_1.default.instance.UpdateCheckpoint(this);\r\n       
+    }\r\n    }\r\n}\r\nexports.default = SpawnPoint;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3Bhd25Qb2ludC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlNwYXduUG9pbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQ0EsaURBQXFEO0FBQ3JELHFEQUE4QztBQUM5QyxpRUFBMEQ7QUFFMUQsc0NBQXNDO0FBQ3RDLE1BQXFCLFVBQVcsU0FBUSxxQ0FBcUI7SUFBN0Q7O1FBR1ksc0JBQWlCLEdBQVMsS0FBSyxDQUFDLENBQUMscURBQXFEO0lBb0JsRyxDQUFDO0lBbEJHLHdFQUF3RTtJQUN4RSx3RkFBd0Y7SUFDeEYsY0FBYyxDQUFDLFFBQWtCO1FBRTdCLGlJQUFpSTtRQUNqSSxJQUFJLG1CQUFTLENBQUMsUUFBUSxDQUFDLGVBQWUsSUFBSSxJQUFJLDJCQWErclQsYUFBYyxDQWJ6c1QsUUFBUSxDQUFDLFVBQVUsRUFBSSxtQkFBUyxDQUFDLFFBQVEsQ0FBQyxlQUFlLENBQUMsVUFBVSxDQUFBO1lBQ2xILE9BQU87UUFFWCw2QkFBNkI7UUFDN0IsSUFBSSxDQUFDLElBQUksQ0FBQyxpQkFBaUIsRUFDM0I7WUFDSSx1QkFBdUI7WUFDdkIsSUFBSSxDQUFDLGlCQUFpQixHQUFHLElBQUksQ0FBQztZQUU5QixpSEFBaUg7WUFDakgseUJBQWUsQ0FBQyxRQUFRLENBQUMsZ0JBQWdCLENBQUMsSUFBSSxDQUFDLENBQUM7U0FDbkQ7SUFDTCxDQUFDO0NBQ0o7QUF2QkQsNkJBdUJDIn0=","assetPath":"Assets/ObbyTemplate/Scripts/Platforms/SpawnPoint.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"particleSystem","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"SpawnPoint","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 99a740e34c9d5de222bcdc8ef406f37e
   onlyWriteTrigger: 0

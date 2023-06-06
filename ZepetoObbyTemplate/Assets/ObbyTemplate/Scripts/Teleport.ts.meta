@@ -20,13 +20,18 @@ ScriptedImporter:
   wrapperOutputDirectory: Generated
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
     { value: true });\r\nconst __UnityEngine__ = require(\"UnityEngine\");\r\nconst
-    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst GameSettings_1 = require(\"./Managers/GameSettings\");\r\nconst
-    ObbyGameManager_1 = require(\"./Managers/ObbyGameManager\");\r\n// Controls the
-    teleport system\r\nclass Teleport extends ZEPETO_Script_1.ZepetoScriptBehaviour
-    {\r\n    OnTriggerEnter(collider) {\r\n        if (GameSettings_1.default.Instance.zepetoCharacter
-    == null || __UnityEngine__.Object.op_Inequality(collider.gameObject, GameSettings_1.default.Instance.zepetoCharacter.gameObject))\r\n           
-    return;\r\n        this.TPPlayer();\r\n    }\r\n    // Teleport the player\r\n   
-    TPPlayer() {\r\n        ObbyGameManager_1.default.instance.TeleportCharacter();\r\n   
-    }\r\n}\r\nexports.default = Teleport;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGVsZXBvcnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUZWxlcG9ydC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFDQSxpREFBcUQ7QUFDckQsMERBQW1EO0FBQ25ELGdFQUF5RDtBQUV6RCwrQkFBK0I7QUFDL0IsTUFBcUIsUUFBUyxTQUFRLHFDQUFxQjtJQUV2RCxjQUFjLENBQUMsUUFBa0I7UUFFN0IsSUFBSSxzQkFBWSxDQUFDLFFBQVEsQ0FBQyxlQUFlLElBQUksSUFBSSwyQkFXMjVVLGFBQWMsQ0FYcjZVLFFBQVEsQ0FBQyxVQUFVLEVBQUksc0JBQVksQ0FBQyxRQUFRLENBQUMsZUFBZSxDQUFDLFVBQVUsQ0FBQTtZQUN4SCxPQUFPO1FBRVgsSUFBSSxDQUFDLFFBQVEsRUFBRSxDQUFDO0lBQ3BCLENBQUM7SUFFRCxzQkFBc0I7SUFDdEIsUUFBUTtRQUVKLHlCQUFlLENBQUMsUUFBUSxDQUFDLGlCQUFpQixFQUFFLENBQUM7SUFDakQsQ0FBQztDQUNKO0FBZkQsMkJBZUMifQ==","assetPath":"Assets/ObbyTemplate/Scripts/Teleport.ts","manifest":{"properties":[],"name":"Teleport","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: 0ef11e833f5ef0d34c3f40ee6b41b9a0
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst GameState_1 = require(\"./Managers/GameState\");\r\nconst
+    ObbyGameManager_1 = require(\"./Managers/ObbyGameManager\");\r\n// This class
+    is responsible for manipulating the position of the player\r\nclass Teleport
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    // https://docs.unity3d.com/ScriptReference/Collider.OnTriggerEnter.html\r\n   
+    OnTriggerEnter(collider) {\r\n        // Check if the \"zepetoCharacter\" of
+    the GameSettings instance is null or if the gameobject of the collider is not
+    him and return\r\n        // If so, return the function\r\n        if (GameState_1.default.Instance.zepetoCharacter
+    == null || __UnityEngine__.Object.op_Inequality(collider.gameObject, GameState_1.default.Instance.zepetoCharacter.gameObject))\r\n           
+    return;\r\n        // Call to the internal function \"TPPlayer\"\r\n        this.TPPlayer();\r\n   
+    }\r\n    // This method teleport the player\r\n    TPPlayer() {\r\n        //
+    Call to the \"TeleportCharacter\" function of the ObbyGameManager instance\r\n       
+    ObbyGameManager_1.default.instance.TeleportCharacter();\r\n    }\r\n}\r\nexports.default
+    = Teleport;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGVsZXBvcnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUZWxlcG9ydC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFDQSxpREFBcUQ7QUFDckQsb0RBQTZDO0FBQzdDLGdFQUF5RDtBQUV6RCx3RUFBd0U7QUFDeEUsTUFBcUIsUUFBUyxTQUFRLHFDQUFxQjtJQUd2RCx3RUFBd0U7SUFDeEUsY0FBYyxDQUFHLFFBQWtCO1FBRS9CLGlJQUFpSTtRQUNqSSw2QkFBNkI7UUFDN0IsSUFBSyxtQkFBUyxDQUFDLFFBQVEsQ0FBQyxlQUFlLElBQUksSUFBSSwyQkFhKzlULGFBQWMsQ0FieitULFFBQVEsQ0FBQyxVQUFVLEVBQUksbUJBQVMsQ0FBQyxRQUFRLENBQUMsZUFBZSxDQUFDLFVBQVUsQ0FBQTtZQUNuSCxPQUFPO1FBRVgsMkNBQTJDO1FBQzNDLElBQUksQ0FBQyxRQUFRLEVBQUUsQ0FBQztJQUNwQixDQUFDO0lBRUQsa0NBQWtDO0lBQ2xDLFFBQVE7UUFFSiwyRUFBMkU7UUFDM0UseUJBQWUsQ0FBQyxRQUFRLENBQUMsaUJBQWlCLEVBQUUsQ0FBQztJQUNqRCxDQUFDO0NBQ0o7QUFyQkQsMkJBcUJDIn0=","assetPath":"Assets/ObbyTemplate/Scripts/Teleport.ts","manifest":{"properties":[],"name":"Teleport","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 3c4d548f5c41ae3351fb506aff115353
   onlyWriteTrigger: 0

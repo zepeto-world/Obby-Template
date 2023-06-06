@@ -21,39 +21,59 @@ ScriptedImporter:
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
     { value: true });\r\nconst __UnityEngine__ = require(\"UnityEngine\");\r\nconst
     UnityEngine_1 = require(\"UnityEngine\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
-    GameSettings_1 = require(\"../Managers/GameSettings\");\r\n// This class  controls
+    GameState_1 = require(\"../Managers/GameState\");\r\n// This class  controls
     the platforms that can fall when the player steps inside\r\nclass FallPlatform
     extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor() {\r\n       
-    super(...arguments);\r\n        this.fallDelay = 0.1; //Time it takes to start
-    falling\r\n        this.respawnDelay = 5; //Time it takes to respawn\r\n    }\r\n   
-    Awake() {\r\n        //Get the Collider reference on this GameObject\r\n       
-    this._myCollider = this.gameObject.GetComponent($typeof(UnityEngine_1.BoxCollider));\r\n       
-    //Get the Rigidbody reference on this GameObject\r\n        this._myRigidbody
+    super(...arguments);\r\n        this.fallDelay = 0.5; // Time it takes to start
+    falling\r\n        this.respawnDelay = 3; // Time it takes to respawn\r\n   
+    }\r\n    // Awake is called when the script instance is being loaded\r\n    Awake()
+    {\r\n        // Get the Collider reference on this GameObject\r\n        this._myCollider
+    = this.gameObject.GetComponent($typeof(UnityEngine_1.BoxCollider));\r\n       
+    // Get the Rigidbody reference on this GameObject\r\n        this._myRigidbody
     = this.gameObject.GetComponent($typeof(UnityEngine_1.Rigidbody));\r\n    }\r\n   
-    Start() {\r\n        if (this.transform.childCount > 0) {\r\n            let
-    child = this.transform\r\n                .GetChild(0)\r\n                .GetComponent($typeof(UnityEngine_1.BoxCollider));
-    //Get Collider on the child\r\n            this._myCollider.center = new UnityEngine_1.Vector3(child.center.x,
-    0.5, child.center.z); //Rebuild Center of this collider\r\n            this._myCollider.size
+    // Start is called on the frame when a script is enabled just before any of the
+    Update methods is called the first time\r\n    Start() {\r\n        // Check
+    if the amount of childs of \"transform\" is more than 0\r\n        if (this.transform.childCount
+    > 0) {\r\n            // DEV NOTE:\r\n            // The FallPlataform is an
+    empty object with a collider and a rigidbody, \r\n            // it takes its
+    dimensions based on the collider of the first child it has in its hierarchy\r\n           
+    // It is important to remember that the child of this object must have a BoxCollider\r\n           
+    // We create a reference to the BoxCollider of child 0\r\n            let child
+    = this.transform.GetChild(0).GetComponent($typeof(UnityEngine_1.BoxCollider));\r\n           
+    // Rebuild Center of this collider from the child center\r\n            this._myCollider.center
+    = new UnityEngine_1.Vector3(child.center.x, 0.5, child.center.z);\r\n           
+    // Rebuild Size of this collider from the child size\r\n            this._myCollider.size
     = new UnityEngine_1.Vector3(child.transform.localScale.x * child.size.x, 1, child.transform.localScale.z
-    * child.size.z); //Rebuild Size of this collider\r\n            this._myCollider.isTrigger
-    = true; //Set it Trigger\r\n        }\r\n        //Set init pos\r\n        this._initPosY
-    = this.transform.position.y;\r\n    }\r\n    OnTriggerEnter(collider) {\r\n       
-    if (GameSettings_1.default.Instance.zepetoCharacter == null || __UnityEngine__.Object.op_Inequality(collider.gameObject,
-    GameSettings_1.default.Instance.zepetoCharacter.gameObject))\r\n            return;\r\n       
-    if (!this._falling) {\r\n            //Start falling\r\n            this._falling
-    = true;\r\n            this.Invoke(\"FallPlatform\", this.fallDelay);\r\n       
-    }\r\n    }\r\n    // Active the gravity for the platform so it falls down\r\n   
-    FallPlatform() {\r\n        this._myRigidbody.isKinematic = false;\r\n       
-    this._myRigidbody.useGravity = true;\r\n        //Start respawning\r\n       
-    this.Invoke(\"RespawnPlatform\", this.respawnDelay);\r\n    }\r\n    // Reset
-    the platform to the start position \r\n    RespawnPlatform() {\r\n        this._falling
-    = false; // Flag of is falling\r\n        this._myRigidbody.isKinematic = true;
+    * child.size.z);\r\n            // Set this \"isTrigger\" property on true\r\n           
+    this._myCollider.isTrigger = true;\r\n        }\r\n        // We save the initial
+    position of the platform\r\n        this._initPos = this.transform.position;\r\n   
+    }\r\n    // If the platform detects the collision with the player, it calls the
+    method to fall\r\n    // https://docs.unity3d.com/ScriptReference/Collider.OnTriggerEnter.html\r\n   
+    OnTriggerEnter(collider) {\r\n        // Check if the \"zepetoCharacter\" of
+    the GameSettings instance is null or if the gameobject of the collider is not
+    him and return\r\n        if (GameState_1.default.Instance.zepetoCharacter ==
+    null || __UnityEngine__.Object.op_Inequality(collider.gameObject, GameState_1.default.Instance.zepetoCharacter.gameObject))\r\n           
+    return;\r\n        // Check if the internal variable \"_falling\" is false\r\n       
+    if (!this._falling) {\r\n            // Set the internal variable \"_falling\"
+    on true\r\n            this._falling = true;\r\n            // We call the internal
+    function \"FallPlatform\" after a delay set in the variable \"fallDelay\" \r\n           
+    this.Invoke(\"FallPlatform\", this.fallDelay);\r\n            // DEV NOTE: \r\n           
+    // Using an Invoke instead of a direct call, allows us to add a delay for its
+    execution\r\n        }\r\n    }\r\n    // This method causes the platform to
+    start falling\r\n    FallPlatform() {\r\n        // First we change the \"isKinematic\"
+    property on false\r\n        this._myRigidbody.isKinematic = false;\r\n       
+    // Then we activate the \"useGravity\" for fall\r\n        this._myRigidbody.useGravity
+    = true;\r\n        // We call the internal function \"RespawnPlatform\" after
+    a delay set in the variable \"respawnDelay\" \r\n        this.Invoke(\"RespawnPlatform\",
+    this.respawnDelay);\r\n    }\r\n    // This method is responsible for returning
+    the platform to its initial state\r\n    RespawnPlatform() {\r\n        // We
+    set the flag of is falling on false\r\n        this._falling = false;\r\n       
     // Reset the kinematic and the gravity, doing that the platform will not fall
-    when it respawns\r\n        this._myRigidbody.useGravity = false;\r\n       
-    this.transform.rotation = UnityEngine_1.Quaternion.Euler(0, 0, 0); // Set the
-    rotation to zero\r\n        this.transform.position = new UnityEngine_1.Vector3(this.transform.position.x,
-    this._initPosY, this.transform.position.z); // Set the position into the exact
-    same position but reset his Y position to the initial.\r\n    }\r\n}\r\nexports.default
-    = FallPlatform;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRmFsbFBsYXRmb3JtLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRmFsbFBsYXRmb3JtLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUFBLDZDQUFvRjtBQUNwRixpREFBc0Q7QUFDdEQsMkRBQW9EO0FBR3BELGdGQUFnRjtBQUNoRixNQUFxQixZQUFhLFNBQVEscUNBQXFCO0lBQS9EOztRQUVTLGNBQVMsR0FBVyxHQUFHLENBQUMsQ0FBQyxnQ0FBZ0M7UUFDekQsaUJBQVksR0FBVyxDQUFDLENBQUMsQ0FBQywwQkFBMEI7SUE2RTdELENBQUM7SUFyRUMsS0FBSztRQUNILCtDQUErQztRQUMvQyxJQUFJLENBQUMsV0FBVyxHQUFHLElBQUksQ0FBQyxVQUFVLENBQUMsWUFBWSxTQUFDLHlCQUFXLEVBQUcsQ0FBQztRQUUvRCxnREFBZ0Q7UUFDaEQsSUFBSSxDQUFDLFlBQVksR0FBRyxJQUFJLENBQUMsVUFBVSxDQUFDLFlBQVksU0FBQyx1QkFBUyxFQUFHLENBQUM7SUFDaEUsQ0FBQztJQUVELEtBQUs7UUFDSCxJQUFLLElBQUksQ0FBQyxTQUFTLENBQUMsVUFBVSxHQUFHLENBQUMsRUFDbEM7WUFDRSxJQUFJLEtBQUssR0FBZ0IsSUFBSSxDQUFDLFNBQVM7aUJBQ3BDLFFBQVEsQ0FBRSxDQUFDLENBQUU7aUJBQ2IsWUFBWSxTQUFDLHlCQUFXLEVBQUcsQ0FBQyxDQUFDLDJCQUEyQjtZQUMzRCxJQUFJLENBQUMsV0FBVyxDQUFDLE1BQU0sR0FBRyxJQUFJLHFCQUFPLENBQ25DLEtBQUssQ0FBQyxNQUFNLENBQUMsQ0FBQyxFQUNkLEdBQUcsRUFDSCxLQUFLLENBQUMsTUFBTSxDQUFDLENBQUMsQ0FDZixDQUFDLENBQUMsaUNBQWlDO1lBQ3BDLElBQUksQ0FBQyxXQUFXLENBQUMsSUFBSSxHQUFHLElBQUkscUJBQU8sQ0FDakMsS0FBSyxDQUFDLFNBQVMsQ0FBQyxVQUFVLENBQUMsQ0FBQyxHQUFHLEtBQUssQ0FBQyxJQUFJLENBQUMsQ0FBQyxFQUMzQyxDQUFDLEVBQ0QsS0FBSyxDQUFDLFNBQVMsQ0FBQyxVQUFVLENBQUMsQ0FBQyxHQUFHLEtBQUssQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUM1QyxDQUFDLENBQUMsK0JBQStCO1lBQ2xDLElBQUksQ0FBQyxXQUFXLENBQUMsU0FBUyxHQUFHLElBQUksQ0FBQyxDQUFDLGdCQUFnQjtTQUNwRDtRQUVELGNBQWM7UUFDZCxJQUFJLENBQUMsU0FBUyxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQztJQUM3QyxDQUFDO0lBRUQsY0FBYyxDQUFHLFFBQWtCO1FBQ2pDLElBQ0Usc0JBQVksQ0FBQyxRQUFRLENBQUMsZUFBZSxJQUFJLElBQUksMkJBcUMwclEsYUFBYyxDQXBDcnZRLFFBQVEsQ0FBQyxVQUFVLEVBQUksc0JBQVksQ0FBQyxRQUFRLENBQUMsZUFBZSxDQUFDLFVBQVUsQ0FBQTtZQUV2RSxPQUFPO1FBRVQsSUFBSyxDQUFDLElBQUksQ0FBQyxRQUFRLEVBQ25CO1lBQ0UsZUFBZTtZQUNmLElBQUksQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDO1lBQ3JCLElBQUksQ0FBQyxNQUFNLENBQUUsY0FBYyxFQUFFLElBQUksQ0FBQyxTQUFTLENBQUUsQ0FBQztTQUMvQztJQUNILENBQUM7SUFFRCx1REFBdUQ7SUFDdkQsWUFBWTtRQUNWLElBQUksQ0FBQyxZQUFZLENBQUMsV0FBVyxHQUFHLEtBQUssQ0FBQztRQUN0QyxJQUFJLENBQUMsWUFBWSxDQUFDLFVBQVUsR0FBRyxJQUFJLENBQUM7UUFFcEMsa0JBQWtCO1FBQ2xCLElBQUksQ0FBQyxNQUFNLENBQUUsaUJBQWlCLEVBQUUsSUFBSSxDQUFDLFlBQVksQ0FBRSxDQUFDO0lBQ3RELENBQUM7SUFFRCw0Q0FBNEM7SUFDNUMsZUFBZTtRQUNiLElBQUksQ0FBQyxRQUFRLEdBQUcsS0FBSyxDQUFDLENBQUMscUJBQXFCO1FBRTVDLElBQUksQ0FBQyxZQUFZLENBQUMsV0FBVyxHQUFHLElBQUksQ0FBQyxDQUFDLDhGQUE4RjtRQUNwSSxJQUFJLENBQUMsWUFBWSxDQUFDLFVBQVUsR0FBRyxLQUFLLENBQUM7UUFFckMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEdBQUcsd0JBQVUsQ0FBQyxLQUFLLENBQUUsQ0FBQyxFQUFFLENBQUMsRUFBRSxDQUFDLENBQUUsQ0FBQyxDQUFDLDJCQUEyQjtRQUNsRixJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyxJQUFJLHFCQUFPLENBQ25DLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsRUFDekIsSUFBSSxDQUFDLFNBQVMsRUFDZCxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQzFCLENBQUMsQ0FBQyx5RkFBeUY7SUFDOUYsQ0FBQztDQUNGO0FBaEZELCtCQWdGQyJ9","assetPath":"Assets/ObbyTemplate/Scripts/Platforms/FallPlatform.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"fallDelay","type":"System.Single","isArray":false,"initValue":["0.1"],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"respawnDelay","type":"System.Single","isArray":false,"initValue":["5"],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"FallPlatform","description":"","hasAnimatorMove":false},"isCompiled":true}'
-  typescriptHash: 04f27a2619d86fac8fce3fd7054fa44e
+    when it respawns\r\n        this._myRigidbody.isKinematic = true;\r\n       
+    // Deactivate the \"useGravity\" to prevent the move\r\n        this._myRigidbody.useGravity
+    = false;\r\n        // Set the rotation of the transform to zero\r\n        this.transform.rotation
+    = UnityEngine_1.Quaternion.Euler(0, 0, 0);\r\n        // Set the position into
+    the exact same position at start\r\n        this.transform.position = this._initPos;\r\n   
+    }\r\n}\r\nexports.default = FallPlatform;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRmFsbFBsYXRmb3JtLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRmFsbFBsYXRmb3JtLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUFBLDZDQUFvRjtBQUNwRixpREFBc0Q7QUFDdEQscURBQThDO0FBRTlDLGdGQUFnRjtBQUNoRixNQUFxQixZQUFhLFNBQVEscUNBQXFCO0lBQS9EOztRQUVTLGNBQVMsR0FBVyxHQUFHLENBQUMsQ0FBQyxpQ0FBaUM7UUFDMUQsaUJBQVksR0FBVyxDQUFDLENBQUMsQ0FBQywyQkFBMkI7SUFtRzlELENBQUM7SUEzRkMsMkRBQTJEO0lBQzNELEtBQUs7UUFFSCxnREFBZ0Q7UUFDaEQsSUFBSSxDQUFDLFdBQVcsR0FBRyxJQUFJLENBQUMsVUFBVSxDQUFDLFlBQVksU0FBQyx5QkFBVyxFQUFHLENBQUM7UUFFL0QsaURBQWlEO1FBQ2pELElBQUksQ0FBQyxZQUFZLEdBQUcsSUFBSSxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsdUJBQVMsRUFBRyxDQUFDO0lBQ2hFLENBQUM7SUFFRCx1SEFBdUg7SUFDdkgsS0FBSztRQUVILDhEQUE4RDtRQUM5RCxJQUFLLElBQUksQ0FBQyxTQUFTLENBQUMsVUFBVSxHQUFHLENBQUMsRUFDbEM7WUFDRSxZQUFZO1lBQ1oseUVBQXlFO1lBQ3pFLDJGQUEyRjtZQUMzRixvRkFBb0Y7WUFFcEYsc0RBQXNEO1lBQ3RELElBQUksS0FBSyxHQUFnQixJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBRSxDQUFDLENBQUUsQ0FBQyxZQUFZLFNBQUMseUJBQVcsRUFBRyxDQUFDO1lBRWxGLHdEQUF3RDtZQUN4RCxJQUFJLENBQUMsV0FBVyxDQUFDLE1BQU0sR0FBRyxJQUFJLHFCQUFPLENBQUUsS0FBSyxDQUFDLE1BQU0sQ0FBQyxDQUFDLEVBQUUsR0FBRyxFQUFFLEtBQUssQ0FBQyxNQUFNLENBQUMsQ0FBQyxDQUFFLENBQUM7WUFFN0Usb0RBQW9EO1lBQ3BELElBQUksQ0FBQyxXQUFXLENBQUMsSUFBSSxHQUFHLElBQUkscUJBQU8sQ0FBRSxLQUFLLENBQUMsU0FBUyxDQUFDLFVBQVUsQ0FBQyxDQUFDLEdBQUcsS0FBSyxDQUFDLElBQUksQ0FBQyxDQUFDLEVBQUUsQ0FBQyxFQUFFLEtBQUssQ0FBQyxTQUFTLENBQUMsVUFBVSxDQUFDLENBQUMsR0FBRyxLQUFLLENBQUMsSUFBSSxDQUFDLENBQUMsQ0FBRSxDQUFDO1lBRW5JLHdDQUF3QztZQUN4QyxJQUFJLENBQUMsV0FBVyxDQUFDLFNBQVMsR0FBRyxJQUFJLENBQUM7U0FDbkM7UUFFRCwrQ0FBK0M7UUFDL0MsSUFBSSxDQUFDLFFBQVEsR0FBRyxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQztJQUMxQyxDQUFDO0lBRUQscUZBQXFGO0lBQ3JGLHdFQUF3RTtJQUN4RSxjQUFjLENBQUcsUUFBa0I7UUFFakMsaUlBQWlJO1FBQ2pJLElBQUssbUJBQVMsQ0FBQyxRQUFRLENBQUMsZUFBZSxJQUFJLElBQUksMkJBaUQrd04sYUFBYyxDQWpEenhOLFFBQVEsQ0FBQyxVQUFVLEVBQUksbUJBQVMsQ0FBQyxRQUFRLENBQUMsZUFBZSxDQUFDLFVBQVUsQ0FBQTtZQUNySCxPQUFPO1FBRVQscURBQXFEO1FBQ3JELElBQUssQ0FBQyxJQUFJLENBQUMsUUFBUSxFQUNuQjtZQUNFLCtDQUErQztZQUMvQyxJQUFJLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQztZQUVyQiw4RkFBOEY7WUFDOUYsSUFBSSxDQUFDLE1BQU0sQ0FBRSxjQUFjLEVBQUUsSUFBSSxDQUFDLFNBQVMsQ0FBRSxDQUFDO1lBRTlDLGFBQWE7WUFDYix1RkFBdUY7U0FDeEY7SUFDSCxDQUFDO0lBRUQsbURBQW1EO0lBQ25ELFlBQVk7UUFFVixzREFBc0Q7UUFDdEQsSUFBSSxDQUFDLFlBQVksQ0FBQyxXQUFXLEdBQUcsS0FBSyxDQUFDO1FBRXRDLDZDQUE2QztRQUM3QyxJQUFJLENBQUMsWUFBWSxDQUFDLFVBQVUsR0FBRyxJQUFJLENBQUM7UUFFcEMsb0dBQW9HO1FBQ3BHLElBQUksQ0FBQyxNQUFNLENBQUUsaUJBQWlCLEVBQUUsSUFBSSxDQUFDLFlBQVksQ0FBRSxDQUFDO0lBQ3RELENBQUM7SUFFRCw2RUFBNkU7SUFDN0UsZUFBZTtRQUViLHlDQUF5QztRQUN6QyxJQUFJLENBQUMsUUFBUSxHQUFHLEtBQUssQ0FBQztRQUV0Qiw4RkFBOEY7UUFDOUYsSUFBSSxDQUFDLFlBQVksQ0FBQyxXQUFXLEdBQUcsSUFBSSxDQUFDO1FBRXJDLGtEQUFrRDtRQUNsRCxJQUFJLENBQUMsWUFBWSxDQUFDLFVBQVUsR0FBRyxLQUFLLENBQUM7UUFFckMsNENBQTRDO1FBQzVDLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxHQUFHLHdCQUFVLENBQUMsS0FBSyxDQUFFLENBQUMsRUFBRSxDQUFDLEVBQUUsQ0FBQyxDQUFFLENBQUM7UUFFdEQseURBQXlEO1FBQ3pELElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQyxRQUFRLENBQUM7SUFDMUMsQ0FBQztDQUNGO0FBdEdELCtCQXNHQyJ9","assetPath":"Assets/ObbyTemplate/Scripts/Platforms/FallPlatform.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"fallDelay","type":"System.Single","isArray":false,"initValue":["0.5"],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"respawnDelay","type":"System.Single","isArray":false,"initValue":["3"],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"FallPlatform","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 5b464b112ab65083b0292aeaf7ec635b
   onlyWriteTrigger: 0
