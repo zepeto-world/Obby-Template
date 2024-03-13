@@ -1,0 +1,38 @@
+fileFormatVersion: 2
+guid: 2fbdf141967574946a5bd0010edea106
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst __UnityEngine__ = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst WorldState_1 = require(\"../Managers/WorldState\");\r\nconst
+    ObbyWorldManager_1 = require(\"../Managers/ObbyWorldManager\");\r\n// A class
+    for trap platforms in a world, which are platforms that can trigger specific
+    actions like teleporting the player when they come into contact\r\nclass TrapPlatform
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    // https://docs.unity3d.com/ScriptReference/Collider.OnTriggerEnter.html\r\n   
+    OnTriggerEnter(collider) {\r\n        // Check if the \"zepetoCharacter\" of
+    the WorldSettings instance is null or if the gameobject of the collider is not
+    him and return\r\n        // If so, return the function\r\n        if (WorldState_1.default.Instance.zepetoCharacter
+    == null || __UnityEngine__.Object.op_Inequality(collider.gameObject, WorldState_1.default.Instance.zepetoCharacter.gameObject))\r\n           
+    return;\r\n        // Call to the internal function \"TPPlayer\"\r\n        this.TPPlayer();\r\n   
+    }\r\n    // This method teleport the player\r\n    TPPlayer() {\r\n        //
+    Call to the \"TeleportCharacter\" function of the ObbyWorldManager instance\r\n       
+    ObbyWorldManager_1.default.instance.TeleportCharacter();\r\n    }\r\n}\r\nexports.default
+    = TrapPlatform;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVHJhcFBsYXRmb3JtLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiVHJhcFBsYXRmb3JtLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUNBLGlEQUFxRDtBQUNyRCx1REFBZ0Q7QUFDaEQsbUVBQTREO0FBRTVELHVKQUF1SjtBQUN2SixNQUFxQixZQUFhLFNBQVEscUNBQXFCO0lBRTNELHdFQUF3RTtJQUN4RSxjQUFjLENBQUMsUUFBa0I7UUFFN0Isa0lBQWtJO1FBQ2xJLDZCQUE2QjtRQUM3QixJQUFJLG9CQUFVLENBQUMsUUFBUSxDQUFDLGVBQWUsSUFBSSxJQUFJLDJCQWEyNlQsYUFBYyxDQWJyN1QsUUFBUSxDQUFDLFVBQVUsRUFBSSxvQkFBVSxDQUFDLFFBQVEsQ0FBQyxlQUFlLENBQUMsVUFBVSxDQUFBO1lBQ3BILE9BQU87UUFFWCwyQ0FBMkM7UUFDM0MsSUFBSSxDQUFDLFFBQVEsRUFBRSxDQUFDO0lBQ3BCLENBQUM7SUFFRCxrQ0FBa0M7SUFDbEMsUUFBUTtRQUVKLDRFQUE0RTtRQUM1RSwwQkFBZ0IsQ0FBQyxRQUFRLENBQUMsaUJBQWlCLEVBQUUsQ0FBQztJQUNsRCxDQUFDO0NBQ0o7QUFwQkQsK0JBb0JDIn0=","assetPath":"Assets/StaticResources/Scripts/Platforms/TrapPlatform.ts","manifest":{"properties":[],"name":"TrapPlatform","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: f7542e395ba4c5a7a28e5caa9873833c
+  onlyWriteTrigger: 0

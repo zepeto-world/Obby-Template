@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ObbyTemplate/Scenes/ObbyTemplate.unity
-    guid: dbd85058be286f34da2adb8a105e7977
+    path: Assets/Obby.unity
+    guid: 9e2c5421ccf63464d8911e018de8a5e4
   m_configObjects: {}

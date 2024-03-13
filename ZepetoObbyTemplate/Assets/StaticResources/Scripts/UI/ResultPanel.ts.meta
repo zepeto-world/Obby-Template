@@ -1,0 +1,31 @@
+fileFormatVersion: 2
+guid: a0fedd1c4c9683d448c4a8e0ac7faea5
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    WorldState_1 = require(\"../Managers/WorldState\");\r\n// Class that controls
+    the interactions with the result screen\r\nclass ResultPanel extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    // Start is called on the frame when a script is enabled just before
+    any of the Update methods is called the first time\r\n    Start() {\r\n       
+    // We add a function to \"resetButton\" when we click on it\r\n        this.resetButton.onClick.AddListener(this.ResetBtnAction);\r\n   
+    }\r\n    // Call to reload the scene\r\n    ResetBtnAction() {\r\n        WorldState_1.default.Instance.ResetMap();\r\n   
+    }\r\n}\r\nexports.default = ResultPanel;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUmVzdWx0UGFuZWwuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJSZXN1bHRQYW5lbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUNBLGlEQUFxRDtBQUNyRCx1REFBZ0Q7QUFFaEQsOERBQThEO0FBQzlELE1BQXFCLFdBQVksU0FBUSxxQ0FBcUI7SUFLMUQsdUhBQXVIO0lBQ3ZILEtBQUs7UUFFRCx5REFBeUQ7UUFDekQsSUFBSSxDQUFDLFdBQVcsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLElBQUksQ0FBQyxjQUFjLENBQUMsQ0FBQztJQUM5RCxDQUFDO0lBRUQsMkJBQTJCO0lBQzNCLGNBQWM7UUFDVixvQkFBVSxDQUFDLFFBQVEsQ0FBQyxRQUFRLEVBQUUsQ0FBQztJQUNuQyxDQUFDO0NBQ0o7QUFoQkQsOEJBZ0JDIn0=","assetPath":"Assets/StaticResources/Scripts/UI/ResultPanel.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"resetButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"ResultPanel","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 7dbfd52395f4e2589d51a1c9327ea418
+  onlyWriteTrigger: 0

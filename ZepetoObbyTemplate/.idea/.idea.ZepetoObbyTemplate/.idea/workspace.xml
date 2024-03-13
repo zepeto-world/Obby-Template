@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e5e8eaec-b2c0-4808-b39b-b37b9084d84c" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZepetoObbyTemplate/.idea/runConfigurations/Zepeto_Multiplay_Script.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZepetoObbyTemplate/.idea/runConfigurations/Zepeto_Multiplay_Script.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZepetoObbyTemplate/.idea/runConfigurations/Zepeto_Script.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZepetoObbyTemplate/.idea/runConfigurations/Zepeto_Script.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Background_Prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Background_Prefab/Basecamp_001.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Background_Prefab/Basecamp_001/AR_Board_Tutorial_001.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Background_Prefab/Basecamp_001/AR_Board_Tutorial_001.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Background_Prefab/Basecamp_001/AR_SavePortal_001.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Background_Prefab/Basecamp_001/AR_SavePortal_001.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Background_Prefab/Basecamp_001/AR_SavePortal_002.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Background_Prefab/Basecamp_001/AR_SavePortal_002.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Background_Prefab/Basecamp_001/AR_SavePortal_003.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Background_Prefab/Basecamp_001/AR_SavePortal_003.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Materials/BG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Materials/BG/AR_Color_001.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Materials/BG/AR_Color_001.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Materials/BG/texture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Materials/BG/texture/AR_Color_001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Materials/BG/texture/AR_Color_001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Mesh.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Mesh/00_Collider.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Mesh/00_Collider/AR_SavePortal_collider.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Mesh/00_Collider/AR_SavePortal_collider.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Mesh/Basecamp_001.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Mesh/Basecamp_001/AR_Board_Tutorial_001.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Mesh/Basecamp_001/AR_Board_Tutorial_001.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Mesh/Basecamp_001/AR_SavePortal_001.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Mesh/Basecamp_001/AR_SavePortal_001.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Mesh/Basecamp_001/AR_SavePortal_002.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Mesh/Basecamp_001/AR_SavePortal_002.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Mesh/Basecamp_001/AR_SavePortal_003.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_1/Mesh/Basecamp_001/AR_SavePortal_003.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Collider.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Collider/BG_01.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Collider/BG_01/BG_Roof_Floor_Collider.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Collider/BG_01/BG_Roof_Floor_Collider.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Collider/BG_01/Transform_Ground_Collider.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Collider/BG_01/Transform_Ground_Collider.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Materials/Gimmick_color.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Materials/Gimmick_color.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Materials/jump_colormap_001.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Materials/jump_colormap_001.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Materials/jump_colormap_002.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Materials/jump_colormap_002.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Materials/jump_colormap_003.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Materials/jump_colormap_003.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Materials/texture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Materials/texture/Gimmick_001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Materials/texture/Gimmick_001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Materials/texture/jump_colormap_001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Materials/texture/jump_colormap_001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Mesh.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Mesh/BG_01.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Mesh/BG_01/BG_Roof_Floor_001.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Mesh/BG_01/BG_Roof_Floor_001.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Mesh/gimmick.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Mesh/gimmick/BLUE_Triangle_free.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Mesh/gimmick/BLUE_Triangle_free.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Prefab/Animation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Prefab/Animation/Transform_Ground_01.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Prefab/Animation/Transform_Ground_01.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Prefab/Free_Triangle_Blue.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Prefab/Free_Triangle_Blue.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Prefab/Transform_Ground.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Assets_2/Prefab/Transform_Ground.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Objects.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/Objects.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX].meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/FBX/Cylinder.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/FBX/Cylinder.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/FBX/FX_Cone_meteor.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/FBX/FX_Cone_meteor.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/FBX/FX_JM_Roof_Floor_01.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/FBX/FX_JM_Roof_Floor_01.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/FBX/FX_Plane_01.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/FBX/FX_Plane_01.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Prep.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Prep/Game.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Prep/Game/AnimalRescue.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Prep/Game/AnimalRescue/FX_SavePortal.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Prep/Game/AnimalRescue/FX_SavePortal.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Prep/Game/JumpMap.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Prep/Game/JumpMap/FX_OpenGround.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Prep/Game/JumpMap/FX_OpenGround.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Shader/FX_MasterV2_Addtive.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Shader/FX_MasterV2_Addtive.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Shader/FX_MasterV3_AlphaBlend_Two.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Shader/FX_MasterV3_AlphaBlend_Two.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Shader/FX_Master_Addtive_Two.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Shader/FX_Master_Addtive_Two.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Shader/FX_Master_AlphaBlend_Two.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Shader/FX_Master_AlphaBlend_Two.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FXT_ColorPattern_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FXT_ColorPattern_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FXT_Line_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FXT_Line_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FXT_Line_03_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FXT_Line_03_1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FXT_Line_03_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FXT_Line_03_2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FXT_Mask_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FXT_Mask_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FXT_Noise_01.TGA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FXT_Noise_01.TGA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FXT_Noise_05.TGA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FXT_Noise_05.TGA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FXT_Noise_06.TGA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FXT_Noise_06.TGA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FXT_Normal_01.TGA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FXT_Normal_01.TGA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FXT_Splash_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FXT_Splash_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FxT_FireFly.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FxT_FireFly.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FxT_GlowRing.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FxT_GlowRing.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FxT_GlowRing_Thin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FxT_GlowRing_Thin.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FxT_Rind_Aura.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FxT_Rind_Aura.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FxT_Rind_Light.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/FxT_Rind_Light.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/Materials/FXT_Roof_Light.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/Materials/FXT_Roof_Light.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/Materials/FX_Portal_Light 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/Materials/FX_Portal_Light 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/Materials/FX_Portal_Light 2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/Materials/FX_Portal_Light 2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/Materials/FX_Portal_Light.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/Materials/FX_Portal_Light.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/Materials/FxT_GlowRing 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/Materials/FxT_GlowRing 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/Materials/FxT_LightUp 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/Materials/FxT_LightUp 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/Materials/FxT_LightUp.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/Materials/FxT_LightUp.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/Materials/FxT_glow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/External_Assets/[FX]/Texture/Materials/FxT_glow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/NotoSansKR-VariableFont_wght.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/NotoSansKR-VariableFont_wght.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/OFL.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/README.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Black SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Black SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Black.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Bold SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Bold SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Bold.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-ExtraBold SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-ExtraBold SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-ExtraBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-ExtraBold.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-ExtraLight SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-ExtraLight SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-ExtraLight.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-ExtraLight.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Light SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Light SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Light.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Medium SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Medium SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Medium.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Regular SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Regular SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Regular.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-SemiBold SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-SemiBold SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-SemiBold.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Thin SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Thin SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Thin.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Font/Noto_Sans_KR/static/NotoSansKR-Thin.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/ColorTexture_001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/ColorTexture_001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/M_DeathRoad.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/M_DeathRoad.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/M_DefaultTexture.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/M_DefaultTexture.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/M_FallPlatform.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/M_FallPlatform.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/M_GoalPlatform.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/M_GoalPlatform.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/M_Platform.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/M_Platform.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/M_SpawnPlatform.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/M_SpawnPlatform.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/NewSkybox.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/NewSkybox.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/Skybox.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/Skybox.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/Sparks.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/Sparks.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/fantasy_landscape_zepeto-style_forest_for_parallax.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/fantasy_landscape_zepeto-style_forest_for_parallax.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/fantasy_sky.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/fantasy_sky.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/texture (251).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Materials/texture (251).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Models/AP_Stepstone.mesh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Models/AP_Stepstone.mesh.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Models/CR_Sprinkler_001.mesh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Models/CR_Sprinkler_001.mesh.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Models/SA_Border_001.mesh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Models/SA_Border_001.mesh.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Models/SA_BusStopSign_001.mesh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Models/SA_BusStopSign_001.mesh.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Models/SA_Road_bump_001.mesh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Models/SA_Road_bump_001.mesh.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Components.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Components/CheckPoint.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Components/CheckPoint.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Components/FallPlatformBuilder.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Components/FallPlatformBuilder.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Levels.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Levels/Level_0.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Levels/Level_0.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Levels/Level_1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Levels/Level_1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Levels/Level_2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Levels/Level_2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Levels/Level_Base(Duplicate &amp; Modify the copy).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Levels/Level_Base(Duplicate &amp; Modify the copy).prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Platforms.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Platforms/Death Road.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Platforms/Death Road.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Platforms/DefaultPlatform.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Platforms/DefaultPlatform.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Platforms/DefaultPlatform2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Platforms/DefaultPlatform2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Platforms/FallPlatform.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Platforms/FallPlatform.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Platforms/Goal Platform.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Platforms/Goal Platform.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Platforms/MovePlatform.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Platforms/MovePlatform.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Platforms/SpawnPlatform.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/Platforms/SpawnPlatform.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/UI/GameOverPanel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/UI/GameOverPanel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/UI/StartPanel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/UI/StartPanel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/UI/TimerPanel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/UI/TimerPanel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/UI/VictoryPanel.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Prefabs/UI/VictoryPanel.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/Rectangle 4740.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/Rectangle 4740.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/Rectangle 4741.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/Rectangle 4741.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_Bg_pulple.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_Bg_pulple.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_Bg_yellow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_Bg_yellow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_Timer_Icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_Timer_Icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_btn_120_red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_btn_120_red.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_btn_txt_120_violet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_btn_txt_120_violet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_btn_txt_Line_red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_btn_txt_Line_red.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_icon_arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_icon_arrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_icon_restart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_icon_restart.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_text_lose.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_text_lose.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_text_win.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_text_win.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_titleimg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_titleimg.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_trohy_lose.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_trohy_lose.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_trohy_win.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Art/Texture/UI_trohy_win.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scenes/Lighting Settings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scenes/Lighting Settings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scenes/Main.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scenes/Main.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/Managers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/Managers/GameState.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/Managers/GameState.ts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/Managers/LevelScript.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/Managers/LevelScript.ts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/Managers/ObbyGameManager.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/Managers/ObbyGameManager.ts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/Managers/UIManager.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/Managers/UIManager.ts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/Platforms.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/Platforms/FallPlatform.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/Platforms/FallPlatform.ts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/Platforms/Goal.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/Platforms/Goal.ts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/Platforms/MovePlatformCollision.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/Platforms/MovePlatformCollision.ts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/Platforms/SimpleMove.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/Platforms/SimpleMove.ts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/Platforms/SpawnPoint.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/Platforms/SpawnPoint.ts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/Teleport.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/Teleport.ts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/UI/GameOverScreen.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/UI/GameOverScreen.ts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/UI/StartScreen.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/UI/StartScreen.ts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/UI/TimerController.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/UI/TimerController.ts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/UI/VictoryScreen.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObbyTemplate/Scripts/UI/VictoryScreen.ts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Sprite.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/WorldEditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/WorldEditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/WorldPlayerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/WorldPlayerSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/acorn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ncc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/ncc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-node" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/ts-node" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-node-cwd" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/ts-node-cwd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-node-esm" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/ts-node-esm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-node-script" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/ts-node-script" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-node-transpile-only" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/ts-node-transpile-only" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ts-script" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/ts-script" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tsc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/tsc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tsserver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/tsserver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/zepeto-sandbox" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/zepeto-sandbox" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/zsc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/zsc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@cspotcode/source-map-support/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@cspotcode/source-map-support/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@cspotcode/source-map-support/register-hook-require.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@cspotcode/source-map-support/register-hook-require.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@cspotcode/source-map-support/register.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@cspotcode/source-map-support/register.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@cspotcode/source-map-support/source-map-support.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@cspotcode/source-map-support/source-map-support.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/resolve-uri/dist/resolve-uri.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@jridgewell/resolve-uri/dist/resolve-uri.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/resolve-uri/dist/resolve-uri.mjs.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@jridgewell/resolve-uri/dist/resolve-uri.mjs.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/resolve-uri/dist/resolve-uri.umd.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@jridgewell/resolve-uri/dist/resolve-uri.umd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/resolve-uri/dist/resolve-uri.umd.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@jridgewell/resolve-uri/dist/resolve-uri.umd.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/resolve-uri/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@jridgewell/resolve-uri/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/sourcemap-codec/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@jridgewell/sourcemap-codec/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@jridgewell/trace-mapping/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@tsconfig/node10/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@tsconfig/node10/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@tsconfig/node12/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@tsconfig/node12/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@tsconfig/node14/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@tsconfig/node14/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@tsconfig/node16/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@tsconfig/node16/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.dom.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.dom.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.dom.iterable.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.dom.iterable.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2015.collection.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2015.collection.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2015.core.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2015.core.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2015.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2015.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2015.generator.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2015.generator.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2015.iterable.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2015.iterable.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2015.promise.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2015.promise.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2015.proxy.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2015.proxy.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2015.reflect.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2015.reflect.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2015.symbol.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2015.symbol.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2015.symbol.wellknown.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2015.symbol.wellknown.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2016.array.include.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2016.array.include.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2016.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2016.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2016.full.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2016.full.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2017.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2017.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2017.full.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2017.full.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2017.intl.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2017.intl.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2017.object.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2017.object.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2017.sharedmemory.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2017.sharedmemory.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2017.string.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2017.string.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2017.typedarrays.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2017.typedarrays.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2018.asyncgenerator.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2018.asyncgenerator.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2018.asynciterable.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2018.asynciterable.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2018.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2018.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2018.full.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2018.full.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2018.intl.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2018.intl.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2018.promise.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2018.promise.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2018.regexp.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2018.regexp.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2019.array.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2019.array.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2019.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2019.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2019.full.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2019.full.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2019.object.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2019.object.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2019.string.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2019.string.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2019.symbol.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2019.symbol.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2020.bigint.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2020.bigint.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2020.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2020.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2020.full.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2020.full.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2020.intl.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2020.intl.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2020.promise.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2020.promise.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2020.sharedmemory.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2020.sharedmemory.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2020.string.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2020.string.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2020.symbol.wellknown.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2020.symbol.wellknown.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2021.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2021.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2021.full.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2021.full.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2021.promise.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2021.promise.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2021.string.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2021.string.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2021.weakref.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es2021.weakref.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es5.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es5.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es6.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.es6.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.esnext.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.esnext.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.esnext.full.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.esnext.full.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.esnext.intl.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.esnext.intl.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.scripthost.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.scripthost.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.webworker.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.webworker.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.webworker.importscripts.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.webworker.importscripts.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.webworker.iterable.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/dist/ncc/loaders/typescript/lib/lib.webworker.iterable.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@vercel/ncc/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@vercel/ncc/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@zepeto/sandbox/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@zepeto/sandbox/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@zepeto/sandbox/dist/bytenode/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@zepeto/sandbox/dist/bytenode/cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@zepeto/sandbox/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@zepeto/sandbox/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn-walk/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn-walk/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn-walk/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn-walk/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn-walk/dist/walk.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn-walk/dist/walk.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn-walk/dist/walk.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn-walk/dist/walk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn-walk/dist/walk.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn-walk/dist/walk.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn-walk/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn-walk/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn/bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn/bin/acorn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn/dist/acorn.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn/dist/acorn.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn/dist/acorn.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn/dist/acorn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn/dist/acorn.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn/dist/acorn.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn/dist/acorn.mjs.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/arg/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/arg/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/create-require/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/create-require/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/diff/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/diff/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/make-error/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/make-error/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ts-node/dist/bin-cwd.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ts-node/dist/bin-cwd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ts-node/dist/bin-esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ts-node/dist/bin-esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ts-node/dist/bin-script-deprecated.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ts-node/dist/bin-script-deprecated.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ts-node/dist/bin-script.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ts-node/dist/bin-script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ts-node/dist/bin-transpile.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ts-node/dist/bin-transpile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ts-node/dist/bin.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ts-node/dist/bin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ts-node/dist/transpilers/swc.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ts-node/dist/transpilers/swc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ts-node/dist/transpilers/swc.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ts-node/dist/transpilers/swc.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ts-node/dist/ts-compiler-types.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ts-node/dist/ts-compiler-types.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ts-node/dist/ts-internals.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ts-node/dist/ts-internals.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ts-node/dist/ts-internals.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ts-node/dist/ts-internals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ts-node/dist/ts-internals.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ts-node/dist/ts-internals.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ts-node/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ts-node/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ts-node/tsconfig.schemastore-schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ts-node/tsconfig.schemastore-schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/AUTHORS.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/AUTHORS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/ThirdPartyNoticeText.txt" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/ThirdPartyNoticeText.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/bin/tsc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/bin/tsc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/bin/tsserver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/bin/tsserver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.dom.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.dom.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.dom.iterable.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.dom.iterable.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.collection.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.collection.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.core.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.core.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.generator.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.generator.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.iterable.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.iterable.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.promise.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.promise.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.proxy.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.proxy.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.reflect.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.reflect.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.symbol.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.symbol.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2016.array.include.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2016.array.include.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2016.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2016.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2016.full.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2016.full.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2017.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2017.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2017.full.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2017.full.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2017.intl.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2017.intl.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2017.object.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2017.object.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2017.string.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2017.string.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2018.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2018.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2018.full.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2018.full.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2018.intl.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2018.intl.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2018.promise.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2018.promise.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2018.regexp.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2018.regexp.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2019.array.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2019.array.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2019.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2019.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2019.full.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2019.full.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2019.object.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2019.object.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2019.string.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2019.string.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2019.symbol.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2019.symbol.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.bigint.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.bigint.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.full.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.full.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.intl.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.intl.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.promise.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.promise.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.sharedmemory.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.sharedmemory.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.string.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.string.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.symbol.wellknown.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2020.symbol.wellknown.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2021.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2021.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2021.full.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2021.full.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2021.promise.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2021.promise.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2021.string.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2021.string.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2021.weakref.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es2021.weakref.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es5.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es5.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es6.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.es6.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.esnext.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.esnext.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.esnext.full.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.esnext.full.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.esnext.intl.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.esnext.intl.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.scripthost.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.scripthost.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.webworker.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.webworker.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.webworker.importscripts.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.webworker.importscripts.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/lib.webworker.iterable.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/lib.webworker.iterable.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/lib/typesMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/lib/typesMap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/typescript/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/typescript/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/v8-compile-cache-lib/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/v8-compile-cache-lib/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/yn/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/yn/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/zepeto-script-compiler/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/zepeto-script-compiler/dist/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/zepeto-script-compiler/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/zepeto-script-compiler/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2cQg5QwscsWQFEh67OmWT0fi33E" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/user/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/user/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache&quot;,
+      &quot;/Users/user/.local/share/Symbols/src&quot;
+    ]
+  }
+}</component>
+  <component name="RunManager" selected="Node.js/Chrome에 연결.Zepeto Multiplay Script" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="e5e8eaec-b2c0-4808-b39b-b37b9084d84c" name="변경" comment="" />
+      <created>1708049033227</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708049033227</updated>
+      <workItem from="1708049034833" duration="3448000" />
+      <workItem from="1708075390594" duration="847000" />
+      <workItem from="1708079786694" duration="1095000" />
+      <workItem from="1708084346047" duration="1000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

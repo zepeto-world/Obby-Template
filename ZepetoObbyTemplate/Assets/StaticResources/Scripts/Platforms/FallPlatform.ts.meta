@@ -1,0 +1,62 @@
+fileFormatVersion: 2
+guid: 8ead314104c646044ba6fa308c44e065
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst __UnityEngine__ = require(\"UnityEngine\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    WorldState_1 = require(\"../Managers/WorldState\");\r\n// This class represents
+    a platform that can fall and respawn\r\nclass FallPlatform extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        // Public
+    variable to set the delay before the platform starts falling\r\n        this.fallDelay
+    = 1;\r\n        //Public variable that sets the delay before the platform respawns
+    after the player touches it\r\n        this.respawnDelay = 3;\r\n    }\r\n   
+    // Called once at the start when the script is enabled, to initialize variables\r\n   
+    Start() {\r\n        // Store the initial position of the platform for respawning
+    purposes\r\n        this._initPos = this.transform.position;\r\n    }\r\n   
+    // If the platform detects the collision with the player, it calls the method
+    to fall\r\n    // https://docs.unity3d.com/ScriptReference/Collider.OnTriggerEnter.html\r\n   
+    OnTriggerEnter(collider) {\r\n        if (this.respawnDelay == 0) {\r\n           
+    this.respawnDelay = 0.25;\r\n        }\r\n        // Check if the \"zepetoCharacter\"
+    of the WorldSettings instance is null or if the gameobject of the collider is
+    not him and return\r\n        if (WorldState_1.default.Instance.zepetoCharacter
+    == null || __UnityEngine__.Object.op_Inequality(collider.gameObject, WorldState_1.default.Instance.zepetoCharacter.gameObject))\r\n           
+    return;\r\n        // If the platform is not already falling, start the falling
+    and respawning coroutines\r\n        if (!this._falling && this._coFallPlatform
+    == null) {\r\n            // Mark the platform as falling\r\n            this._falling
+    = true;\r\n            // Start the coroutine to make the platform fall\r\n           
+    this._coFallPlatform = this.StartCoroutine(this.CoFallPlatform());\r\n           
+    // Start the coroutine to respawn the platform after it falls\r\n           
+    this.StartCoroutine(this.CoRespawnPlatform());\r\n        }\r\n    }\r\n    //
+    Coroutine to handle the platform''s falling behavior\r\n    *CoFallPlatform()
+    {\r\n        // Wait for the specified fall delay\r\n        yield new UnityEngine_1.WaitForSeconds(this.fallDelay);\r\n       
+    // Continue falling until the falling condition is false\r\n        while (this._falling)
+    {\r\n            // Move the platform downwards\r\n            this.transform.Translate(0,
+    -0.5, 0);\r\n            // Yield control back to the engine until the next frame\r\n           
+    yield null;\r\n        }\r\n    }\r\n    // Coroutine to respawn the platform
+    to its initial position\r\n    *CoRespawnPlatform() {\r\n        // Wait for
+    the specified respawn delay\r\n        yield new UnityEngine_1.WaitForSeconds(this.fallDelay
+    + this.respawnDelay);\r\n        // Reset the falling flag\r\n        this._falling
+    = false;\r\n        // Reset the platform''s rotation to its original state\r\n       
+    this.transform.rotation = UnityEngine_1.Quaternion.Euler(0, 0, 0);\r\n       
+    // Reset the platform''s position to its initial state\r\n        this.transform.position
+    = this._initPos;\r\n        // Clear the coroutine variable\r\n        this._coFallPlatform
+    = null;\r\n    }\r\n}\r\nexports.default = FallPlatform;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRmFsbFBsYXRmb3JtLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRmFsbFBsYXRmb3JtLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUFBLDZDQUF1RjtBQUN2RixpREFBc0Q7QUFDdEQsdURBQWdEO0FBRWhELDZEQUE2RDtBQUM3RCxNQUFxQixZQUFhLFNBQVEscUNBQXFCO0lBQS9EOztRQUVFLHNFQUFzRTtRQUMvRCxjQUFTLEdBQVcsQ0FBQyxDQUFDO1FBRTdCLDhGQUE4RjtRQUN2RixpQkFBWSxHQUFXLENBQUMsQ0FBQztJQWlGbEMsQ0FBQztJQXRFQywrRUFBK0U7SUFDL0UsS0FBSztRQUVILHFFQUFxRTtRQUNyRSxJQUFJLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDO0lBQzFDLENBQUM7SUFFRCxxRkFBcUY7SUFDckYsd0VBQXdFO0lBQ3hFLGNBQWMsQ0FBQyxRQUFrQjtRQUUvQixJQUFHLElBQUksQ0FBQyxZQUFZLElBQUksQ0FBQyxFQUFDO1lBQ3hCLElBQUksQ0FBQyxZQUFZLEdBQUcsSUFBSSxDQUFDO1NBQzFCO1FBRUQsa0lBQWtJO1FBQ2xJLElBQUksb0JBQVUsQ0FBQyxRQUFRLENBQUMsZUFBZSxJQUFJLElBQUksMkJBc0Q0aFEsYUFBYyxDQXREdGlRLFFBQVEsQ0FBQyxVQUFVLEVBQUksb0JBQVUsQ0FBQyxRQUFRLENBQUMsZUFBZSxDQUFDLFVBQVUsQ0FBQTtZQUN0SCxPQUFPO1FBRVQsc0ZBQXNGO1FBQ3RGLElBQUksQ0FBQyxJQUFJLENBQUMsUUFBUSxJQUFJLElBQUksQ0FBQyxlQUFlLElBQUksSUFBSSxFQUFFO1lBRWxELCtCQUErQjtZQUMvQixJQUFJLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQztZQUVyQixnREFBZ0Q7WUFDaEQsSUFBSSxDQUFDLGVBQWUsR0FBRyxJQUFJLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxjQUFjLEVBQUUsQ0FBQyxDQUFDO1lBRWxFLDZEQUE2RDtZQUM3RCxJQUFJLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxpQkFBaUIsRUFBRSxDQUFDLENBQUM7U0FDL0M7SUFFSCxDQUFDO0lBRUQsc0RBQXNEO0lBQ3RELENBQUMsY0FBYztRQUViLG9DQUFvQztRQUNwQyxNQUFNLElBQUksNEJBQWMsQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLENBQUM7UUFFekMsd0RBQXdEO1FBQ3hELE9BQU8sSUFBSSxDQUFDLFFBQVEsRUFBRTtZQUVwQiw4QkFBOEI7WUFDOUIsSUFBSSxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsQ0FBQyxFQUFFLENBQUMsR0FBRyxFQUFFLENBQUMsQ0FBQyxDQUFDO1lBRXJDLHdEQUF3RDtZQUN4RCxNQUFNLElBQUksQ0FBQztTQUNaO0lBQ0gsQ0FBQztJQUVELDREQUE0RDtJQUM1RCxDQUFDLGlCQUFpQjtRQUVoQix1Q0FBdUM7UUFDdkMsTUFBTSxJQUFJLDRCQUFjLENBQUMsSUFBSSxDQUFDLFNBQVMsR0FBRyxJQUFJLENBQUMsWUFBWSxDQUFDLENBQUM7UUFFN0QseUJBQXlCO1FBQ3pCLElBQUksQ0FBQyxRQUFRLEdBQUcsS0FBSyxDQUFDO1FBRXRCLHNEQUFzRDtRQUN0RCxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyx3QkFBVSxDQUFDLEtBQUssQ0FBQyxDQUFDLEVBQUUsQ0FBQyxFQUFFLENBQUMsQ0FBQyxDQUFDO1FBRXBELHFEQUFxRDtRQUNyRCxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyxJQUFJLENBQUMsUUFBUSxDQUFDO1FBRXhDLCtCQUErQjtRQUMvQixJQUFJLENBQUMsZUFBZSxHQUFHLElBQUksQ0FBQztJQUM5QixDQUFDO0NBRUY7QUF2RkQsK0JBdUZDIn0=","assetPath":"Assets/StaticResources/Scripts/Platforms/FallPlatform.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"fallDelay","type":"System.Single","isArray":false,"initValue":["1"],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"respawnDelay","type":"System.Single","isArray":false,"initValue":["3"],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"FallPlatform","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 4920682cb448a55e5498bc5d639ca4c1
+  onlyWriteTrigger: 0

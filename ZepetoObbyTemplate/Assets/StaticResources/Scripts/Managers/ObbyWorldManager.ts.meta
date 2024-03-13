@@ -1,0 +1,53 @@
+fileFormatVersion: 2
+guid: 3ac695146e23f3640809272de4b8627b
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst WorldState_1 = require(\"./WorldState\");\r\n//
+    This class controls the checkpoint system for the player\r\nclass ObbyWorldManager
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    // Awake is called when
+    the script instance is being loaded\r\n    Awake() {\r\n        // This is how
+    the instance of this class is allocated. Which makes it a \"singleton\"\r\n       
+    // Singleton https://docs.zepeto.me/studio/reference/singleton\r\n        if
+    (ZEPETO_Script_1.ZepetoScriptBehaviour.op_Equality(ObbyWorldManager.instance,
+    null)) {\r\n            ObbyWorldManager.instance = this;\r\n        }\r\n       
+    else {\r\n            UnityEngine_1.GameObject.Destroy(this);\r\n        }\r\n   
+    }\r\n    // Control when the player has fallen down and respawn him on the last
+    checkpoint\r\n    // Update is called every frame, if the MonoBehaviour is enabled\r\n   
+    Update() {\r\n        // Check if the \"zepetoCharacter\" variable of the \"WorldState\"
+    instance is not null\r\n        if (WorldState_1.default.Instance.zepetoCharacter
+    != null) {\r\n            // Check if the positios of the \"zepetoCharacter\"
+    is less than -20 on Y\r\n            // Which means that the player has fallen
+    from the platforms, if so\r\n            if (WorldState_1.default.Instance.zepetoCharacter.transform.position.y
+    < -20) {\r\n                // We send the player to the position of \"_currentCheckpoint\"
+    \r\n                WorldState_1.default.Instance.zepetoCharacter.transform.position
+    = this._currentCheckpoint.transform.position;\r\n                // Call to the
+    internal method that teleports the player\r\n                this.TeleportCharacter();\r\n           
+    }\r\n        }\r\n    }\r\n    // This method updates the current checkpoint
+    to one passed by parameter\r\n    UpdateCheckpoint(newCheckpoint) {\r\n       
+    // Here we set the reference of \"_checkPoint\"\r\n        this._currentCheckpoint
+    = newCheckpoint;\r\n    }\r\n    // Teleport the character to last checkpoint
+    position\r\n    TeleportCharacter() {\r\n        // We make a call to the function
+    of \"zepetoCharacter\" \"teleport\", passing both position and rotation as parameters\r\n       
+    WorldState_1.default.Instance.zepetoCharacter.Teleport(this._currentCheckpoint.transform.position,
+    WorldState_1.default.Instance.zepetoCharacter.transform.rotation);\r\n    }\r\n}\r\nexports.default
+    = ObbyWorldManager;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiT2JieVdvcmxkTWFuYWdlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIk9iYnlXb3JsZE1hbmFnZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBeUM7QUFDekMsaURBQXFEO0FBRXJELDZDQUFzQztBQUV0QywyREFBMkQ7QUFDM0QsTUFBcUIsZ0JBQWlCLFNBQVEscUNBQXFCO0lBUS9ELDJEQUEyRDtJQUMzRCxLQUFLO1FBRUQsb0ZBQW9GO1FBQ3BGLDhEQUE4RDtRQUM5RCxJQWxCQyxxQ0FBcUIsQ0F5RCsrSSxXQUFZLENBdkM3Z0osZ0JBQWdCLENBQUMsUUFBUSxFQUFJLElBQUksR0FBRTtZQUNuQyxnQkFBZ0IsQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDO1NBQ3BDO2FBQU07WUFDSCx3QkFBVSxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsQ0FBQztTQUM1QjtJQUNMLENBQUM7SUFFRCxpRkFBaUY7SUFDakYsZ0VBQWdFO0lBQ2hFLE1BQU07UUFFRixtRkFBbUY7UUFDbkYsSUFBSSxvQkFBVSxDQUFDLFFBQVEsQ0FBQyxlQUFlLElBQUksSUFBSSxFQUFFO1lBRTdDLHVFQUF1RTtZQUN2RSxtRUFBbUU7WUFDbkUsSUFBSSxvQkFBVSxDQUFDLFFBQVEsQ0FBQyxlQUFlLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDLEdBQUcsQ0FBQyxFQUFFLEVBQUU7Z0JBRWhFLDhEQUE4RDtnQkFDOUQsb0JBQVUsQ0FBQyxRQUFRLENBQUMsZUFBZSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDLGtCQUFrQixDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUM7Z0JBRXBHLHdEQUF3RDtnQkFDeEQsSUFBSSxDQUFDLGlCQUFpQixFQUFFLENBQUM7YUFDNUI7U0FDSjtJQUNMLENBQUM7SUFFRCx3RUFBd0U7SUFDeEUsZ0JBQWdCLENBQUMsYUFBNEI7UUFDekMsNkNBQTZDO1FBQzdDLElBQUksQ0FBQyxrQkFBa0IsR0FBRyxhQUFhLENBQUM7SUFDNUMsQ0FBQztJQUVELHFEQUFxRDtJQUNyRCxpQkFBaUI7UUFFYixtSEFBbUg7UUFDbkgsb0JBQVUsQ0FBQyxRQUFRLENBQUMsZUFBZSxDQUFDLFFBQVEsQ0FBQyxJQUFJLENBQUMsa0JBQWtCLENBQUMsU0FBUyxDQUFDLFFBQVEsRUFBRSxvQkFBVSxDQUFDLFFBQVEsQ0FBQyxlQUFlLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDO0lBQ3JKLENBQUM7Q0FDSjtBQXBERCxtQ0FvREMifQ==","assetPath":"Assets/StaticResources/Scripts/Managers/ObbyWorldManager.ts","manifest":{"properties":[],"name":"ObbyWorldManager","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 500498f50d0693fd27606ca8f880fbaf
+  onlyWriteTrigger: 0

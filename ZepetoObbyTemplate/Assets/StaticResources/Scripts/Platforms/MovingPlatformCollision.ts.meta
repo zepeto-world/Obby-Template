@@ -1,0 +1,43 @@
+fileFormatVersion: 2
+guid: 23f2e1ad1b18c0b408b18db9256ef66b
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\n// This class controls the moving
+    platforms\r\nclass MovingPlatformCollision extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    // https://docs.unity3d.com/ScriptReference/Collider.OnTriggerEnter.html\r\n   
+    // This event is fired when the player reaches the moving platform\r\n    OnTriggerEnter(collider)
+    {\r\n        // Obtain the ZepetoCharacter component from the collider that activates
+    the trigger\r\n        let _player = collider.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter));\r\n       
+    // Check if the variable \"_player\" is not null\r\n        if (_player) {\r\n           
+    // We set this transform like parent of the \"_player\"\r\n            // This
+    is done to keep player positions related to the platform\r\n            _player.transform.SetParent(this.transform);\r\n       
+    }\r\n    }\r\n    // https://docs.unity3d.com/ScriptReference/Collider.OnTriggerExit.html\r\n   
+    // This event is fired when the player leaves the moving platform\r\n    OnTriggerExit(collider)
+    {\r\n        // Obtain the ZepetoCharacter component from the collider that activates
+    the trigger\r\n        let _player = collider.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter));\r\n       
+    // Check if the variable \"_player\" is not null\r\n        if (_player) {\r\n           
+    // We set the parents of the \"_player\" on null\r\n            // By unparenting
+    the player from the mobile platform, he can move freely again\r\n           
+    _player.transform.parent = null;\r\n        }\r\n    }\r\n}\r\nexports.default
+    = MovingPlatformCollision;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTW92aW5nUGxhdGZvcm1Db2xsaXNpb24uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJNb3ZpbmdQbGF0Zm9ybUNvbGxpc2lvbi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUF1QztBQUN2Qyw2RUFBOEQ7QUFDOUQsaURBQXFEO0FBRXJELDJDQUEyQztBQUMzQyxNQUFxQix1QkFBd0IsU0FBUSxxQ0FBcUI7SUFFdEUsd0VBQXdFO0lBQ3hFLGtFQUFrRTtJQUNsRSxjQUFjLENBQUMsUUFBa0I7UUFFN0Isb0ZBQW9GO1FBQ3BGLElBQUksT0FBTyxHQUFHLFFBQVEsQ0FBQyxZQUFZLFNBQUMsNkNBQWUsRUFBRyxDQUFDO1FBRXZELDhDQUE4QztRQUM5QyxJQUFJLE9BQU8sRUFBRTtZQUVULHFEQUFxRDtZQUNyRCxnRUFBZ0U7WUFDaEUsT0FBTyxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxDQUFDO1NBQy9DO0lBQ0wsQ0FBQztJQUVELHVFQUF1RTtJQUN2RSxpRUFBaUU7SUFDakUsYUFBYSxDQUFDLFFBQWtCO1FBRTVCLG9GQUFvRjtRQUNwRixJQUFJLE9BQU8sR0FBRyxRQUFRLENBQUMsWUFBWSxTQUFDLDZDQUFlLEVBQUcsQ0FBQztRQUV2RCw4Q0FBOEM7UUFDOUMsSUFBSSxPQUFPLEVBQUU7WUFFVCw4Q0FBOEM7WUFDOUMsK0VBQStFO1lBQy9FLE9BQU8sQ0FBQyxTQUFTLENBQUMsTUFBTSxHQUFHLElBQUksQ0FBQztTQUNuQztJQUNMLENBQUM7Q0FDSjtBQWpDRCwwQ0FpQ0MifQ==","assetPath":"Assets/StaticResources/Scripts/Platforms/MovingPlatformCollision.ts","manifest":{"properties":[],"name":"MovingPlatformCollision","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: b8fb02af451d7f0943aa2890db6bfcdd
+  onlyWriteTrigger: 0

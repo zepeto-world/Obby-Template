@@ -1,0 +1,50 @@
+fileFormatVersion: 2
+guid: 15bc698cf8752fa4fa8541ae40762dc9
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\n// This class controls the moving
+    platforms\r\nclass MovingPlatform extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        // How much
+    time its tooks to move and go back\r\n        this.movingTime = 1;\r\n       
+    this.movingRangeX = 2;\r\n        // Amount of distance that the platform will
+    move on Y\r\n        this.movingRangeY = 2;\r\n        // Amount of distance
+    that the platform will move on Z\r\n        this.movingRangeZ = 2;\r\n       
+    // Controls the time\r\n        this._delta = 0;\r\n        // Flag for the move\r\n       
+    this._movingFlag = true;\r\n    }\r\n    // Every second the platform moves toward
+    the offset position setted on the variables\r\n    // Once the time is gapped
+    them comes again to the start position\r\n    // https://docs.unity3d.com/ScriptReference/MonoBehaviour.FixedUpdate.html\r\n   
+    FixedUpdate() {\r\n        // We count every second that is happen on the world
+    and save it on \"_delta\"\r\n        this._delta += UnityEngine_1.Time.deltaTime;\r\n       
+    // Check if the amount of \"_delta\" is more or equal to \"movingTime\"\r\n       
+    if (this._delta >= this.movingTime) {\r\n            // Set \"_delta\" to zero\r\n           
+    this._delta = 0;\r\n            // We set the variable _movingFlag to its value
+    in reverse (if true then false - if false then true)\r\n            this._movingFlag
+    = !this._movingFlag;\r\n        }\r\n        // Check if \"_movingFlag\" is true
+    or false\r\n        if (this._movingFlag) {\r\n            // Move the transform
+    to its target position\r\n            this.transform.Translate(this.movingRangeX
+    * UnityEngine_1.Time.deltaTime, this.movingRangeY * UnityEngine_1.Time.deltaTime,
+    this.movingRangeZ * UnityEngine_1.Time.deltaTime);\r\n        }\r\n        else
+    {\r\n            // Move the transform to its initial position\r\n           
+    this.transform.Translate(-this.movingRangeX * UnityEngine_1.Time.deltaTime, -1
+    * this.movingRangeY * UnityEngine_1.Time.deltaTime, -this.movingRangeZ * UnityEngine_1.Time.deltaTime);\r\n       
+    }\r\n    }\r\n}\r\nexports.default = MovingPlatform;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2ltcGxlTW92ZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlNpbXBsZU1vdmUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxpREFBcUQ7QUFDckQsNkNBQW1DO0FBRW5DLDJDQUEyQztBQUMzQyxNQUFxQixjQUFlLFNBQVEscUNBQXFCO0lBQWpFOztRQUVJLDhDQUE4QztRQUN2QyxlQUFVLEdBQVcsQ0FBQyxDQUFDO1FBSXZCLGlCQUFZLEdBQVcsQ0FBQyxDQUFDO1FBRWhDLHNEQUFzRDtRQUMvQyxpQkFBWSxHQUFXLENBQUMsQ0FBQztRQUVoQyxzREFBc0Q7UUFDL0MsaUJBQVksR0FBVyxDQUFDLENBQUM7UUFFaEMsb0JBQW9CO1FBQ1osV0FBTSxHQUFXLENBQUMsQ0FBQztRQUUzQixvQkFBb0I7UUFDWixnQkFBVyxHQUFZLElBQUksQ0FBQztJQWdDeEMsQ0FBQztJQTlCRyxxRkFBcUY7SUFDckYsaUVBQWlFO0lBQ2pFLDBFQUEwRTtJQUMxRSxXQUFXO1FBRVAsNEVBQTRFO1FBQzVFLElBQUksQ0FBQyxNQUFNLElBQUksa0JBQUksQ0FBQyxTQUFTLENBQUM7UUFFOUIsbUVBQW1FO1FBQ25FLElBQUksSUFBSSxDQUFDLE1BQU0sSUFBSSxJQUFJLENBQUMsVUFBVSxFQUFFO1lBRWhDLHVCQUF1QjtZQUN2QixJQUFJLENBQUMsTUFBTSxHQUFHLENBQUMsQ0FBQztZQUVoQixvR0FBb0c7WUFDcEcsSUFBSSxDQUFDLFdBQVcsR0FBRyxDQUFDLElBQUksQ0FBQyxXQUFXLENBQUM7U0FDeEM7UUFFRCwwQ0FBMEM7UUFDMUMsSUFBSSxJQUFJLENBQUMsV0FBVyxFQUFFO1lBRWxCLDRDQUE0QztZQUM1QyxJQUFJLENBQUMsU0FBUyxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsWUFBWSxHQUFHLGtCQUFJLENBQUMsU0FBUyxFQUFFLElBQUksQ0FBQyxZQUFZLEdBQUcsa0JBQUksQ0FBQyxTQUFTLEVBQUUsSUFBSSxDQUFDLFlBQVksR0FBRyxrQkFBSSxDQUFDLFNBQVMsQ0FBQyxDQUFDO1NBQ3hJO2FBQ0k7WUFFRCw2Q0FBNkM7WUFDN0MsSUFBSSxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsQ0FBQyxJQUFJLENBQUMsWUFBWSxHQUFHLGtCQUFJLENBQUMsU0FBUyxFQUFFLENBQUMsQ0FBQyxHQUFHLElBQUksQ0FBQyxZQUFZLEdBQUcsa0JBQUksQ0FBQyxTQUFTLEVBQUUsQ0FBQyxJQUFJLENBQUMsWUFBWSxHQUFHLGtCQUFJLENBQUMsU0FBUyxDQUFDLENBQUM7U0FDL0k7SUFDTCxDQUFDO0NBQ0o7QUFuREQsaUNBbURDIn0=","assetPath":"Assets/StaticResources/Scripts/Platforms/SimpleMove.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"movingTime","type":"System.Single","isArray":false,"initValue":["1"],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"movingRangeX","type":"System.Single","isArray":false,"initValue":["2"],"enumKeys":[],"enumValues":[],"attributes":[{"name":"Header","args":["\"Direction\""]}]},{"assembly":"mscorlib","name":"movingRangeY","type":"System.Single","isArray":false,"initValue":["2"],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"movingRangeZ","type":"System.Single","isArray":false,"initValue":["2"],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"MovingPlatform","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 45ed587afe686266267b91f39ff9d86b
+  onlyWriteTrigger: 0

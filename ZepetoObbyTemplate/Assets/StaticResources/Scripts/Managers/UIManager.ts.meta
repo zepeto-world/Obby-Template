@@ -1,0 +1,36 @@
+fileFormatVersion: 2
+guid: f3e466cae2c705d4e894cb156c0ea808
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\n// This class controls all the
+    UI process of the world\r\nclass UIManager extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    // Awake is called when the script instance is being loaded\r\n    Awake()
+    {\r\n        // This is how the instance of this class is allocated. Which makes
+    it a \"singleton\"\r\n        // Singleton https://en.wikipedia.org/wiki/Singleton_pattern\r\n       
+    if (ZEPETO_Script_1.ZepetoScriptBehaviour.op_Inequality(UIManager.Instance, null))\r\n           
+    UnityEngine_1.GameObject.Destroy(this.gameObject);\r\n        UIManager.Instance
+    = this;\r\n    }\r\n    // This method is called when start\r\n    OnStart()
+    {\r\n        // We deactivate  the gameobject \"_resultPanel\"\r\n        this._resultPanel.SetActive(false);\r\n   
+    }\r\n    // This method is called when the player wins\r\n    OnEndWorld() {\r\n       
+    // We activate the gameobject \"_resultPanel\"\r\n        this._resultPanel.SetActive(true);\r\n   
+    }\r\n}\r\nexports.default = UIManager;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVUlNYW5hZ2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiVUlNYW5hZ2VyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXlDO0FBQ3pDLGlEQUFxRDtBQUVyRCxzREFBc0Q7QUFDdEQsTUFBcUIsU0FBVSxTQUFRLHFDQUFxQjtJQVF4RCwyREFBMkQ7SUFDM0QsS0FBSztRQUVELG9GQUFvRjtRQUNwRiw0REFBNEQ7UUFDNUQsSUFoQkMscUNBQXFCLENBa0MwNUwsYUFBYyxDQWxCMTdMLFNBQVMsQ0FBQyxRQUFRLEVBQUksSUFBSTtZQUFFLHdCQUFVLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxVQUFVLENBQUMsQ0FBQztRQUNwRSxTQUFTLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQztJQUM5QixDQUFDO0lBRUQsbUNBQW1DO0lBQ25DLE9BQU87UUFFSCwrQ0FBK0M7UUFDL0MsSUFBSSxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7SUFDdkMsQ0FBQztJQUVELDZDQUE2QztJQUM3QyxVQUFVO1FBRU4sNENBQTRDO1FBQzVDLElBQUksQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO0lBQ3RDLENBQUM7Q0FFSjtBQS9CRCw0QkErQkMifQ==","assetPath":"Assets/StaticResources/Scripts/Managers/UIManager.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"_resultPanel","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"SerializeField","args":[]}]}],"name":"UIManager","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: adceafe8b1a1261d525dfd7934c882a2
+  onlyWriteTrigger: 0

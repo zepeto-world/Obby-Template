@@ -1,0 +1,37 @@
+fileFormatVersion: 2
+guid: ff9e234a66fdae148819748c2dbf1863
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst __UnityEngine__ = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst WorldState_1 = require(\"../Managers/WorldState\");\r\n//
+    This class is in charge of reacting when reaching the final platform\r\nclass
+    GoalPlatform extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    // https://docs.unity3d.com/ScriptReference/Collider.OnTriggerEnter.html\r\n   
+    // This event fires when the player reaches the last platform\r\n    OnTriggerEnter(collider)
+    {\r\n        // Check if the \"zepetoCharacter\" of the WorldState instance is
+    null or if the gameobject of the collider is not him and return\r\n        if
+    (WorldState_1.default.Instance.zepetoCharacter == null || __UnityEngine__.Object.op_Inequality(collider.gameObject,
+    WorldState_1.default.Instance.zepetoCharacter.gameObject))\r\n            return;\r\n       
+    // Check if the flag \"canWin\" of the instance of WorldState is false\r\n       
+    if (!this._used && WorldState_1.default.Instance.canWin) {\r\n            //
+    We call to \"OnWorldEnd\" method of the WorldState instance\r\n            WorldState_1.default.Instance.OnWorldEnd();\r\n           
+    // And set the flag \"_used\" on true\r\n            this._used = true;\r\n       
+    }\r\n    }\r\n}\r\nexports.default = GoalPlatform;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR29hbFBsYXRmb3JtLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiR29hbFBsYXRmb3JtLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUNBLGlEQUFxRDtBQUNyRCx1REFBZ0Q7QUFFaEQsdUVBQXVFO0FBQ3ZFLE1BQXFCLFlBQWEsU0FBUSxxQ0FBcUI7SUFLM0Qsd0VBQXdFO0lBQ3hFLDZEQUE2RDtJQUM3RCxjQUFjLENBQUMsUUFBa0I7UUFFN0IsK0hBQStIO1FBQy9ILElBQUksb0JBQVUsQ0FBQyxRQUFRLENBQUMsZUFBZSxJQUFJLElBQUksMkJBYW80VCxhQUFjLENBYjk0VCxRQUFRLENBQUMsVUFBVSxFQUFJLG9CQUFVLENBQUMsUUFBUSxDQUFDLGVBQWUsQ0FBQyxVQUFVLENBQUE7WUFDcEgsT0FBTztRQUVYLG9FQUFvRTtRQUNwRSxJQUFJLENBQUMsSUFBSSxDQUFDLEtBQUssSUFBSSxvQkFBVSxDQUFDLFFBQVEsQ0FBQyxNQUFNLEVBQUU7WUFFM0MsNERBQTREO1lBQzVELG9CQUFVLENBQUMsUUFBUSxDQUFDLFVBQVUsRUFBRSxDQUFDO1lBRWpDLG1DQUFtQztZQUNuQyxJQUFJLENBQUMsS0FBSyxHQUFHLElBQUksQ0FBQztTQUNyQjtJQUNMLENBQUM7Q0FDSjtBQXZCRCwrQkF1QkMifQ==","assetPath":"Assets/StaticResources/Scripts/Platforms/GoalPlatform.ts","manifest":{"properties":[],"name":"GoalPlatform","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 50e076d2a8438732bc6db835ce1fc1c1
+  onlyWriteTrigger: 0

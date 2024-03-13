@@ -127,7 +127,7 @@
       }
     },
     "zepeto.asset": {
-      "version": "1.0.11",
+      "version": "1.1.1",
       "depth": 2,
       "source": "registry",
       "dependencies": {
@@ -143,11 +143,12 @@
       "url": "https://upm.zepeto.run"
     },
     "zepeto.character": {
-      "version": "3.1.13",
+      "version": "3.1.18",
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "zepeto.asset": "1.0.11",
+        "zepeto.asset": "1.1.1",
+        "com.unity.modules.cloth": "1.0.0",
         "com.unity.modules.particlesystem": "1.0.0",
         "com.unity.modules.physics": "1.0.0",
         "com.unity.modules.audio": "1.0.0",
@@ -156,38 +157,37 @@
       "url": "https://upm.zepeto.run"
     },
     "zepeto.character.controller": {
-      "version": "1.7.0",
+      "version": "1.11.7",
       "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.inputsystem": "1.0.2",
-        "zepeto.event.bus": "0.2.0"
+        "zepeto.character": "3.1.18"
       },
       "url": "https://upm.zepeto.run"
     },
-    "zepeto.chat": {
-      "version": "1.0.1",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://upm.zepeto.run"
-    },
     "zepeto.event.bus": {
-      "version": "0.2.0",
-      "depth": 2,
+      "version": "0.5.3",
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://upm.zepeto.run"
     },
-    "zepeto.iwp": {
-      "version": "1.2.1",
+    "zepeto.module": {
+      "version": "1.0.8",
       "depth": 1,
       "source": "registry",
-      "dependencies": {},
+      "dependencies": {
+        "zepeto.script": "1.14.6",
+        "zepeto.multiplay": "1.11.1",
+        "zepeto.character": "3.1.18",
+        "zepeto.playbaas.sdk": "0.0.5-preview",
+        "com.unity.nuget.newtonsoft-json": "2.0.0"
+      },
       "url": "https://upm.zepeto.run"
     },
     "zepeto.multiplay": {
-      "version": "1.7.0",
+      "version": "1.11.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -196,49 +196,56 @@
       "url": "https://upm.zepeto.run"
     },
     "zepeto.multiplay.script": {
-      "version": "1.7.0",
+      "version": "1.12.10",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
+      "url": "https://upm.zepeto.run"
+    },
+    "zepeto.playbaas.sdk": {
+      "version": "0.0.6-preview",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "2.0.0",
+        "com.unity.editorcoroutines": "1.0.0"
+      },
       "url": "https://upm.zepeto.run"
     },
     "zepeto.script": {
-      "version": "1.9.0",
+      "version": "1.14.7",
       "depth": 1,
       "source": "registry",
-      "dependencies": {},
-      "url": "https://upm.zepeto.run"
-    },
-    "zepeto.script.leaderboard": {
-      "version": "1.1.8",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {},
+      "dependencies": {
+        "zepeto.event.bus": "0.5.3",
+        "com.unity.nuget.newtonsoft-json": "2.0.0"
+      },
       "url": "https://upm.zepeto.run"
     },
     "zepeto.script.unityengine.typings": {
-      "version": "1.0.6",
+      "version": "1.1.1",
       "depth": 1,
       "source": "registry",
-      "dependencies": {},
+      "dependencies": {
+        "zepeto.script": "1.12.0"
+      },
       "url": "https://upm.zepeto.run"
     },
     "zepeto.world": {
-      "version": "1.15.0",
+      "version": "1.21.15",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "zepeto.world.common": "1.0.1",
-        "zepeto.world.shared": "1.8.0",
-        "zepeto.script": "1.9.0",
-        "zepeto.multiplay": "1.7.0",
-        "zepeto.multiplay.script": "1.7.0",
-        "zepeto.chat": "1.0.1",
-        "zepeto.character": "3.1.13",
-        "zepeto.character.controller": "1.7.0",
-        "zepeto.script.unityengine.typings": "1.0.6",
-        "zepeto.iwp": "1.2.1",
-        "zepeto.script.leaderboard": "1.1.8",
+        "zepeto.world.shared": "1.10.11",
+        "zepeto.script": "1.14.7",
+        "zepeto.event.bus": "0.5.3",
+        "zepeto.module": "1.0.8",
+        "zepeto.multiplay": "1.11.1",
+        "zepeto.multiplay.script": "1.12.10",
+        "zepeto.character": "3.1.18",
+        "zepeto.character.controller": "1.11.7",
+        "zepeto.script.unityengine.typings": "1.1.1",
+        "zepeto.playbaas.sdk": "0.0.6-preview",
         "com.unity.scriptablebuildpipeline": "1.15.2",
         "com.unity.editorcoroutines": "1.0.0",
         "com.unity.postprocessing": "3.1.1",
@@ -248,22 +255,8 @@
       },
       "url": "https://upm.zepeto.run"
     },
-    "zepeto.world.common": {
-      "version": "1.0.1",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://upm.zepeto.run"
-    },
-    "zepeto.world.gui": {
-      "version": "1.1.0-preview",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://upm.zepeto.run"
-    },
     "zepeto.world.shared": {
-      "version": "1.8.0",
+      "version": "1.10.11",
       "depth": 1,
       "source": "registry",
       "dependencies": {

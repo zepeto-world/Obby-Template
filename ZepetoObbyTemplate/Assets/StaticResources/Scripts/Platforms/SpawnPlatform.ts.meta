@@ -1,0 +1,40 @@
+fileFormatVersion: 2
+guid: 2c745c29e3f9f79478a5b7ebd7503578
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst __UnityEngine__ = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst WorldState_1 = require(\"../Managers/WorldState\");\r\nconst
+    ObbyWorldManager_1 = require(\"../Managers/ObbyWorldManager\");\r\n// This class
+    controls the spawnpoints\r\nclass SpawnPlatform extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        // Internal
+    flag to set if the spawnpoint was actived\r\n        this._activeCheckpoint =
+    false;\r\n    }\r\n    // https://docs.unity3d.com/ScriptReference/Collider.OnTriggerEnter.html\r\n   
+    // When the player touches the spawn it got setted active and update the last
+    checkpoint\r\n    OnTriggerEnter(collider) {\r\n        // Check if the \"zepetoCharacter\"
+    of the WorldSettings instance is null or if the gameobject of the collider is
+    not him and return\r\n        if (WorldState_1.default.Instance.zepetoCharacter
+    == null || __UnityEngine__.Object.op_Inequality(collider.gameObject, WorldState_1.default.Instance.zepetoCharacter.gameObject))\r\n           
+    return;\r\n        // Check if the flag is false\r\n        if (!this._activeCheckpoint)
+    {\r\n            // Set the flag on true\r\n            this._activeCheckpoint
+    = true;\r\n            // Call to the UpdateCheckpoint method of the \"ObbyWorldManager\"
+    instance passing this \"SpawnPoint\" like reference\r\n            ObbyWorldManager_1.default.instance.UpdateCheckpoint(this);\r\n       
+    }\r\n    }\r\n}\r\nexports.default = SpawnPlatform;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3Bhd25QbGF0Zm9ybS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlNwYXduUGxhdGZvcm0udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQ0EsaURBQXFEO0FBQ3JELHVEQUFnRDtBQUNoRCxtRUFBNEQ7QUFFNUQsc0NBQXNDO0FBQ3RDLE1BQXFCLGFBQWMsU0FBUSxxQ0FBcUI7SUFBaEU7O1FBRUkscURBQXFEO1FBQzdDLHNCQUFpQixHQUFTLEtBQUssQ0FBQztJQW9CNUMsQ0FBQztJQWxCRyx3RUFBd0U7SUFDeEUsd0ZBQXdGO0lBQ3hGLGNBQWMsQ0FBQyxRQUFrQjtRQUU3QixrSUFBa0k7UUFDbEksSUFBSSxvQkFBVSxDQUFDLFFBQVEsQ0FBQyxlQUFlLElBQUksSUFBSSwyQkFhK3lULGFBQWMsQ0FienpULFFBQVEsQ0FBQyxVQUFVLEVBQUksb0JBQVUsQ0FBQyxRQUFRLENBQUMsZUFBZSxDQUFDLFVBQVUsQ0FBQTtZQUNwSCxPQUFPO1FBRVgsNkJBQTZCO1FBQzdCLElBQUksQ0FBQyxJQUFJLENBQUMsaUJBQWlCLEVBQUU7WUFFekIsdUJBQXVCO1lBQ3ZCLElBQUksQ0FBQyxpQkFBaUIsR0FBRyxJQUFJLENBQUM7WUFFOUIsa0hBQWtIO1lBQ2xILDBCQUFnQixDQUFDLFFBQVEsQ0FBQyxnQkFBZ0IsQ0FBQyxJQUFJLENBQUMsQ0FBQztTQUNwRDtJQUNMLENBQUM7Q0FDSjtBQXZCRCxnQ0F1QkMifQ==","assetPath":"Assets/StaticResources/Scripts/Platforms/SpawnPlatform.ts","manifest":{"properties":[],"name":"SpawnPlatform","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: d6d6f5b51a8edd384ca86bb7f96b53b0
+  onlyWriteTrigger: 0
