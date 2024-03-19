@@ -95,12 +95,9 @@ MonoBehaviour:
   script:
     keys:
     - resetButton
-    - nextLevelButton
     unityValues:
     - {fileID: 8561205810528081575}
-    - {fileID: 0}
     values:
-    - 
     - 
     unityArrayValues: []
     arrayValues: []
@@ -185,7 +182,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Congratulation
+  m_Text: Congratulations
 --- !u!114 &562638502601209646
 MonoBehaviour:
   m_ObjectHideFlags: 0
