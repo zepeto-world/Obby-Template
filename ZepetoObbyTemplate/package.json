@@ -54,7 +54,6 @@
 			"resolved": "https://registry.npmjs.org/@vercel/ncc/-/ncc-0.31.1.tgz",
 			"version": "0.31.1"
 		},
-		"@zepeto/sandbox": "file:Library/Packages/zepeto-sandbox.tgz",
 		"acorn": {
 			"integrity": "sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==",
 			"resolved": "https://registry.npmjs.org/acorn/-/acorn-8.8.2.tgz",
@@ -115,7 +114,6 @@
 			"integrity": "sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==",
 			"resolved": "https://registry.npmjs.org/yn/-/yn-3.1.1.tgz",
 			"version": "3.1.1"
-		},
-		"zepeto-script-compiler": "file:Library/Packages/zepeto-script-compiler.tgz"
+		}
 	}
 }

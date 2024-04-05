@@ -127,7 +127,7 @@
       }
     },
     "zepeto.asset": {
-      "version": "1.1.1",
+      "version": "1.1.3",
       "depth": 2,
       "source": "registry",
       "dependencies": {
@@ -143,11 +143,11 @@
       "url": "https://upm.zepeto.run"
     },
     "zepeto.character": {
-      "version": "3.1.18",
+      "version": "3.1.22",
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "zepeto.asset": "1.1.1",
+        "zepeto.asset": "1.1.3",
         "com.unity.modules.cloth": "1.0.0",
         "com.unity.modules.particlesystem": "1.0.0",
         "com.unity.modules.physics": "1.0.0",
@@ -157,12 +157,12 @@
       "url": "https://upm.zepeto.run"
     },
     "zepeto.character.controller": {
-      "version": "1.11.7",
+      "version": "1.11.11",
       "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.inputsystem": "1.0.2",
-        "zepeto.character": "3.1.18"
+        "zepeto.character": "3.1.22"
       },
       "url": "https://upm.zepeto.run"
     },
@@ -174,7 +174,7 @@
       "url": "https://upm.zepeto.run"
     },
     "zepeto.module": {
-      "version": "1.0.8",
+      "version": "1.0.10",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -232,18 +232,18 @@
       "url": "https://upm.zepeto.run"
     },
     "zepeto.world": {
-      "version": "1.21.15",
+      "version": "1.21.20",
       "depth": 0,
       "source": "registry",
       "dependencies": {
         "zepeto.world.shared": "1.10.11",
         "zepeto.script": "1.14.7",
         "zepeto.event.bus": "0.5.3",
-        "zepeto.module": "1.0.8",
+        "zepeto.module": "1.0.10",
         "zepeto.multiplay": "1.11.1",
         "zepeto.multiplay.script": "1.12.10",
-        "zepeto.character": "3.1.18",
-        "zepeto.character.controller": "1.11.7",
+        "zepeto.character": "3.1.22",
+        "zepeto.character.controller": "1.11.11",
         "zepeto.script.unityengine.typings": "1.1.1",
         "zepeto.playbaas.sdk": "0.0.6-preview",
         "com.unity.scriptablebuildpipeline": "1.15.2",
